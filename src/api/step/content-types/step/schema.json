@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "steps",
+  "info": {
+    "singularName": "step",
+    "pluralName": "steps",
+    "displayName": "Step",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "single",
+        "double",
+        "coop"
+      ],
+      "default": "single",
+      "required": true
+    },
+    "song": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::song.song",
+      "inversedBy": "steps"
+    },
+    "changes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::step-change.step-change",
+      "mappedBy": "step"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

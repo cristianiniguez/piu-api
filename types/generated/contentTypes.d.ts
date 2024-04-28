@@ -362,35 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiSongSong extends Schema.CollectionType {
-  collectionName: 'songs';
-  info: {
-    singularName: 'song';
-    pluralName: 'songs';
-    displayName: 'Song';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required & Attribute.Unique;
-    artist: Attribute.String & Attribute.Required;
-    type: Attribute.Enumeration<['arcade', 'remix', 'full-song', 'shortcut']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'arcade'>;
-    bpm: Attribute.String & Attribute.Required;
-    slug: Attribute.UID<'api::song.song', 'name'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::song.song', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::song.song', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -817,6 +788,194 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiGameEditionGameEdition extends Schema.CollectionType {
+  collectionName: 'game_editions';
+  info: {
+    singularName: 'game-edition';
+    pluralName: 'game-editions';
+    displayName: 'Game Edition';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    game_versions: Attribute.Relation<
+      'api::game-edition.game-edition',
+      'oneToMany',
+      'api::game-version.game-version'
+    >;
+    release_date: Attribute.Date & Attribute.Required & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::game-edition.game-edition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::game-edition.game-edition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGameVersionGameVersion extends Schema.CollectionType {
+  collectionName: 'game_versions';
+  info: {
+    singularName: 'game-version';
+    pluralName: 'game-versions';
+    displayName: 'Game Version';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    game_edition: Attribute.Relation<
+      'api::game-version.game-version',
+      'manyToOne',
+      'api::game-edition.game-edition'
+    >;
+    release_date: Attribute.Date & Attribute.Required & Attribute.Unique;
+    step_changes: Attribute.Relation<
+      'api::game-version.game-version',
+      'oneToMany',
+      'api::step-change.step-change'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::game-version.game-version',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::game-version.game-version',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSongSong extends Schema.CollectionType {
+  collectionName: 'songs';
+  info: {
+    singularName: 'song';
+    pluralName: 'songs';
+    displayName: 'Song';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    artist: Attribute.String & Attribute.Required;
+    type: Attribute.Enumeration<['arcade', 'remix', 'full-song', 'shortcut']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'arcade'>;
+    bpm: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::song.song', 'name'>;
+    steps: Attribute.Relation<'api::song.song', 'oneToMany', 'api::step.step'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::song.song', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::song.song', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiStepStep extends Schema.CollectionType {
+  collectionName: 'steps';
+  info: {
+    singularName: 'step';
+    pluralName: 'steps';
+    displayName: 'Step';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    type: Attribute.Enumeration<['single', 'double', 'coop']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'single'>;
+    song: Attribute.Relation<'api::step.step', 'manyToOne', 'api::song.song'>;
+    changes: Attribute.Relation<
+      'api::step.step',
+      'oneToMany',
+      'api::step-change.step-change'
+    >;
+    name: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::step.step', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::step.step', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiStepChangeStepChange extends Schema.CollectionType {
+  collectionName: 'step_changes';
+  info: {
+    singularName: 'step-change';
+    pluralName: 'step-changes';
+    displayName: 'Step Change';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    step: Attribute.Relation<
+      'api::step-change.step-change',
+      'manyToOne',
+      'api::step.step'
+    >;
+    type: Attribute.Enumeration<['add', 'update', 'delete']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'add'>;
+    level: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    game_version: Attribute.Relation<
+      'api::step-change.step-change',
+      'manyToOne',
+      'api::game-version.game-version'
+    >;
+    name: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::step-change.step-change',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::step-change.step-change',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -827,7 +986,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::song.song': ApiSongSong;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -836,6 +994,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::game-edition.game-edition': ApiGameEditionGameEdition;
+      'api::game-version.game-version': ApiGameVersionGameVersion;
+      'api::song.song': ApiSongSong;
+      'api::step.step': ApiStepStep;
+      'api::step-change.step-change': ApiStepChangeStepChange;
     }
   }
 }
