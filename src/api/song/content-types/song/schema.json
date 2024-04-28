@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "songs",
+  "info": {
+    "singularName": "song",
+    "pluralName": "songs",
+    "displayName": "Song",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "artist": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "arcade",
+        "remix",
+        "full-song",
+        "shortcut"
+      ],
+      "required": true,
+      "default": "arcade"
+    },
+    "bpm": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}
