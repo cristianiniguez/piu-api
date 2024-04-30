@@ -885,6 +885,12 @@ export interface ApiSongSong extends Schema.CollectionType {
     bpm: Attribute.String & Attribute.Required;
     slug: Attribute.UID<'api::song.song', 'name'>;
     steps: Attribute.Relation<'api::song.song', 'oneToMany', 'api::step.step'>;
+    premium: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    category: Attribute.Enumeration<['Original', 'World Music']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'Original'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::song.song', 'oneToOne', 'admin::user'> &

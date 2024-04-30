@@ -45,6 +45,20 @@
       "relation": "oneToMany",
       "target": "api::step.step",
       "mappedBy": "song"
+    },
+    "premium": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Original",
+        "World Music"
+      ],
+      "default": "Original",
+      "required": true
     }
   }
 }
