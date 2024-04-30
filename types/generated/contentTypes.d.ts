@@ -848,6 +848,7 @@ export interface ApiGameVersionGameVersion extends Schema.CollectionType {
       'oneToMany',
       'api::step-change.step-change'
     >;
+    url: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

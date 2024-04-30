@@ -33,6 +33,9 @@
       "relation": "oneToMany",
       "target": "api::step-change.step-change",
       "mappedBy": "game_version"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }
