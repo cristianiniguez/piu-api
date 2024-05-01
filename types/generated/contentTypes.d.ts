@@ -889,7 +889,7 @@ export interface ApiSongSong extends Schema.CollectionType {
     premium: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
-    category: Attribute.Enumeration<['Original', 'World Music']> &
+    category: Attribute.Enumeration<['Original', 'World Music', 'K-POP']> &
       Attribute.Required &
       Attribute.DefaultTo<'Original'>;
     createdAt: Attribute.DateTime;

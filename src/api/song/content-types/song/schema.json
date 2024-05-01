@@ -55,7 +55,8 @@
       "type": "enumeration",
       "enum": [
         "Original",
-        "World Music"
+        "World Music",
+        "K-POP"
       ],
       "default": "Original",
       "required": true
