@@ -22,11 +22,6 @@
       "relation": "oneToMany",
       "target": "api::game-version.game-version",
       "mappedBy": "game_edition"
-    },
-    "release_date": {
-      "type": "date",
-      "required": true,
-      "unique": true
     }
   }
 }

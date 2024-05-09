@@ -804,7 +804,6 @@ export interface ApiGameEditionGameEdition extends Schema.CollectionType {
       'oneToMany',
       'api::game-version.game-version'
     >
-    release_date: Attribute.Date & Attribute.Required & Attribute.Unique
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     createdBy: Attribute.Relation<
