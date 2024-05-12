@@ -1,7 +1,5 @@
 import path from 'path'
 
-console.log(__dirname)
-
 export default () => ({
   connection: {
     client: 'sqlite',
