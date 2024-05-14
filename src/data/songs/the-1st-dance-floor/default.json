@@ -1,0 +1,58 @@
+[
+  {
+    "id": "another-truth",
+    "name": "Another Truth",
+    "artist": "Novasonic",
+    "bpm": 136,
+    "type": "arcade",
+    "category": "k-pop",
+    "steps": {
+      "single": [
+        [
+          { "level": 3, "versionId": "the-1st-dance-floor::default" },
+          { "level": 4, "versionId": "nxa::default" },
+          { "level": 3, "versionId": "fiesta::v1.01" },
+          { "level": 4, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 5, "versionId": "the-1st-dance-floor::default" },
+          { "level": 6, "versionId": "phoenix::v1.00.0" }
+        ],
+        [{ "level": 8, "versionId": "fiesta-ex::v1.50" }],
+        [
+          { "level": 16, "versionId": "zero::default" },
+          { "level": 15, "versionId": "nx::default" },
+          { "level": 16, "versionId": "xx::v1.00.1" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 7, "versionId": "the-1st-dance-floor::default" },
+          { "level": 5, "versionId": "exceed::default" },
+          { "level": 6, "versionId": "exceed-2::default" },
+          { "level": 7, "versionId": "xx::v1.00.1" },
+          { "level": 9, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 18, "versionId": "exceed::default" },
+          { "level": 16, "versionId": "exceed-2::default" },
+          { "level": 17, "versionId": "xx::v1.00.1" },
+          { "level": 18, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 18, "versionId": "nx::default" },
+          { "level": 17, "versionId": "nxa::default" },
+          { "level": 18, "versionId": "xx::v1.00.1" },
+          { "level": 19, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 22, "versionId": "nx::default" },
+          { "level": 21, "versionId": "nx2::default" },
+          { "level": 22, "versionId": "nxa::default" },
+          { "level": 21, "versionId": "xx::v1.00.1" }
+        ]
+      ],
+      "coop": [[{ "level": 2, "versionId": "xx::v2.07.0" }]]
+    }
+  }
+]
