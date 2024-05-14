@@ -342,5 +342,35 @@
       ],
       "coop": [[{ "level": 2, "versionId": "prime-je::v1.08.0" }]]
     }
+  },
+  {
+    "id": "with-my-lover",
+    "name": "With My Lover",
+    "artist": "BanYa",
+    "bpm": 124,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 3, "versionId": "3rd-obg::default" },
+          { "level": 5, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 10, "versionId": "zero::default" },
+          { "level": 12, "versionId": "xx::v1.00.1" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 11, "versionId": "zero::default" },
+          { "level": 14, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 19, "versionId": "xx::v1.02.0" },
+          { "level": 18, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
