@@ -44,5 +44,22 @@
         ]
       ]
     }
+  },
+  {
+    "id": "close-your-eye",
+    "name": "Close Your Eye",
+    "artist": "BanYa",
+    "bpm": 105,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 3, "versionId": "3rd-obg::default" },
+          { "level": 4, "versionId": "fiesta::v1.01" },
+          { "level": 6, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
