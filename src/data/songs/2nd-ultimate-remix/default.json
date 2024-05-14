@@ -76,9 +76,7 @@
     "category": "original",
     "steps": {
       "single": [
-        [
-          { "level": 2, "versionId": "fiesta-ex::v1.50" }
-        ],
+        [{ "level": 2, "versionId": "fiesta-ex::v1.50" }],
         [
           { "level": 6, "versionId": "fiesta-ex::v1.50" },
           { "level": 7, "versionId": "phoenix::v1.00.0" }
@@ -119,6 +117,23 @@
           { "level": 19, "versionId": "phoenix::v1.00.0" }
         ]
       ]
+    }
+  },
+  {
+    "id": "repeatorment-remix",
+    "name": "Repeatorment Remix",
+    "artist": "BanYa",
+    "bpm": 150,
+    "type": "remix",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 19, "versionId": "fiesta-ex::v1.50" },
+          { "level": 18, "versionId": "xx::v1.00.1" }
+        ]
+      ],
+      "double": [[{ "level": 22, "versionId": "xx::v2.07.0" }]]
     }
   }
 ]
