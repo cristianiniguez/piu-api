@@ -1,5 +1,5 @@
 import { test, expect } from 'bun:test'
-import * as songs from './songs'
+import songs from './songs'
 import { getVersions } from '.'
 
 const ALL_VERSION_IDS = getVersions().map(({ id }) => id)
