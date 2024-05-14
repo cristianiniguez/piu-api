@@ -115,5 +115,45 @@
         ]
       ]
     }
+  },
+  {
+    "id": "free-style",
+    "name": "Free Style",
+    "artist": "BanYa",
+    "bpm": 99,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [{ "level": 5, "versionId": "xx::v2.07.0" }],
+        [{ "level": 9, "versionId": "xx::v2.07.0" }],
+        [{ "level": 13, "versionId": "fiesta-ex::v1.50" }]
+      ],
+      "double": [[{ "level": 15, "versionId": "fiesta::v1.01" }]]
+    }
+  },
+  {
+    "id": "midnight-blue",
+    "name": "Midnight Blue",
+    "artist": "BanYa",
+    "bpm": 80,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 12, "versionId": "fiesta::v1.10" },
+          { "level": 11, "versionId": "xx::v1.00.1" },
+          { "level": 12, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 13, "versionId": "fiesta::v1.10" },
+          { "level": 12, "versionId": "xx::v1.00.1" },
+          { "level": 13, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
