@@ -66,5 +66,59 @@
         ]
       ]
     }
+  },
+  {
+    "id": "final-audition",
+    "name": "Final Audition",
+    "artist": "BanYa",
+    "bpm": 130.5,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 2, "versionId": "fiesta-ex::v1.50" }
+        ],
+        [
+          { "level": 6, "versionId": "fiesta-ex::v1.50" },
+          { "level": 7, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 9, "versionId": "fiesta-ex::v1.50" },
+          { "level": 10, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 10, "versionId": "the-prex-3::default" },
+          { "level": 13, "versionId": "exceed::default" },
+          { "level": 14, "versionId": "exceed-2::default" },
+          { "level": 15, "versionId": "zero::default" },
+          { "level": 17, "versionId": "nxa::default" },
+          { "level": 18, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 16, "versionId": "nx::default" },
+          { "level": 17, "versionId": "nx2::default" },
+          { "level": 15, "versionId": "nxa::default" },
+          { "level": 18, "versionId": "xx::v1.00.1" },
+          { "level": 19, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 15, "versionId": "nx::default" },
+          { "level": 16, "versionId": "nx2::default" },
+          { "level": 15, "versionId": "fiesta::v1.01" },
+          { "level": 17, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 18, "versionId": "exceed::default" },
+          { "level": 17, "versionId": "exceed-2::default" },
+          { "level": 16, "versionId": "nx::default" },
+          { "level": 17, "versionId": "nxa::default" },
+          { "level": 18, "versionId": "xx::v1.00.1" },
+          { "level": 19, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
