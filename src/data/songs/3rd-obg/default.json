@@ -288,5 +288,59 @@
         [{ "level": 23, "versionId": "prime-2::v1.05.0" }]
       ]
     }
+  },
+  {
+    "id": "turkey-march",
+    "name": "Turkey March",
+    "artist": "BanYa",
+    "bpm": 150,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [{ "level": 3, "versionId": "fiesta-ex::v1.50" }],
+        [
+          { "level": 7, "versionId": "3rd-obg::default" },
+          { "level": 6, "versionId": "exceed::default" },
+          { "level": 7, "versionId": "exceed-2::default" }
+        ],
+        [
+          { "level": 7, "versionId": "3rd-obg::default" },
+          { "level": 11, "versionId": "exceed::default" },
+          { "level": 12, "versionId": "exceed-2::default" }
+        ],
+        [
+          { "level": 15, "versionId": "nx2::default" },
+          { "level": 16, "versionId": "xx::v1.00.1" },
+          { "level": 17, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 18, "versionId": "prime-je::v1.08.0" },
+          { "level": 19, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 7, "versionId": "3rd-obg::default" },
+          { "level": 8, "versionId": "exceed::default" },
+          { "level": 9, "versionId": "nx::default" },
+          { "level": 13, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 17, "versionId": "prime-je::v1.08.0" },
+          { "level": 18, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 16, "versionId": "exceed::default" },
+          { "level": 18, "versionId": "exceed-2::default" },
+          { "level": 19, "versionId": "zero::default" },
+          { "level": 18, "versionId": "nx::default" },
+          { "level": 19, "versionId": "nxa::default" },
+          { "level": 20, "versionId": "xx::v1.00.1" },
+          { "level": 21, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "coop": [[{ "level": 2, "versionId": "prime-je::v1.08.0" }]]
+    }
   }
 ]
