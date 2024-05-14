@@ -221,5 +221,30 @@
         ]
       ]
     }
+  },
+  {
+    "id": "pumping-up",
+    "name": "Pumping Up",
+    "artist": "BanYa",
+    "bpm": 135,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 4, "versionId": "fiesta::v1.01" },
+          { "level": 5, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 9, "versionId": "xx::v2.07.0" },
+          { "level": 10, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 12, "versionId": "fiesta-ex::v1.30" },
+          { "level": 13, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [[{ "level": 15, "versionId": "prime-2::v1.06.0" }]]
+    }
   }
 ]
