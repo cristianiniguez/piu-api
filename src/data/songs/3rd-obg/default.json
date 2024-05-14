@@ -12,5 +12,37 @@
         [{ "level": 13, "versionId": "xx::v1.00.1" }]
       ]
     }
+  },
+  {
+    "id": "banya-hiphop-remix",
+    "name": "BANYA HIPHOP REMIX",
+    "artist": "BanYa",
+    "bpm": 99,
+    "type": "remix",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 5, "versionId": "3rd-obg::default" },
+          { "level": 6, "versionId": "exceed-2::default" },
+          { "level": 7, "versionId": "nx::default" },
+          { "level": 3, "versionId": "nxa::default" },
+          { "level": 6, "versionId": "fiesta::v1.01" }
+        ],
+        [
+          { "level": 7, "versionId": "exceed-2::default" },
+          { "level": 8, "versionId": "nx::default" },
+          { "level": 9, "versionId": "nxa::default" },
+          { "level": 7, "versionId": "fiesta::v1.01" },
+          { "level": 8, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 20, "versionId": "prime-2::v2.04.0" },
+          { "level": 21, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
