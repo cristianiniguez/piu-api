@@ -192,5 +192,34 @@
         ]
       ]
     }
+  },
+  {
+    "id": "a-nightmare",
+    "name": "A nightmare",
+    "artist": "BanYa",
+    "bpm": 120,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 1, "versionId": "3rd-obg::default" },
+          { "level": 2, "versionId": "xx::v1.00.1" },
+          { "level": 3, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 4, "versionId": "3rd-obg::default" },
+          { "level": 5, "versionId": "exceed::default" },
+          { "level": 4, "versionId": "exceed-2::default" },
+          { "level": 6, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 13, "versionId": "fiesta-ex::v1.30" },
+          { "level": 14, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
