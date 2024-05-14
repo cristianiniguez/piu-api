@@ -1,0 +1,16 @@
+[
+  {
+    "id": "an-interesting-view",
+    "name": "An Interesting View",
+    "artist": "BanYa",
+    "bpm": 160,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [{ "level": 6, "versionId": "3rd-obg::default" }],
+        [{ "level": 13, "versionId": "xx::v1.00.1" }]
+      ]
+    }
+  }
+]
