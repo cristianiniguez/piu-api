@@ -61,5 +61,59 @@
         ]
       ]
     }
+  },
+  {
+    "id": "final-audition-2",
+    "name": "Final Audition 2",
+    "artist": "BanYa",
+    "bpm": 130,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [{ "level": 4, "versionId": "fiesta-ex::v1.50" }],
+        [{ "level": 7, "versionId": "fiesta-ex::v1.50" }],
+        [
+          { "level": 6, "versionId": "3rd-obg::default" },
+          { "level": 7, "versionId": "exceed-2::default" },
+          { "level": 8, "versionId": "nx::default" },
+          { "level": 9, "versionId": "xx::v1.00.1" },
+          { "level": 10, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 6, "versionId": "3rd-obg::default" },
+          { "level": 10, "versionId": "exceed::default" },
+          { "level": 9, "versionId": "exceed-2::default" },
+          { "level": 10, "versionId": "nx::default" },
+          { "level": 12, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 15, "versionId": "nx::default" },
+          { "level": 16, "versionId": "nx2::default" },
+          { "level": 17, "versionId": "xx::v1.00.1" },
+          { "level": 18, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 6, "versionId": "3rd-obg::default" },
+          { "level": 7, "versionId": "exceed-2::default" },
+          { "level": 8, "versionId": "nx::default" },
+          { "level": 11, "versionId": "xx::v1.00.1" },
+          { "level": 12, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 17, "versionId": "exceed::default" },
+          { "level": 16, "versionId": "zero:: default" },
+          { "level": 17, "versionId": "nx::default" },
+          { "level": 18, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 18, "versionId": "nx::default" },
+          { "level": 19, "versionId": "nx2::default" },
+          { "level": 20, "versionId": "xx::v1.00.1" }
+        ]
+      ]
+    }
   }
 ]
