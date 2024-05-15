@@ -93,5 +93,26 @@
       ],
       "coop": [[{ "level": 2, "versionId": "xx::v2.01.0" }]]
     }
+  },
+  {
+    "id": "n",
+    "name": "N",
+    "artist": "BanYa",
+    "bpm": 106,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 4, "versionId": "the-perfect-collection::default" },
+          { "level": 5, "versionId": "nx::default" }
+        ],
+        [
+          { "level": 14, "versionId": "zero::default" },
+          { "level": 16, "versionId": "nx::default" }
+        ]
+      ],
+      "double": [[{ "level": 16, "versionId": "fiesta-ex::v1.50" }]]
+    }
   }
 ]
