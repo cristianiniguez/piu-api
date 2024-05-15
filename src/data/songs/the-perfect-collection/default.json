@@ -114,5 +114,28 @@
       ],
       "double": [[{ "level": 16, "versionId": "fiesta-ex::v1.50" }]]
     }
+  },
+  {
+    "id": "pump-jump",
+    "name": "Pump Jump",
+    "artist": "BanYa",
+    "bpm": 106,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 4, "versionId": "the-perfect-collection::default" },
+          { "level": 5, "versionId": "phoenix::v1.00.0" }
+        ],
+        [{ "level": 15, "versionId": "fiesta::v1.01" }]
+      ],
+      "double": [
+        [
+          { "level": 17, "versionId": "fiesta::v1.01" },
+          { "level": 18, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
