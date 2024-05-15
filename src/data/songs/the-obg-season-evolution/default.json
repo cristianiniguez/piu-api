@@ -26,5 +26,34 @@
         [{ "level": 17, "versionId": "prime-je::v1.07.0" }]
       ]
     }
+  },
+  {
+    "id": "first-love",
+    "name": "First Love",
+    "artist": "BanYa",
+    "bpm": 104,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 3, "versionId": "the-obg-season-evolution::default" },
+          { "level": 4, "versionId": "exceed::default" },
+          { "level": 6, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 8, "versionId": "the-obg-season-evolution::default" },
+          { "level": 9, "versionId": "exceed::default" },
+          { "level": 10, "versionId": "xx::v1.00.1" },
+          { "level": 12, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 14, "versionId": "fiesta::v1.01" },
+          { "level": 15, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
