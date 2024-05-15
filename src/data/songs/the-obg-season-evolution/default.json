@@ -1,0 +1,30 @@
+[
+  {
+    "id": "betrayer",
+    "name": "Betrayer",
+    "artist": "BanYa",
+    "bpm": 92,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [{ "level": 1, "versionId": "fiesta-ex::v1.50" }],
+        [
+          { "level": 4, "versionId": "the-obg-season-evolution::default" },
+          { "level": 5, "versionId": "exceed::default" }
+        ],
+        [
+          { "level": 6, "versionId": "the-obg-season-evolution::default" },
+          { "level": 8, "versionId": "exceed::default" },
+          { "level": 9, "versionId": "phoenix::v1.00.0" }
+        ],
+        [{ "level": 13, "versionId": "fiesta-ex::v1.50" }],
+        [{ "level": 16, "versionId": "prime-je::v1.07.0" }]
+      ],
+      "double": [
+        [{ "level": 13, "versionId": "fiesta::v1.01" }],
+        [{ "level": 17, "versionId": "prime-je::v1.07.0" }]
+      ]
+    }
+  }
+]
