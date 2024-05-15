@@ -111,5 +111,35 @@
         ]
       ]
     }
+  },
+  {
+    "id": "oh-rosa",
+    "name": "Oh! Rosa",
+    "artist": "BanYa",
+    "bpm": 148,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 7, "versionId": "fiesta::v1.01" },
+          { "level": 8, "versionId": "xx::v1.00.1" },
+          { "level": 9, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 13, "versionId": "fiesta::v1.01" },
+          { "level": 14, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 7, "versionId": "the-obg-season-evolution::default" },
+          { "level": 6, "versionId": "exceed::default" },
+          { "level": 7, "versionId": "exceed-2::default" },
+          { "level": 11, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "coop": [[{ "level": 2, "versionId": "prime-2::v1.04.0" }]]
+    }
   }
 ]
