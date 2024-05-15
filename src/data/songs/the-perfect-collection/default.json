@@ -137,5 +137,41 @@
         ]
       ]
     }
+  },
+  {
+    "id": "rolling-christmas",
+    "name": "Rolling Christmas",
+    "artist": "BanYa",
+    "bpm": 142,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [{ "level": 3, "versionId": "fiesta::v1.10" }],
+        [{ "level": 5, "versionId": "fiesta-2::v1.00" }],
+        [{ "level": 8, "versionId": "fiesta::v1.10" }],
+        [
+          { "level": 13, "versionId": "fiesta::v1.01" },
+          { "level": 12, "versionId": "xx::v1.00.1" }
+        ],
+        [{ "level": 17, "versionId": "xx::v2.06.0" }]
+      ],
+      "double": [
+        [
+          { "level": 4, "versionId": "zero::default" },
+          { "level": 5, "versionId": "prime-je::v1.07.0" }
+        ],
+        [
+          { "level": 12, "versionId": "zero::default" },
+          { "level": 13, "versionId": "nx::default" }
+        ],
+        [
+          { "level": 17, "versionId": "prime-je::v1.08.0" },
+          { "level": 16, "versionId": "xx::v1.00.1" }
+        ],
+        [{ "level": 22, "versionId": "xx::v2.05.0" }]
+      ],
+      "coop": [[{ "level": 2, "versionId": "prime::v1.11.0" }]]
+    }
   }
 ]
