@@ -36,5 +36,62 @@
         ]
       ]
     }
+  },
+  {
+    "id": "beethoven-virus",
+    "name": "Beethoven Virus",
+    "artist": "BanYa",
+    "bpm": 162,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 5, "versionId": "the-perfect-collection::default" },
+          { "level": 4, "versionId": "exceed::default" },
+          { "level": 3, "versionId": "exceed-2::default" },
+          { "level": 4, "versionId": "nxa::default" }
+        ],
+        [
+          { "level": 8, "versionId": "fiesta::v1.01" },
+          { "level": 6, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 6, "versionId": "the-perfect-collection::default" },
+          { "level": 7, "versionId": "nx::default" }
+        ],
+        [
+          { "level": 13, "versionId": "fiesta::v1.01" },
+          { "level": 11, "versionId": "xx::v1.00.1" },
+          { "level": 12, "versionId": "phoenix::v1.00.0" }
+        ],
+        [{ "level": 16, "versionId": "fiesta::v1.01" }],
+        [
+          { "level": 16, "versionId": "nx::default" },
+          { "level": 17, "versionId": "nx2::default" }
+        ],
+        [{ "level": 21, "versionId": "xx::v2.08.0" }]
+      ],
+      "double": [
+        [
+          { "level": 9, "versionId": "the-perfect-collection::default" },
+          { "level": 6, "versionId": "exceed::default" },
+          { "level": 8, "versionId": "exceed-2::default" },
+          { "level": 11, "versionId": "xx::v1.00.1" },
+          { "level": 13, "versionId": "phoenix::v1.00.0" }
+        ],
+        [{ "level": 18, "versionId": "fiesta::v1.01" }],
+        [
+          { "level": 17, "versionId": "exceed::default" },
+          { "level": 20, "versionId": "exceed-2::default" },
+          { "level": 21, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 23, "versionId": "xx::v2.08.0" },
+          { "level": 24, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "coop": [[{ "level": 2, "versionId": "xx::v2.01.0" }]]
+    }
   }
 ]
