@@ -173,5 +173,63 @@
       ],
       "coop": [[{ "level": 2, "versionId": "prime::v1.11.0" }]]
     }
+  },
+  {
+    "id": "slam",
+    "name": "Slam",
+    "artist": "Novasonic",
+    "bpm": 131.99,
+    "type": "arcade",
+    "category": "k-pop",
+    "steps": {
+      "single": [
+        [
+          { "level": 4, "versionId": "the-perfect-collection::default" },
+          { "level": 3, "versionId": "exceed::default" },
+          { "level": 5, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 6, "versionId": "the-perfect-collection::default" },
+          { "level": 5, "versionId": "exceed::default" },
+          { "level": 6, "versionId": "nx::default" },
+          { "level": 7, "versionId": "phoenix::v1.00.0" }
+        ],
+        [{ "level": 9, "versionId": "fiesta-ex::v1.50" }],
+        [
+          { "level": 4, "versionId": "extra::default" },
+          { "level": 9, "versionId": "the-premiere::default" },
+          { "level": 12, "versionId": "exceed::default" },
+          { "level": 15, "versionId": "exceed-2::default" },
+          { "level": 16, "versionId": "nx::default" },
+          { "level": 18, "versionId": "nx2::default" },
+          { "level": 17, "versionId": "nxa::default" },
+          { "level": 18, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 18, "versionId": "nxa::default" },
+          { "level": 19, "versionId": "xx::v1.00.1" },
+          { "level": 20, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 6, "versionId": "the-perfect-collection::default" },
+          { "level": 5, "versionId": "exceed::default" },
+          { "level": 6, "versionId": "exceed-2::default" },
+          { "level": 9, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 17, "versionId": "exceed::default" },
+          { "level": 19, "versionId": "exceed-2::default" },
+          { "level": 20, "versionId": "nx::default" },
+          { "level": 21, "versionId": "xx::v1.00.1" },
+          { "level": 22, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 23, "versionId": "prime-2::v1.04.0" },
+          { "level": 24, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
