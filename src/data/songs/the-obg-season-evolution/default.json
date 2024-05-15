@@ -141,5 +141,54 @@
       ],
       "coop": [[{ "level": 2, "versionId": "prime-2::v1.04.0" }]]
     }
+  },
+  {
+    "id": "solitary",
+    "name": "Solitary",
+    "artist": "BanYa",
+    "bpm": 136,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [{ "level": 2, "versionId": "fiesta-ex::v1.50" }],
+        [{ "level": 4, "versionId": "fiesta-ex::v1.50" }],
+        [
+          { "level": 7, "versionId": "the-obg-season-evolution::default" },
+          { "level": 5, "versionId": "exceed::default" },
+          { "level": 6, "versionId": "nxa::default" }
+        ],
+        [{ "level": 8, "versionId": "fiesta-ex::v1.50" }],
+        [
+          { "level": 6, "versionId": "the-obg-season-evolution::default" },
+          { "level": 9, "versionId": "exceed::default" },
+          { "level": 8, "versionId": "exceed-2::default" },
+          { "level": 9, "versionId": "nx::default" },
+          { "level": 11, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 16, "versionId": "fiesta::v1.01" },
+          { "level": 18, "versionId": "xx::v1.00.1" },
+          { "level": 17, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 17, "versionId": "nx2::default" },
+          { "level": 18, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 8, "versionId": "the-obg-season-evolution::default" },
+          { "level": 6, "versionId": "exceed::default" },
+          { "level": 7, "versionId": "nx::default" },
+          { "level": 10, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 15, "versionId": "exceed-2::default" },
+          { "level": 16, "versionId": "nx::default" },
+          { "level": 17, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
