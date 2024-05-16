@@ -15,6 +15,10 @@
         ],
         [
           { "level": 8, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "the-obg-season-evolution::default" },
+          { "level": 8, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 8, "versionId": "the-premiere-2::default" },
           { "level": 6, "versionId": "exceed::default" },
           { "level": 7, "versionId": "exceed-2::default" },
           { "level": 8, "versionId": "zero::default" },
@@ -25,6 +29,10 @@
         ],
         [
           { "level": 5, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "the-obg-season-evolution::default" },
+          { "level": 5, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 5, "versionId": "the-premiere-2::default" },
           { "level": 10, "versionId": "exceed::default" },
           { "level": 11, "versionId": "exceed-2::default" },
           { "level": 12, "versionId": "nx::default" },
@@ -45,6 +53,8 @@
       "double": [
         [
           { "level": 7, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "the-obg-season-evolution::default" },
+          { "level": 7, "versionId": "zero::default" },
           { "level": 9, "versionId": "zero::default" },
           { "level": 13, "versionId": "nx::default" },
           { "level": 12, "versionId": "nxa::default" },
