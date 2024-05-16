@@ -186,11 +186,29 @@
     "steps": {
       "single": [
         [
+          { "level": 6, "versionId": "2nd-ultimate-remix::default" },
+          { "level": 0, "versionId": "3rd-obg::default" },
+          { "level": 6, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "the-premiere::default" },
+          { "level": 7, "versionId": "fiesta-ex::v1.00" },
+          { "level": 0, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
           { "level": 19, "versionId": "fiesta-ex::v1.50" },
           { "level": 18, "versionId": "xx::v1.00.1" }
         ]
       ],
-      "double": [[{ "level": 22, "versionId": "xx::v2.07.0" }]]
+      "double": [
+        [
+          { "level": 6, "versionId": "2nd-ultimate-remix::default" },
+          { "level": 0, "versionId": "3rd-obg::default" },
+          { "level": 6, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "the-premiere::default" },
+          { "level": 8, "versionId": "fiesta-ex::v1.00" },
+          { "level": 0, "versionId": "phoenix::v1.00.0" }
+        ],
+        [{ "level": 22, "versionId": "xx::v2.07.0" }]
+      ]
     }
   }
 ]
