@@ -35,5 +35,34 @@
         ]
       ]
     }
+  },
+  {
+    "id": "extra-banya-remix",
+    "name": "EXTRA BanYa Remix",
+    "artist": "BanYa",
+    "bpm": 200,
+    "type": "remix",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 9, "versionId": "extra::default" },
+          { "level": 10, "versionId": "nx2::default" },
+          { "level": 8, "versionId": "nxa::default" },
+          { "level": 11, "versionId": "xx::v1.00.1" },
+          { "level": 12, "versionId": "phoenix::v1.00.0" }
+        ],
+        [{ "level": 21, "versionId": "nxa::default" }]
+      ],
+      "double": [
+        [
+          { "level": 9, "versionId": "extra::default" },
+          { "level": 11, "versionId": "nx2::default" },
+          { "level": 13, "versionId": "nxa::default" },
+          { "level": 14, "versionId": "xx::v1.00.1" },
+          { "level": 15, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
+    }
   }
 ]
