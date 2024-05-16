@@ -1,0 +1,39 @@
+[
+  {
+    "id": "chicken-wing",
+    "name": "Chicken Wing",
+    "artist": "BanYa",
+    "bpm": 200,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [{ "level": 4, "versionId": "fiesta-ex::v1.50" }],
+        [{ "level": 6, "versionId": "fiesta-ex::v1.50" }],
+        [{ "level": 9, "versionId": "fiesta-ex::v1.50" }],
+        [
+          { "level": 3, "versionId": "extra::default" },
+          { "level": 7, "versionId": "the-prex::default" },
+          { "level": 10, "versionId": "exceed::default" },
+          { "level": 11, "versionId": "xx::v1.00.1" }
+        ],
+        [{ "level": 17, "versionId": "fiesta-2::v1.60" }],
+        [
+          { "level": 19, "versionId": "fiesta::v1.01" },
+          { "level": 20, "versionId": "xx::v1.00.1" }
+        ],
+        [{ "level": 21, "versionId": "prime::v1.17.0" }]
+      ],
+      "double": [
+        [
+          { "level": 17, "versionId": "fiesta-ex::v1.50" },
+          { "level": 18, "versionId": "phoenix::v1.00.0" }
+        ],
+        [
+          { "level": 23, "versionId": "prime::v1.17.0" },
+          { "level": 22, "versionId": "xx::v1.00.1" }
+        ]
+      ]
+    }
+  }
+]
