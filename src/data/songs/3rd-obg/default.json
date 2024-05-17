@@ -428,7 +428,18 @@
     "steps": {
       "single": [
         [
+          { "level": 4, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "extra::default" },
+          { "level": 4, "versionId": "the-premiere::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 4, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-prex-2::default" },
+          { "level": 4, "versionId": "the-prex-3::default" },
+          { "level": 0, "versionId": "nx::default" }
+        ],
+        [
           { "level": 4, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" },
           { "level": 5, "versionId": "phoenix::v1.00.0" }
         ],
         [
@@ -437,6 +448,7 @@
         ],
         [
           { "level": 12, "versionId": "fiesta-ex::v1.30" },
+          { "level": 0, "versionId": "prime::v1.00.0" },
           { "level": 13, "versionId": "phoenix::v1.00.0" }
         ]
       ],
