@@ -32,6 +32,7 @@
       "single": [
         [
           { "level": 5, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "extra::default" },
           { "level": 6, "versionId": "exceed-2::default" },
           { "level": 7, "versionId": "nx::default" },
           { "level": 3, "versionId": "nxa::default" },
@@ -47,8 +48,21 @@
       ],
       "double": [
         [
+          { "level": 5, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "extra::default" },
+          { "level": 6, "versionId": "exceed-2::default" },
+          { "level": 7, "versionId": "nx::default" },
+          { "level": 0, "versionId": "fiesta::v1.01", "performanced": true }
+        ],
+        [
           { "level": 20, "versionId": "prime-2::v2.04.0" },
           { "level": 21, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double-p": [
+        [
+          { "level": 6, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "phoenix::v1.00.0" }
         ]
       ]
     }
