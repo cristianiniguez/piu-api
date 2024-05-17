@@ -12,8 +12,8 @@
           { "level": 3, "versionId": "the-1st-dance-floor::default" },
           { "level": 0, "versionId": "3rd-obg::default" },
           { "level": 3, "versionId": "the-collection::default" },
-          { "level": 0, "versionId": "the-rebirth::default"},
-          { "level": 3, "versionId": "the-premiere-2::default"},
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 3, "versionId": "the-premiere-2::default" },
           { "level": 4, "versionId": "nxa::default" },
           { "level": 3, "versionId": "fiesta::v1.01" },
           { "level": 4, "versionId": "phoenix::v1.00.0" }
@@ -22,8 +22,8 @@
           { "level": 5, "versionId": "the-1st-dance-floor::default" },
           { "level": 0, "versionId": "3rd-obg::default" },
           { "level": 5, "versionId": "the-collection::default" },
-          { "level": 0, "versionId": "the-rebirth::default"},
-          { "level": 5, "versionId": "the-premiere-2::default"},
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 5, "versionId": "the-premiere-2::default" },
           { "level": 6, "versionId": "phoenix::v1.00.0" }
         ],
         [{ "level": 8, "versionId": "fiesta-ex::v1.50" }],
@@ -38,8 +38,8 @@
           { "level": 7, "versionId": "the-1st-dance-floor::default" },
           { "level": 0, "versionId": "3rd-obg::default" },
           { "level": 7, "versionId": "the-collection::default" },
-          { "level": 0, "versionId": "the-rebirth::default"},
-          { "level": 7, "versionId": "the-premiere-2::default"},
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 7, "versionId": "the-premiere-2::default" },
           { "level": 5, "versionId": "exceed::default" },
           { "level": 6, "versionId": "exceed-2::default" },
           { "level": 7, "versionId": "xx::v1.00.1" },
@@ -65,6 +65,53 @@
         ]
       ],
       "coop": [[{ "level": 2, "versionId": "xx::v2.07.0" }]]
+    }
+  },
+  "funky-tonight": {
+    "id": "funky-tonight",
+    "name": "Funky Tonight",
+    "artist": "CLON",
+    "bpm": 105,
+    "type": "arcade",
+    "category": "k-pop",
+    "steps": {
+      "single": [
+        [
+          { "level": 2, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 4, "versionId": "the-1st-dance-floor::default" },
+          { "level": 0, "versionId": "3rd-obg::default" },
+          { "level": 4, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 4, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 5, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 11, "versionId": "zero::default" },
+          { "level": 12, "versionId": "nx::default" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 4, "versionId": "the-1st-dance-floor::default" },
+          { "level": 0, "versionId": "3rd-obg::default" },
+          { "level": 4, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 4, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 14, "versionId": "fiesta-2::v1.00" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ]
+      ]
     }
   }
 }
