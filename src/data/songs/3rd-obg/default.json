@@ -77,9 +77,43 @@
     "steps": {
       "single": [
         [
+          { "level": 2, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "extra::default" },
+          { "level": 2, "versionId": "the-premiere::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 2, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-prex-2::default" }
+        ],
+        [
           { "level": 3, "versionId": "3rd-obg::default" },
           { "level": 4, "versionId": "fiesta::v1.01" },
           { "level": 6, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 4, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "extra::default" },
+          { "level": 4, "versionId": "the-premiere::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 4, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-prex-2::default" }
+        ]
+      ],
+      "single-p": [
+        [
+          { "level": 2, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" },
+          { "level": 2, "versionId": "prime-2::v1.00.0" },
+          { "level": 0, "versionId": "phoenix::v1.00.0" }
+        ]
+      ],
+      "double-p": [
+        [
+          { "level": 3, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" },
+          { "level": 3, "versionId": "prime-2::v1.00.0" },
+          { "level": 0, "versionId": "phoenix::v1.00.0" }
         ]
       ]
     }
