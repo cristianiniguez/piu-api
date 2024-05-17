@@ -535,16 +535,26 @@
         [{ "level": 3, "versionId": "fiesta-ex::v1.50" }],
         [
           { "level": 7, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 7, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-premiere-3::default" },
+          { "level": 7, "versionId": "the-prex-3::default" },
           { "level": 6, "versionId": "exceed::default" },
           { "level": 7, "versionId": "exceed-2::default" }
         ],
         [
           { "level": 7, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 7, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-premiere-3::default" },
+          { "level": 7, "versionId": "the-prex-3::default" },
           { "level": 11, "versionId": "exceed::default" },
           { "level": 12, "versionId": "exceed-2::default" }
         ],
         [
           { "level": 15, "versionId": "nx2::default" },
+          { "level": 0, "versionId": "nxa::default" },
+          { "level": 15, "versionId": "fiesta::v1.01" },
           { "level": 16, "versionId": "xx::v1.00.1" },
           { "level": 17, "versionId": "phoenix::v1.00.0" }
         ],
@@ -556,6 +566,10 @@
       "double": [
         [
           { "level": 7, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 7, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-premiere-3::default" },
+          { "level": 7, "versionId": "the-prex-3::default" },
           { "level": 8, "versionId": "exceed::default" },
           { "level": 9, "versionId": "nx::default" },
           { "level": 13, "versionId": "phoenix::v1.00.0" }
