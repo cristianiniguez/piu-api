@@ -113,5 +113,71 @@
         ]
       ]
     }
+  },
+  "hatred": {
+    "id": "hatred",
+    "name": "Hatred",
+    "artist": "Novasonic",
+    "bpm": 136.03,
+    "type": "arcade",
+    "category": "k-pop",
+    "steps": {
+      "single": [
+        [
+          { "level": 2, "versionId": "exceed-2::default" },
+          { "level": 0, "versionId": "nx::default" }
+        ],
+        [
+          { "level": 7, "versionId": "the-1st-dance-floor::default" },
+          { "level": 0, "versionId": "2nd-ultimate-remix::default" },
+          { "level": 7, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "extra::default" },
+          { "level": 7, "versionId": "the-premiere::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 7, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-prex-2::default" },
+          { "level": 7, "versionId": "exceed::default" },
+          { "level": 0, "versionId": "nx::default" },
+          { "level": 6, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" }
+        ],
+        [
+          { "level": 13, "versionId": "exceed-2::default" },
+          { "level": 0, "versionId": "nx::default" },
+          { "level": 13, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 7, "versionId": "the-1st-dance-floor::default" },
+          { "level": 0, "versionId": "2nd-ultimate-remix::default" },
+          { "level": 7, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "extra::default" },
+          { "level": 7, "versionId": "the-premiere::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 7, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-prex-2::default" },
+          { "level": 7, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" }
+        ],
+        [
+          { "level": 7, "versionId": "exceed-2::default" },
+          { "level": 0, "versionId": "nx::default" }
+        ],
+        [
+          { "level": 16, "versionId": "exceed-2::default" },
+          { "level": 0, "versionId": "nx::default" },
+          { "level": 16, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" }
+        ]
+      ],
+      "double-p": [
+        [
+          { "level": 7, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" }
+        ]
+      ]
+    }
   }
 }
