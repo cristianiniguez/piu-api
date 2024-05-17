@@ -205,11 +205,37 @@
     "category": "original",
     "steps": {
       "single": [
+        [
+          { "level": 2, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 2, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-premiere-3::default" },
+          { "level": 1, "versionId": "zero::default" },
+          { "level": 0, "versionId": "nx::default" }
+        ],
         [{ "level": 5, "versionId": "xx::v2.07.0" }],
         [{ "level": 9, "versionId": "xx::v2.07.0" }],
-        [{ "level": 13, "versionId": "fiesta-ex::v1.50" }]
+        [
+          { "level": 13, "versionId": "fiesta-ex::v1.50" },
+          { "level": 0, "versionId": "prime::v1.00.0" },
+          { "level": 13, "versionId": "prime-2::v1.00.0" }
+        ]
       ],
-      "double": [[{ "level": 15, "versionId": "fiesta::v1.01" }]]
+      "double": [
+        [
+          { "level": 15, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" },
+          { "level": 15, "versionId": "prime-2::v1.00.0" }
+        ]
+      ],
+      "single-p": [
+        [
+          { "level": 1, "versionId": "fiesta::v1.01" },
+          { "level": 0, "versionId": "prime::v1.00.0" },
+          { "level": 1, "versionId": "prime-2::v1.00.0" },
+          { "level": 0, "versionId": "phoenix::v1.00.0" }
+        ]
+      ]
     }
   },
   {
