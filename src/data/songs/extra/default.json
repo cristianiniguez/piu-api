@@ -1,5 +1,5 @@
-[
-  {
+{
+  "chicken-wing": {
     "id": "chicken-wing",
     "name": "Chicken Wing",
     "artist": "BanYa",
@@ -36,7 +36,7 @@
       ]
     }
   },
-  {
+  "extra-banya-remix": {
     "id": "extra-banya-remix",
     "name": "EXTRA BanYa Remix",
     "artist": "BanYa",
@@ -65,4 +65,4 @@
       ]
     }
   }
-]
+}

@@ -1,5 +1,5 @@
-[
-  {
+{
+  "extravaganza": {
     "id": "extravaganza",
     "name": "Extravaganza",
     "artist": "BanYa",
@@ -76,7 +76,7 @@
       ]
     }
   },
-  {
+  "final-audition": {
     "id": "final-audition",
     "name": "Final Audition",
     "artist": "BanYa",
@@ -175,7 +175,7 @@
       ]
     }
   },
-  {
+  "repeatorment-remix": {
     "id": "repeatorment-remix",
     "name": "Repeatorment Remix",
     "artist": "BanYa",
@@ -210,4 +210,4 @@
       ]
     }
   }
-]
+}

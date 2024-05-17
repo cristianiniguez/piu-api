@@ -7,4 +7,4 @@ function validateSchema<T, Z extends ZodType<T>>(dto: unknown, schema: Z): z.inf
   return data
 }
 
-export const validateMapVersionToSongsList = (map: any) => validateSchema(map, z.record(z.array(songSchema)))
+export const validateMapVersionToSongsList = (map: any) => validateSchema(map, z.record(z.record(songSchema)))

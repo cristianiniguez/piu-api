@@ -1,5 +1,5 @@
-[
-  {
+{
+  "another-truth": {
     "id": "another-truth",
     "name": "Another Truth",
     "artist": "Novasonic",
@@ -67,4 +67,4 @@
       "coop": [[{ "level": 2, "versionId": "xx::v2.07.0" }]]
     }
   }
-]
+}

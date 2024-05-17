@@ -1,5 +1,5 @@
-[
-  {
+{
+  "an-interesting-view": {
     "id": "an-interesting-view",
     "name": "An Interesting View",
     "artist": "BanYa",
@@ -21,7 +21,7 @@
       ]
     }
   },
-  {
+  "banya-hiphop-remix": {
     "id": "banya-hiphop-remix",
     "name": "BANYA HIPHOP REMIX",
     "artist": "BanYa",
@@ -67,7 +67,7 @@
       ]
     }
   },
-  {
+  "close-your-eye": {
     "id": "close-your-eye",
     "name": "Close Your Eye",
     "artist": "BanYa",
@@ -118,7 +118,7 @@
       ]
     }
   },
-  {
+  "final-audition-2": {
     "id": "final-audition-2",
     "name": "Final Audition 2",
     "artist": "BanYa",
@@ -196,7 +196,7 @@
       ]
     }
   },
-  {
+  "free-style": {
     "id": "free-style",
     "name": "Free Style",
     "artist": "BanYa",
@@ -238,7 +238,7 @@
       ]
     }
   },
-  {
+  "midnight-blue": {
     "id": "midnight-blue",
     "name": "Midnight Blue",
     "artist": "BanYa",
@@ -290,7 +290,7 @@
       ]
     }
   },
-  {
+  "naissance": {
     "id": "naissance",
     "name": "Naissance",
     "artist": "BanYa",
@@ -347,7 +347,7 @@
       ]
     }
   },
-  {
+  "a-nightmare": {
     "id": "a-nightmare",
     "name": "A nightmare",
     "artist": "BanYa",
@@ -418,7 +418,7 @@
       ]
     }
   },
-  {
+  "pumping-up": {
     "id": "pumping-up",
     "name": "Pumping Up",
     "artist": "BanYa",
@@ -455,7 +455,7 @@
       "double": [[{ "level": 15, "versionId": "prime-2::v1.06.0" }]]
     }
   },
-  {
+  "she-likes-pizza": {
     "id": "she-likes-pizza",
     "name": "She Likes Pizza",
     "artist": "BanYa",
@@ -523,7 +523,7 @@
       ]
     }
   },
-  {
+  "turkey-march": {
     "id": "turkey-march",
     "name": "Turkey March",
     "artist": "BanYa",
@@ -591,7 +591,7 @@
       "coop": [[{ "level": 2, "versionId": "prime-je::v1.08.0" }]]
     }
   },
-  {
+  "with-my-lover": {
     "id": "with-my-lover",
     "name": "With My Lover",
     "artist": "BanYa",
@@ -630,4 +630,4 @@
       ]
     }
   }
-]
+}

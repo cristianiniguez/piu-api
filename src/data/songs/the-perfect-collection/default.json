@@ -1,5 +1,5 @@
-[
-  {
+{
+  "all-i-want-for-x-mas": {
     "id": "all-i-want-for-x-mas",
     "name": "All I Want For X-mas",
     "artist": "BanYa",
@@ -37,7 +37,7 @@
       ]
     }
   },
-  {
+  "beethoven-virus": {
     "id": "beethoven-virus",
     "name": "Beethoven Virus",
     "artist": "BanYa",
@@ -94,7 +94,7 @@
       "coop": [[{ "level": 2, "versionId": "xx::v2.01.0" }]]
     }
   },
-  {
+  "n": {
     "id": "n",
     "name": "N",
     "artist": "BanYa",
@@ -115,7 +115,7 @@
       "double": [[{ "level": 16, "versionId": "fiesta-ex::v1.50" }]]
     }
   },
-  {
+  "pump-jump": {
     "id": "pump-jump",
     "name": "Pump Jump",
     "artist": "BanYa",
@@ -138,7 +138,7 @@
       ]
     }
   },
-  {
+  "rolling-christmas": {
     "id": "rolling-christmas",
     "name": "Rolling Christmas",
     "artist": "BanYa",
@@ -174,7 +174,7 @@
       "coop": [[{ "level": 2, "versionId": "prime::v1.11.0" }]]
     }
   },
-  {
+  "slam": {
     "id": "slam",
     "name": "Slam",
     "artist": "Novasonic",
@@ -232,4 +232,4 @@
       ]
     }
   }
-]
+}

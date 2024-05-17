@@ -7,7 +7,7 @@ const ALL_VERSION_IDS = getVersions().map(({ id }) => id)
 test('All steps have valid version ids', () => {
   Object.values(songs).forEach(mapVersionToSongs => {
     Object.values(mapVersionToSongs).forEach(songs => {
-      songs.forEach(song => {
+      Object.values(songs).forEach(song => {
         Object.values(song.steps).forEach(stepsList => {
           stepsList.forEach(stepHistory => {
             stepHistory.forEach(stepChange => {
@@ -23,7 +23,7 @@ test('All steps have valid version ids', () => {
 test('All step histories are ordered correctly', () => {
   Object.values(songs).forEach(mapVersionToSongs => {
     Object.values(mapVersionToSongs).forEach(songs => {
-      songs.forEach(song => {
+      Object.values(songs).forEach(song => {
         Object.values(song.steps).forEach(stepsList => {
           stepsList.forEach(stepHistory => {
             const versionIdxs = stepHistory.map(({ versionId }) => ALL_VERSION_IDS.findIndex(v => v === versionId))

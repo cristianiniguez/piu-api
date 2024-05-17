@@ -1,5 +1,5 @@
-[
-  {
+{
+  "betrayer": {
     "id": "betrayer",
     "name": "Betrayer",
     "artist": "BanYa",
@@ -27,7 +27,7 @@
       ]
     }
   },
-  {
+  "first-love": {
     "id": "first-love",
     "name": "First Love",
     "artist": "BanYa",
@@ -56,7 +56,7 @@
       ]
     }
   },
-  {
+  "mr-larpus": {
     "id": "mr-larpus",
     "name": "Mr. Larpus",
     "artist": "BanYa",
@@ -112,7 +112,7 @@
       ]
     }
   },
-  {
+  "oh-rosa": {
     "id": "oh-rosa",
     "name": "Oh! Rosa",
     "artist": "BanYa",
@@ -142,7 +142,7 @@
       "coop": [[{ "level": 2, "versionId": "prime-2::v1.04.0" }]]
     }
   },
-  {
+  "solitary": {
     "id": "solitary",
     "name": "Solitary",
     "artist": "BanYa",
@@ -191,4 +191,4 @@
       ]
     }
   }
-]
+}
