@@ -54,7 +54,6 @@
         [
           { "level": 7, "versionId": "3rd-obg::default" },
           { "level": 0, "versionId": "the-obg-season-evolution::default" },
-          { "level": 7, "versionId": "zero::default" },
           { "level": 9, "versionId": "zero::default" },
           { "level": 13, "versionId": "nx::default" },
           { "level": 12, "versionId": "nxa::default" },
