@@ -602,16 +602,25 @@
       "single": [
         [
           { "level": 3, "versionId": "3rd-obg::default" },
+          { "level": 0, "versionId": "extra::default" },
+          { "level": 3, "versionId": "the-premiere::default" },
+          { "level": 0, "versionId": "the-rebirth::default" },
+          { "level": 3, "versionId": "the-premiere-2::default" },
+          { "level": 0, "versionId": "the-prex-2::default" },
+          { "level": 3, "versionId": "zero::default" },
+          { "level": 0, "versionId": "nx2::default" },
           { "level": 5, "versionId": "xx::v1.00.1" }
         ],
         [
           { "level": 10, "versionId": "zero::default" },
+          { "level": 0, "versionId": "nx2::default" },
           { "level": 12, "versionId": "xx::v1.00.1" }
         ]
       ],
       "double": [
         [
           { "level": 11, "versionId": "zero::default" },
+          { "level": 0, "versionId": "nx2::default" },
           { "level": 14, "versionId": "xx::v1.00.1" }
         ],
         [
