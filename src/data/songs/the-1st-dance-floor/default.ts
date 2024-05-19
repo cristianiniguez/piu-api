@@ -119,7 +119,7 @@ const songsMap: Record<string, Song> = {
         { 'exceed-2::default': 2, 'nx::default': 0 },
         {
           ...firstToPrex2Pattern(7),
-          'exceed::default': 7,
+          'exceed-2::default': 7,
           'nx::default': 0,
           'fiesta::v1.01': 6,
           'prime::v1.00.0': 0
@@ -186,6 +186,7 @@ const songsMap: Record<string, Song> = {
           'exceed::default': 6,
           'exceed-2::default': 7,
           'zero::default': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 7),
           'prime::v1.01.0': 8,
           'xx::v1.00.1': 0
         },
@@ -193,8 +194,14 @@ const songsMap: Record<string, Song> = {
           'exceed::default': 16,
           'exceed-2::default': 15,
           'zero::default': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 15),
           'prime::v1.01.0': 15,
           'xx::v1.00.1': 0
+        },
+        {
+          "infinity::v1.05": 15,
+          "infinity::v1.09": 16,
+          "prime::v1.00.0": 0
         },
         { 'prime::v1.08.0': 18, 'xx::v1.00.1': 0 }
       ]
