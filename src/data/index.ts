@@ -1,4 +1,4 @@
-import editions from './editions.ts'
+import editions from './editions'
 import { getVersionId, getVersionName } from '../utils'
 
 export const getVersions = () => editions.map(({ id, name, versions }) => versions.map(v => ({

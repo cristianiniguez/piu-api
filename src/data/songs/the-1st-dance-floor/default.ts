@@ -37,6 +37,7 @@ const songsMap: Record<string, Song> = {
     category: 'k-pop',
     steps: {
       single: [
+        onlyInfinityPattern('infinity::v1.09', 1),
         {
           ...firstToPremiere2Pattern(3),
           'nxa::default': 4,
