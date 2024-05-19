@@ -1,3 +1,30 @@
+const thirdToPremiere2Pattern: StepHistoryPattern = level => ({
+  '3rd-obg::default': level,
+  'the-obg-season-evolution::default': 0,
+  'the-collection::default': level,
+  'the-rebirth::default': 0,
+  'the-premiere-2::default': level
+})
+
+const secondToPrex3Pattern: StepHistoryPattern = level => ({
+  '2nd-ultimate-remix::default': level,
+  '3rd-obg::default': 0,
+  'the-collection::default': level,
+  'extra::default': 0,
+  'the-premiere::default': level,
+  'the-rebirth::default': 0,
+  'the-premiere-2::default': level,
+  'the-prex-2::default': 0,
+  'the-prex-3::default': level
+})
+
+const secondToPremierePattern: StepHistoryPattern = level => ({
+  '2nd-ultimate-remix::default': level,
+  '3rd-obg::default': 0,
+  'the-collection::default': level,
+  'the-premiere::default': 0
+})
+
 const songsMap: Record<string, Song> = {
   'extravaganza': {
     id: 'extravaganza',
@@ -11,11 +38,7 @@ const songsMap: Record<string, Song> = {
         { 'fiesta-ex::v1.50': 4 },
         { 'fiesta::v1.10': 7, 'xx::v1.00.1': 8 },
         {
-          '3rd-obg::default': 8,
-          'the-obg-season-evolution::default': 0,
-          'the-collection::default': 8,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 8,
+          ...thirdToPremiere2Pattern(8),
           'exceed::default': 6,
           'exceed-2::default': 7,
           'zero::default': 8,
@@ -25,11 +48,7 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 11
         },
         {
-          '3rd-obg::default': 5,
-          'the-obg-season-evolution::default': 0,
-          'the-collection::default': 5,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 5,
+          ...thirdToPremiere2Pattern(5),
           'exceed::default': 10,
           'exceed-2::default': 11,
           'nx::default': 12,
@@ -73,29 +92,13 @@ const songsMap: Record<string, Song> = {
       'single': [
         { 'fiesta-ex::v1.50': 2 },
         {
-          '2nd-ultimate-remix::default': 3,
-          '3rd-obg::default': 0,
-          'the-collection::default': 3,
-          'extra::default': 0,
-          'the-premiere::default': 3,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 3,
-          'the-prex-2::default': 0,
-          'the-prex-3::default': 3,
+          ...secondToPrex3Pattern(3),
           'exceed::default': 2,
           'nx::default': 3,
           'fiesta::v1.01': 0
         },
         {
-          '2nd-ultimate-remix::default': 6,
-          '3rd-obg::default': 0,
-          'the-collection::default': 6,
-          'extra::default': 0,
-          'the-premiere::default': 6,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 6,
-          'the-prex-2::default': 0,
-          'the-prex-3::default': 6,
+          ...secondToPrex3Pattern(6),
           'exceed::default': 5,
           'exceed-2::default': 7,
           'phoenix::v1.00.0': 0
@@ -120,15 +123,7 @@ const songsMap: Record<string, Song> = {
       ],
       'double': [
         {
-          '2nd-ultimate-remix::default': 5,
-          '3rd-obg::default': 0,
-          'the-collection::default': 5,
-          'extra::default': 0,
-          'the-premiere::default': 5,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 5,
-          'the-prex-2::default': 0,
-          'the-prex-3::default': 5,
+          ...secondToPrex3Pattern(5),
           'exceed::default': 3,
           'fiesta::v1.01': 0
         },
@@ -160,10 +155,7 @@ const songsMap: Record<string, Song> = {
     steps: {
       single: [
         {
-          '2nd-ultimate-remix::default': 6,
-          '3rd-obg::default': 0,
-          'the-collection::default': 6,
-          'the-premiere::default': 0,
+          ...secondToPremierePattern(6),
           'fiesta-ex::v1.00': 7,
           'phoenix::v1.00.0': 0
         },
@@ -171,11 +163,7 @@ const songsMap: Record<string, Song> = {
       ],
       double: [
         {
-          '2nd-ultimate-remix::default': 6,
-          '3rd-obg::default': 0,
-          'the-collection::default': 6,
-          'the-premiere::default': 0,
-          'fiesta-ex::v1.00': 8,
+          ...secondToPremierePattern(6),
           'phoenix::v1.00.0': 0
         },
         { 'xx::v2.07.0': 22 }
