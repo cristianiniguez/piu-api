@@ -6,7 +6,7 @@ const thirdToPremiere2Pattern: StepHistoryPattern = level => ({
   'the-premiere-2::default': level
 })
 
-const secondToPrex3Pattern: StepHistoryPattern = level => ({
+const secondToPrex2Prex3Pattern: StepHistoryPattern = level => ({
   '2nd-ultimate-remix::default': level,
   '3rd-obg::default': 0,
   'the-collection::default': level,
@@ -18,6 +18,16 @@ const secondToPrex3Pattern: StepHistoryPattern = level => ({
   'the-prex-3::default': level
 })
 
+const secondToPremiere3Prex3Pattern: StepHistoryPattern = level => ({
+  '2nd-ultimate-remix::default': level,
+  '3rd-obg::default': 0,
+  'the-collection::default': level,
+  'the-rebirth::default': 0,
+  'the-premiere-2::default': level,
+  'the-premiere-3::default': 0,
+  'the-prex-3::default': level
+})
+
 const secondToPremierePattern: StepHistoryPattern = level => ({
   '2nd-ultimate-remix::default': level,
   '3rd-obg::default': 0,
@@ -26,6 +36,37 @@ const secondToPremierePattern: StepHistoryPattern = level => ({
 })
 
 const songsMap: Record<string, Song> = {
+  'com-back': {
+    id: 'com-back',
+    name: "Com'Back",
+    artist: 'Sechs Kies',
+    bpm: 158,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: {
+      single: [
+        { 'fiesta::v1.10': 4, 'xx::v1.00.1': 0 },
+        {
+          ...secondToPremiere3Prex3Pattern(6),
+          'xx::v1.00.1': 0
+        },
+        { 'fiesta-2::v1.00': 8, 'xx::v1.00.1': 0 },
+        {
+          'the-prex-3::default': 3,
+          'exceed::default': 12,
+          'exceed-2::default': 8,
+          'zero::default': 0
+        },
+        { 'zero::default': 14, 'nx::default': 15, 'xx::v1.00.1': 0 }
+      ],
+      double: [
+        { 'fiesta::v1.10': 7, 'xx::v1.00.1': 0 },
+        { 'fiesta::v1.01': 8, 'fiesta::v1.20': 0 },
+        { 'zero::default': 16, 'xx::v1.00.1': 0 }
+      ],
+      coop: [{ 'prime-2::v2.05.0': 2, 'xx::v1.00.1': 0 }]
+    }
+  },
   'extravaganza': {
     id: 'extravaganza',
     name: 'Extravaganza',
@@ -92,13 +133,13 @@ const songsMap: Record<string, Song> = {
       'single': [
         { 'fiesta-ex::v1.50': 2 },
         {
-          ...secondToPrex3Pattern(3),
+          ...secondToPrex2Prex3Pattern(3),
           'exceed::default': 2,
           'nx::default': 3,
           'fiesta::v1.01': 0
         },
         {
-          ...secondToPrex3Pattern(6),
+          ...secondToPrex2Prex3Pattern(6),
           'exceed::default': 5,
           'exceed-2::default': 7,
           'phoenix::v1.00.0': 0
@@ -123,7 +164,7 @@ const songsMap: Record<string, Song> = {
       ],
       'double': [
         {
-          ...secondToPrex3Pattern(5),
+          ...secondToPrex2Prex3Pattern(5),
           'exceed::default': 3,
           'fiesta::v1.01': 0
         },
