@@ -1,3 +1,5 @@
+import { onlyInfinityPattern } from 'data/patterns'
+
 const thirdToPremiere2Pattern: StepHistoryPattern = level => ({
   '3rd-obg::default': level,
   'the-obg-season-evolution::default': 0,
@@ -131,6 +133,7 @@ const songsMap: Record<string, Song> = {
     category: 'original',
     steps: {
       'single': [
+        onlyInfinityPattern('infinity::v1.09', 1),
         { 'fiesta-ex::v1.50': 2 },
         {
           ...secondToPrex2Prex3Pattern(3),
@@ -138,13 +141,13 @@ const songsMap: Record<string, Song> = {
           'nx::default': 3,
           'fiesta::v1.01': 0
         },
+        { 'fiesta-ex::v1.50': 6, 'phoenix::v1.00.0': 7 },
         {
           ...secondToPrex2Prex3Pattern(6),
           'exceed::default': 5,
           'exceed-2::default': 7,
           'phoenix::v1.00.0': 0
         },
-        { 'fiesta-ex::v1.50': 6, 'phoenix::v1.00.0': 7 },
         { 'fiesta-ex::v1.50': 9, 'phoenix::v1.00.0': 10 },
         {
           'the-prex-3::default': 10,
@@ -183,7 +186,7 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 19
         }
       ],
-      'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }]
+      'double-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }]
     }
   },
   'repeatorment-remix': {
