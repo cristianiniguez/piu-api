@@ -20,6 +20,15 @@ const secondToPrex2Prex3Pattern: StepHistoryPattern = level => ({
   'the-prex-3::default': level
 })
 
+const secondToPremiere3Pattern: StepHistoryPattern = level => ({
+  '2nd-ultimate-remix::default': level,
+  '3rd-obg::default': 0,
+  'the-collection::default': level,
+  'the-rebirth::default': 0,
+  'the-premiere-2::default': level,
+  'the-premiere-3::default': 0
+})
+
 const secondToPremiere3Prex3Pattern: StepHistoryPattern = level => ({
   '2nd-ultimate-remix::default': level,
   '3rd-obg::default': 0,
@@ -35,6 +44,13 @@ const secondToPremierePattern: StepHistoryPattern = level => ({
   '3rd-obg::default': 0,
   'the-collection::default': level,
   'the-premiere::default': 0
+})
+
+const zeroToXXPattern: StepHistoryPattern = level => ({
+  'zero::default': level,
+  'nx2::default': 0,
+  'fiesta::v1.01': level,
+  'xx::v1.00.1': 0
 })
 
 const songsMap: Record<string, Song> = {
@@ -187,6 +203,39 @@ const songsMap: Record<string, Song> = {
         }
       ],
       'double-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }]
+    }
+  },
+  'mobius-strip': {
+    id: 'mobius-strip',
+    name: 'Mobius Strip',
+    artist: 'Sechs Kies',
+    bpm: 106,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: {
+      single: [
+        { 'fiesta-ex::v1.50': 2, 'xx::v1.00.1': 0 },
+        { 'fiesta::v1.01': 4, 'xx::v1.00.1': 0 },
+        {
+          ...secondToPremiere3Pattern(6),
+          'exceed-2::default': 5,
+          'nx::default': 6,
+          'nx2::default': 0,
+          'fiesta::v1.01': 6,
+          'xx::v1.00.1': 0
+        },
+        zeroToXXPattern(12)
+      ],
+      double: [
+        {
+          ...secondToPremiere3Pattern(7),
+          'exceed-2::default': 6,
+          'nx2::default': 0,
+          'fiesta::v1.01': 7,
+          'xx::v1.00.1': 0
+        },
+        zeroToXXPattern(14)
+      ]
     }
   },
   'repeatorment-remix': {
