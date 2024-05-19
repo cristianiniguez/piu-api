@@ -179,5 +179,76 @@
         ]
       ]
     }
+  },
+  "hypnosis": {
+    "id": "hypnosis",
+    "name": "Hypnosis",
+    "artist": "BanYa",
+    "bpm": 180.2,
+    "type": "arcade",
+    "category": "original",
+    "steps": {
+      "single": [
+        [
+          { "level": 1, "versionId": "infinity::v1.09" },
+          { "level": 0, "versionId": "prime::v1.00.0" }
+        ],
+        [
+          { "level": 4, "versionId": "infinity::v1.09" },
+          { "level": 0, "versionId": "prime::v1.00.0" }
+        ],
+        [
+          { "level": 7, "versionId": "the-1st-dance-floor::default" },
+          { "level": 0, "versionId": "3rd-obg::default" },
+          { "level": 7, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "extra::default" },
+          { "level": 7, "versionId": "the-prex-3::default" },
+          { "level": 6, "versionId": "exceed::default" },
+          { "level": 0, "versionId": "zero::default" },
+          { "level": 7, "versionId": "prime::v1.01.0" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 9, "versionId": "the-prex-3::default" },
+          { "level": 12, "versionId": "exceed::default" },
+          { "level": 0, "versionId": "zero::default" },
+          { "level": 15, "versionId": "infinity::v1.09" },
+          { "level": 0, "versionId": "prime::v1.00.0" },
+          { "level": 15, "versionId": "prime::v1.01.0" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 18, "versionId": "infinity::v1.09" },
+          { "level": 0, "versionId": "prime::v1.00.0" },
+          { "level": 18, "versionId": "prime::v1.08.0" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ]
+      ],
+      "double": [
+        [
+          { "level": 7, "versionId": "the-1st-dance-floor::default" },
+          { "level": 0, "versionId": "3rd-obg::default" },
+          { "level": 7, "versionId": "the-collection::default" },
+          { "level": 0, "versionId": "extra::default" },
+          { "level": 7, "versionId": "the-prex-3::default" },
+          { "level": 6, "versionId": "exceed::default" },
+          { "level": 7, "versionId": "exceed-2::default" },
+          { "level": 0, "versionId": "zero::default" },
+          { "level": 8, "versionId": "prime::v1.01.0" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 16, "versionId": "exceed::default" },
+          { "level": 15, "versionId": "exceed-2::default" },
+          { "level": 0, "versionId": "zero::default" },
+          { "level": 15, "versionId": "prime::v1.01.0" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ],
+        [
+          { "level": 18, "versionId": "prime::v1.08.0" },
+          { "level": 0, "versionId": "xx::v1.00.1" }
+        ]
+      ]
+    }
   }
 }
