@@ -1,8 +1,7 @@
-import defaultVersion from './default.json'
-import { validateMapVersionToSongsList } from 'utils/validation'
+import defaultVersion from './default'
 
-const mapVersionToSongs = validateMapVersionToSongsList({
+const mapVersionToSongs = {
   default: defaultVersion
-})
+}
 
 export default mapVersionToSongs
