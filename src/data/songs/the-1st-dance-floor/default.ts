@@ -1,3 +1,5 @@
+import { onlyInfinityPattern } from 'data/patterns'
+
 const firstToPremiere2Pattern: StepHistoryPattern = level => ({
   'the-1st-dance-floor::default': level,
   '3rd-obg::default': 0,
@@ -154,8 +156,8 @@ const songsMap: Record<string, Song> = {
     category: 'original',
     steps: {
       single: [
-        { 'infinity::v1.09': 1, 'prime::v1.00.0': 0 },
-        { 'infinity::v1.09': 4, 'prime::v1.00.0': 0 },
+        onlyInfinityPattern('infinity::v1.09', 1),
+        onlyInfinityPattern('infinity::v1.09', 4),
         {
           ...firstToPrex3Pattern(7),
           'exceed::default': 6,
@@ -167,14 +169,12 @@ const songsMap: Record<string, Song> = {
           'the-prex-3::default': 9,
           'exceed::default': 12,
           'zero::default': 0,
-          'infinity::v1.09': 15,
-          'prime::v1.00.0': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 15),
           'prime::v1.01.0': 15,
           'xx::v1.00.1': 0
         },
         {
-          'infinity::v1.09': 18,
-          'prime::v1.00.0': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 18),
           'prime::v1.08.0': 18,
           'xx::v1.00.1': 0
         }
@@ -196,6 +196,58 @@ const songsMap: Record<string, Song> = {
           'xx::v1.00.1': 0
         },
         { 'prime::v1.08.0': 18, 'xx::v1.00.1': 0 }
+      ]
+    }
+  },
+  'ignition-starts': {
+    id: 'ignition-starts',
+    name: 'Ignition Starts',
+    artist: 'BanYa',
+    bpm: 146.05,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        onlyInfinityPattern('infinity::v1.10', 2),
+        onlyInfinityPattern('infinity::v1.10', 3),
+        {
+          ...firstToPrex3Pattern(7),
+          'exceed::default': 6,
+          'zero::default': 0,
+          ...onlyInfinityPattern('infinity::v1.10', 6),
+          'prime::v1.01.0': 8,
+          'xx::v1.00.1': 0
+        },
+        {
+          'the-prex-3::default': 8,
+          'exceed::default': 12,
+          'zero::default': 0,
+          ...onlyInfinityPattern('infinity::v1.10', 12),
+          'prime::v1.01.0': 15,
+          'xx::v1.00.1': 0
+        },
+        onlyInfinityPattern('infinity::v1.10', 17),
+        {
+          'prime::v1.19.0': 18,
+          'xx::v1.00.1': 0
+        }
+      ],
+      double: [
+        {
+          ...firstToPrex3Pattern(7),
+          'exceed::default': 6,
+          'exceed-2::default': 7,
+          'zero::default': 0,
+          ...onlyInfinityPattern('infinity::v1.10', 7),
+          'prime::v1.01.0': 10,
+          'xx::v1.00.1': 0
+        },
+        onlyInfinityPattern('infinity::v1.10', 16),
+        {
+          ...onlyInfinityPattern('infinity::v1.10', 17),
+          'prime::v1.19.0': 17,
+          'xx::v1.00.1': 0
+        }
       ]
     }
   }
