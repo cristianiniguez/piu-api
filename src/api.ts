@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { getVersions } from './data'
-import editions from './data/editions.json'
+import editions from './data/editions.ts'
 
 const api = Router()
 

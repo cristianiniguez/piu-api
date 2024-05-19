@@ -1,8 +1,8 @@
 import { test, expect } from 'bun:test'
 import songs from './songs'
-import { getVersions } from '.'
+import { getVersions } from './editions'
 
-const ALL_VERSION_IDS = getVersions().map(({ id }) => id)
+const ALL_VERSION_IDS = getVersions()
 
 test('All steps have valid version ids', () => {
   Object.values(songs).forEach(mapVersionToSongs => {
