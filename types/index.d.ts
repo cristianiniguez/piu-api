@@ -6,6 +6,8 @@ type StepType = 'single' | 'double' | 'single-p' | 'double-p' | 'coop'
 
 type StepHistory = Partial<Record<Version, number>>
 
+type StepHistoryPattern = (level: number) => Partial<Record<Version, number>>
+
 type MapStepTypeToStepHistory = Partial<Record<StepType, StepHistory[]>>
 
 type Song = {
