@@ -257,6 +257,7 @@ const songsMap: Record<string, Song> = {
       double: [
         {
           ...secondToPremierePattern(6),
+          'fiesta-ex::v1.00': 8,
           'phoenix::v1.00.0': 0
         },
         { 'xx::v2.07.0': 22 }
