@@ -32,11 +32,8 @@ const songsMap: Record<string, Song> = {
     category: 'original',
     steps: {
       single: [
-        {
-          ...thirdToPrex2(6),
-          'xx::v1.00.1': 6
-        },
-        { 'xx::v1.00.1': 13 }
+        { ...thirdToPrex2(6), 'xx::v1.00.1': 6 },
+        { ...thirdToPrex2(6), 'xx::v1.00.1': 13 }
       ]
     }
   },
@@ -88,7 +85,13 @@ const songsMap: Record<string, Song> = {
     steps: {
       'single': [
         thirdToPrex2(2),
-        { '3rd-obg::default': 3, 'fiesta::v1.01': 4, 'phoenix::v1.00.0': 6 }
+        {
+          ...thirdToPrex2(3),
+          'fiesta::v1.01': 4,
+          "prime::v1.00.0": 0,
+          "prime-2::v1.00.0": 4,
+          'phoenix::v1.00.0': 6
+        }
       ],
       'double': [thirdToPrex2(4)],
       'single-p': [fiestaToPhoenixPattern(2)],
