@@ -271,7 +271,8 @@ const songsMap: Record<string, Song> = {
         { 'fiesta-ex::v1.50': 4, 'phoenix::v1.00.0': 5 },
         {
           ...thirdToPrex3(6),
-          'exceed-2::default': 7
+          'exceed-2::default': 7,
+          'phoenix::v1.00.0': 0
         },
         { 'fiesta-ex::v1.50': 8 },
         {
@@ -359,12 +360,12 @@ const songsMap: Record<string, Song> = {
     category: 'original',
     steps: {
       single: [
+        { 'fiesta::v1.01': 4, 'prime::v1.00.0': 0, 'phoenix::v1.00.0': 5 },
         {
           ...thirdToPrex2(4),
           'the-prex-3::default': 4,
           'nx::default': 0
         },
-        { 'fiesta::v1.01': 4, 'prime::v1.00.0': 0, 'phoenix::v1.00.0': 5 },
         { 'xx::v2.07.0': 9, 'phoenix::v1.00.0': 10 },
         { 'fiesta-ex::v1.30': 12, 'prime::v1.00.0': 0, 'phoenix::v1.00.0': 13 }
       ],
@@ -420,6 +421,7 @@ const songsMap: Record<string, Song> = {
           'prime-2::v1.00.0': 16,
           'phoenix::v1.00.0': 18
         },
+        { 'nx::default': 19, 'nx2::default': 0 },
         { 'prime-2::v1.05.0': 23 }
       ]
     }
@@ -433,6 +435,7 @@ const songsMap: Record<string, Song> = {
     category: 'original',
     steps: {
       single: [
+        onlyInfinityPattern('infinity::v1.09', 1),
         { 'fiesta-ex::v1.50': 3 },
         {
           ...thirdToPrex3(7),
@@ -451,7 +454,8 @@ const songsMap: Record<string, Song> = {
           'xx::v1.00.1': 16,
           'phoenix::v1.00.0': 17
         },
-        { 'prime-je::v1.08.0': 18, 'phoenix::v1.00.0': 19 }
+        onlyInfinityPattern('infinity::v1.09', 18),
+        { 'prime::v1.12.0': 18, 'phoenix::v1.00.0': 19 }
       ],
       double: [
         {
@@ -460,7 +464,8 @@ const songsMap: Record<string, Song> = {
           'nx::default': 9,
           'phoenix::v1.00.0': 13
         },
-        { 'prime-je::v1.08.0': 17, 'phoenix::v1.00.0': 18 },
+        onlyInfinityPattern('infinity::v1.10', 14),
+        { 'prime::v1.12.0': 17, 'phoenix::v1.00.0': 18 },
         {
           'exceed::default': 16,
           'exceed-2::default': 18,
@@ -471,7 +476,7 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 21
         }
       ],
-      coop: [{ 'prime-je::v1.08.0': 2 }]
+      coop: [{ 'prime::v1.12.0': 2 }]
     }
   },
   'with-my-lover': {
