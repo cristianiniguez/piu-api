@@ -225,16 +225,18 @@ const songsMap: Record<string, Song> = {
         { 'fiesta-ex::v1.50': 13, 'prime::v1.00.0': 0, 'prime-2::v1.00.0': 13 }
       ],
       'double': [
+        {
+          '3rd-obg::default': 3,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 3,
+          'the-premiere-3::default': 0,
+          'zero::default': 3,
+          'nx::default': 0
+        },
         { 'fiesta::v1.01': 15, 'prime::v1.00.0': 0, 'prime-2::v1.00.0': 15 }
       ],
-      'single-p': [
-        {
-          'fiesta::v1.01': 1,
-          'prime::v1.00.0': 0,
-          'prime-2::v1.00.0': 1,
-          'phoenix::v1.00.0': 0
-        }
-      ]
+      'single-p': [fiestaToPhoenixPattern(1)],
+      'double-p': [fiestaToPhoenixPattern(3)]
     }
   },
   'midnight-blue': {
