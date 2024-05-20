@@ -1,6 +1,12 @@
 import { onlyInfinityPattern } from 'data/patterns'
 
-const thirdToPrex2: StepHistoryPattern = level => ({
+const thirdToPremiere2Pattern: StepHistoryPattern = level => ({
+  '3rd-obg::default': level,
+  'the-rebirth::default': 0,
+  'the-premiere-2::default': level
+})
+
+const thirdToPrex2Pattern: StepHistoryPattern = level => ({
   '3rd-obg::default': level,
   'extra::default': 0,
   'the-premiere::default': level,
@@ -9,7 +15,14 @@ const thirdToPrex2: StepHistoryPattern = level => ({
   'the-prex-2::default': 0
 })
 
-const thirdToPrex3: StepHistoryPattern = level => ({
+const thirdToPremiere3Pattern: StepHistoryPattern = level => ({
+  '3rd-obg::default': level,
+  'the-rebirth::default': 0,
+  'the-premiere-2::default': level,
+  'the-premiere-3::default': 0
+})
+
+const thirdToPrex3Pattern: StepHistoryPattern = level => ({
   '3rd-obg::default': level,
   'the-rebirth::default': 0,
   'the-premiere-2::default': level,
@@ -34,8 +47,8 @@ const songsMap: Record<string, Song> = {
     category: 'original',
     steps: {
       single: [
-        { ...thirdToPrex2(6), 'xx::v1.00.1': 6 },
-        { ...thirdToPrex2(6), 'xx::v1.00.1': 13 }
+        { ...thirdToPrex2Pattern(6), 'xx::v1.00.1': 6 },
+        { ...thirdToPrex2Pattern(6), 'xx::v1.00.1': 13 }
       ]
     }
   },
@@ -86,16 +99,16 @@ const songsMap: Record<string, Song> = {
     category: 'original',
     steps: {
       'single': [
-        thirdToPrex2(2),
+        thirdToPrex2Pattern(2),
         {
-          ...thirdToPrex2(3),
+          ...thirdToPrex2Pattern(3),
           'fiesta::v1.01': 4,
           'prime::v1.00.0': 0,
           'prime-2::v1.00.0': 4,
           'phoenix::v1.00.0': 6
         }
       ],
-      'double': [thirdToPrex2(4)],
+      'double': [thirdToPrex2Pattern(4)],
       'single-p': [fiestaToPhoenixPattern(2)],
       'double-p': [fiestaToPhoenixPattern(3)]
     }
@@ -110,7 +123,7 @@ const songsMap: Record<string, Song> = {
     steps: {
       'single': [
         {
-          ...thirdToPrex3(1),
+          ...thirdToPrex3Pattern(1),
           'nx::default': 3,
           'nxa::default': 2,
           'fiesta::v1.01': 0
@@ -138,7 +151,7 @@ const songsMap: Record<string, Song> = {
       ],
       'double': [
         {
-          ...thirdToPrex3(4),
+          ...thirdToPrex3Pattern(4),
           'exceed-2::default': 5,
           'nx::default': 6,
           'fiesta::v1.01': 5,
@@ -161,7 +174,7 @@ const songsMap: Record<string, Song> = {
         { 'fiesta-ex::v1.50': 4 },
         { 'fiesta-ex::v1.50': 7 },
         {
-          ...thirdToPrex2(6),
+          ...thirdToPrex2Pattern(6),
           'the-premiere-3::default': 6,
           'exceed-2::default': 7,
           'nx::default': 8,
@@ -169,7 +182,7 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 10
         },
         {
-          ...thirdToPrex2(6),
+          ...thirdToPrex2Pattern(6),
           'the-premiere-3::default': 6,
           'exceed::default': 10,
           'exceed-2::default': 9,
@@ -185,7 +198,7 @@ const songsMap: Record<string, Song> = {
       ],
       'double': [
         {
-          ...thirdToPrex2(6),
+          ...thirdToPrex2Pattern(6),
           'the-premiere-3::default': 6,
           'exceed-2::default': 7,
           'nx::default': 8,
@@ -213,10 +226,7 @@ const songsMap: Record<string, Song> = {
     steps: {
       'single': [
         {
-          '3rd-obg::default': 2,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 2,
-          'the-premiere-3::default': 0,
+          ...thirdToPremiere3Pattern(2),
           'zero::default': 1,
           'nx::default': 0
         },
@@ -226,10 +236,7 @@ const songsMap: Record<string, Song> = {
       ],
       'double': [
         {
-          '3rd-obg::default': 3,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 3,
-          'the-premiere-3::default': 0,
+          ...thirdToPremiere3Pattern(3),
           'zero::default': 3,
           'nx::default': 0
         },
@@ -248,11 +255,11 @@ const songsMap: Record<string, Song> = {
     category: 'original',
     steps: {
       'single': [
-        thirdToPrex2(4),
+        thirdToPrex2Pattern(4),
         { 'fiesta::v1.10': 12, 'xx::v1.00.1': 11, 'phoenix::v1.00.0': 12 }
       ],
       'double': [
-        thirdToPrex2(4),
+        thirdToPrex2Pattern(4),
         { 'fiesta::v1.10': 13, 'xx::v1.00.1': 12, 'phoenix::v1.00.0': 13 }
       ],
       'single-p': [{ 'fiesta::v1.01': 4, 'phoenix::v1.00.0': 0 }],
@@ -270,13 +277,13 @@ const songsMap: Record<string, Song> = {
       single: [
         { 'fiesta-ex::v1.50': 4, 'phoenix::v1.00.0': 5 },
         {
-          ...thirdToPrex3(6),
+          ...thirdToPrex3Pattern(6),
           'exceed-2::default': 7,
           'phoenix::v1.00.0': 0
         },
         { 'fiesta-ex::v1.50': 8 },
         {
-          ...thirdToPrex3(6),
+          ...thirdToPrex3Pattern(6),
           'exceed::default': 9,
           'nx::default': 11,
           'nxa::default': 10,
@@ -287,7 +294,7 @@ const songsMap: Record<string, Song> = {
       ],
       double: [
         {
-          ...thirdToPrex3(6),
+          ...thirdToPrex3Pattern(6),
           'exceed-2::default': 7,
           'phoenix::v1.00.0': 12
         },
@@ -305,7 +312,7 @@ const songsMap: Record<string, Song> = {
     steps: {
       'single': [
         {
-          ...thirdToPrex2(1),
+          ...thirdToPrex2Pattern(1),
           'the-prex-3::default': 1,
           'zero::default': 0,
           'fiesta::v1.01': 1,
@@ -315,7 +322,7 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 3
         },
         {
-          ...thirdToPrex2(4),
+          ...thirdToPrex2Pattern(4),
           'the-prex-3::default': 4,
           'exceed::default': 5,
           'exceed-2::default': 4,
@@ -328,7 +335,7 @@ const songsMap: Record<string, Song> = {
       ],
       'double': [
         {
-          ...thirdToPrex2(3),
+          ...thirdToPrex2Pattern(3),
           'the-prex-3::default': 3,
           'exceed::default': 4,
           'exceed-2::default': 5,
@@ -362,7 +369,7 @@ const songsMap: Record<string, Song> = {
       single: [
         { 'fiesta::v1.01': 4, 'prime::v1.00.0': 0, 'phoenix::v1.00.0': 5 },
         {
-          ...thirdToPrex2(4),
+          ...thirdToPrex2Pattern(4),
           'the-prex-3::default': 4,
           'nx::default': 0
         },
@@ -382,7 +389,7 @@ const songsMap: Record<string, Song> = {
     steps: {
       single: [
         {
-          ...thirdToPrex2(8),
+          ...thirdToPrex2Pattern(8),
           'the-prex-3::default': 8,
           'exceed::default': 7,
           'nxa::default': 8,
@@ -391,7 +398,7 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 9
         },
         {
-          ...thirdToPrex2(8),
+          ...thirdToPrex2Pattern(8),
           'the-prex-3::default': 8,
           'exceed::default': 10,
           'exceed-2::default': 9,
@@ -405,7 +412,7 @@ const songsMap: Record<string, Song> = {
       ],
       double: [
         {
-          ...thirdToPrex2(8),
+          ...thirdToPrex2Pattern(8),
           'the-prex-3::default': 8,
           'exceed::default': 9,
           'exceed-2::default': 8,
@@ -438,12 +445,12 @@ const songsMap: Record<string, Song> = {
         onlyInfinityPattern('infinity::v1.09', 1),
         { 'fiesta-ex::v1.50': 3 },
         {
-          ...thirdToPrex3(7),
+          ...thirdToPrex3Pattern(7),
           'exceed::default': 6,
           'exceed-2::default': 7
         },
         {
-          ...thirdToPrex3(7),
+          ...thirdToPrex3Pattern(7),
           'exceed::default': 11,
           'exceed-2::default': 12
         },
@@ -459,7 +466,7 @@ const songsMap: Record<string, Song> = {
       ],
       double: [
         {
-          ...thirdToPrex3(7),
+          ...thirdToPrex3Pattern(7),
           'exceed::default': 8,
           'nx::default': 9,
           'phoenix::v1.00.0': 13
@@ -479,6 +486,44 @@ const songsMap: Record<string, Song> = {
       coop: [{ 'prime::v1.12.0': 2 }]
     }
   },
+  'we-are': {
+    id: 'we-are',
+    name: 'We Are',
+    artist: 'DEUX',
+    bpm: 115.9,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: {
+      'single': [
+        { 'fiesta-ex::v1.50': 2, 'prime-2::v1.00.0': 0 },
+        { 'fiesta::v1.10': 4, 'prime-2::v1.00.0': 0 },
+        { ...thirdToPremiere2Pattern(5), 'prime-2::v1.00.0': 0 },
+        {
+          'the-prex-3::default': 7,
+          'exceed::default': 9,
+          'nx::default': 13,
+          'nxa::default': 12,
+          'prime-2::v1.00.0': 0
+        }
+      ],
+      'double': [
+        {
+          ...thirdToPremiere2Pattern(5),
+          'exceed::default': 4,
+          'exceed-2::default': 5,
+          'nx::default': 6,
+          'prime-2::v1.00.0': 0
+        },
+        {
+          'zero::default': 12,
+          'nx::default': 14,
+          'nxa::default': 13,
+          'prime-2::v1.00.0': 0
+        }
+      ],
+      'double-p': [{ 'fiesta-ex::v1.30': 4, 'prime-2::v1.00.0': 0 }]
+    }
+  },
   'with-my-lover': {
     id: 'with-my-lover',
     name: 'With My Lover',
@@ -489,7 +534,7 @@ const songsMap: Record<string, Song> = {
     steps: {
       single: [
         {
-          ...thirdToPrex2(3),
+          ...thirdToPrex2Pattern(3),
           'zero::default': 3,
           'nx2::default': 0,
           'xx::v1.00.1': 5
