@@ -1,3 +1,5 @@
+import { onlyInfinityPattern } from 'data/patterns'
+
 const thirdToPrex2: StepHistoryPattern = level => ({
   '3rd-obg::default': level,
   'extra::default': 0,
@@ -88,14 +90,63 @@ const songsMap: Record<string, Song> = {
         {
           ...thirdToPrex2(3),
           'fiesta::v1.01': 4,
-          "prime::v1.00.0": 0,
-          "prime-2::v1.00.0": 4,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 4,
           'phoenix::v1.00.0': 6
         }
       ],
       'double': [thirdToPrex2(4)],
       'single-p': [fiestaToPhoenixPattern(2)],
       'double-p': [fiestaToPhoenixPattern(3)]
+    }
+  },
+  'dont-bother-me': {
+    id: 'dont-bother-me',
+    name: "Don't Bother Me",
+    artist: 'Tashannie',
+    bpm: 110,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: {
+      'single': [
+        {
+          ...thirdToPrex3(1),
+          'nx::default': 3,
+          'nxa::default': 2,
+          'fiesta::v1.01': 0
+        },
+        { 'fiesta::v1.01': 4, 'xx::v1.00.1': 0 },
+        { 'fiesta::v1.01': 5, 'xx::v1.00.1': 0 },
+        {
+          '3rd-obg::default': 5,
+          'exceed::default': 6,
+          'exceed-2::default': 7,
+          'nx::default': 6,
+          'fiesta::v1.01': 0,
+          'fiesta-ex::v1.00': 6,
+          'prime::v1.00.0': 0
+        },
+        {
+          'the-prex-3::default': 5,
+          'exceed::default': 9,
+          'exceed-2::default': 10,
+          'nx::default': 12,
+          'nxa::default': 10,
+          'xx::v1.00.1': 0
+        },
+        onlyInfinityPattern('infinity::v1.10', 13)
+      ],
+      'double': [
+        {
+          ...thirdToPrex3(4),
+          'exceed-2::default': 5,
+          'nx::default': 6,
+          'fiesta::v1.01': 5,
+          'xx::v1.00.1': 0
+        },
+        { 'fiesta-ex::v1.20': 13, 'xx::v1.00.1': 0 }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 2, 'xx::v1.00.1': 0 }]
     }
   },
   'final-audition-2': {
