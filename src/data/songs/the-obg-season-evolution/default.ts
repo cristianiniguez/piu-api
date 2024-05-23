@@ -1,3 +1,5 @@
+import { onlyInfinityPattern } from 'data/patterns'
+
 const songsMap: Record<string, Song> = {
   'betrayer': {
     id: 'betrayer',
@@ -149,9 +151,16 @@ const songsMap: Record<string, Song> = {
     steps: {
       single: [
         { 'fiesta-ex::v1.50': 3 },
-        { 'the-obg-season-evolution::default': 4, 'nxa::default': 5 },
+        {
+          'the-obg-season-evolution::default': 4,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 4,
+          'nxa::default': 5
+        },
         {
           'the-obg-season-evolution::default': 10,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 10,
           'exceed::default': 7,
           'exceed-2::default': 9,
           'nx::default': 10,
@@ -161,17 +170,21 @@ const songsMap: Record<string, Song> = {
         },
         {
           'the-obg-season-evolution::default': 10,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 10,
           'exceed::default': 12,
           'exceed-2::default': 13,
           'nx::default': 14,
           'phoenix::v1.00.0': 15
         },
         { 'fiesta::v1.01': 20 },
-        { 'nx::default': 21, 'prime-je::v1.01.0': 22 }
+        { 'nx::default': 21, 'nxa::default': 22 }
       ],
       double: [
         {
           'the-obg-season-evolution::default': 10,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 10,
           'nx::default': 14,
           'xx::v1.00.1': 16
         },
@@ -182,7 +195,13 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 18
         },
         { 'xx::v2.07.0': 22 },
-        { 'nx::default': 21, 'nx2::default': 23 }
+        { 'nx::default': 21, 'nx2::default': 23 },
+        {
+          'nx::default': 23,
+          'nx2::default': 25,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 25)
+        }
       ]
     }
   },
