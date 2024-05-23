@@ -404,36 +404,61 @@ const songsMap: Record<string, Song> = {
     bpm: 136,
     type: 'arcade',
     category: 'original',
-    steps: {
-      single: [
-        { 'fiesta-ex::v1.50': 2 },
-        { 'fiesta-ex::v1.50': 4 },
-        {
-          'the-obg-season-evolution::default': 7,
-          'exceed::default': 5,
-          'nxa::default': 6
-        },
-        { 'fiesta-ex::v1.50': 8 },
-        {
-          'the-obg-season-evolution::default': 6,
-          'exceed::default': 9,
-          'exceed-2::default': 8,
-          'nx::default': 9,
-          'phoenix::v1.00.0': 11
-        },
-        { 'fiesta::v1.01': 16, 'xx::v1.00.1': 18, 'phoenix::v1.00.0': 17 },
-        { 'nx2::default': 17, 'phoenix::v1.00.0': 18 }
-      ],
-      double: [
-        {
-          'the-obg-season-evolution::default': 8,
-          'exceed::default': 6,
-          'nx::default': 7,
-          'xx::v1.00.1': 10
-        },
-        { 'exceed-2::default': 15, 'nx::default': 16, 'phoenix::v1.00.0': 17 }
-      ]
-    }
+    steps: (() => {
+      const obgToPremiere2Pattern: StepHistoryPattern = level => ({
+        'the-obg-season-evolution::default': level,
+        'the-rebirth::default': 0,
+        'the-premiere-2::default': level
+      })
+
+      return {
+        'single': [
+          { 'fiesta-ex::v1.50': 2 },
+          {
+            ...obgToPremiere2Pattern(4),
+            'exceed::default': 3,
+            'fiesta::v1.01': 0
+          },
+          { 'fiesta-ex::v1.50': 4 },
+          {
+            ...obgToPremiere2Pattern(7),
+            'exceed::default': 5,
+            'nxa::default': 6
+          },
+          { 'fiesta-ex::v1.50': 8 },
+          {
+            ...obgToPremiere2Pattern(6),
+            'exceed::default': 9,
+            'exceed-2::default': 8,
+            'nx::default': 9,
+            'phoenix::v1.00.0': 11
+          },
+          { 'fiesta::v1.01': 16, 'xx::v1.00.1': 18, 'phoenix::v1.00.0': 17 },
+          { 'nx2::default': 17, 'phoenix::v1.00.0': 18 }
+        ],
+        'double': [
+          {
+            ...obgToPremiere2Pattern(8),
+            'exceed::default': 6,
+            'nx::default': 7,
+            'xx::v1.00.1': 10
+          },
+          {
+            'exceed-2::default': 15,
+            'nx::default': 16,
+            'phoenix::v1.00.0': 17
+          },
+          {
+            'nx2::default': 19,
+            'nxa::default': 18,
+            'fiesta::v1.01': 0,
+            ...onlyInfinityPattern('infinity::v1.09', 18)
+          }
+        ],
+        'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
+        'double-p': [{ 'fiesta-ex::v1.30': 5, 'phoenix::v1.00.0': 0 }]
+      }
+    })()
   }
 }
 
