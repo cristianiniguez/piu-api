@@ -7,18 +7,62 @@ const songsMap: Record<string, Song> = {
     type: 'arcade',
     category: 'original',
     steps: {
-      single: [
-        { 'fiesta-ex::v1.50': 1 },
-        { 'the-obg-season-evolution::default': 4, 'exceed::default': 5 },
+      'single': [
+        { 'fiesta-ex::v1.50': 1, 'prime::v1.00.0': 0, 'prime::v1.11.0': 1 },
+        {
+          'the-obg-season-evolution::default': 4,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 4,
+          'exceed::default': 2,
+          'exceed-2::default': 0
+        },
+        {
+          'the-obg-season-evolution::default': 4,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 4,
+          'exceed::default': 5,
+          'exceed-2::default': 0,
+          'fiesta::v1.01': 5,
+          'prime::v1.00.0': 0,
+          'prime::v1.11.0': 5
+        },
         {
           'the-obg-season-evolution::default': 6,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 6,
           'exceed::default': 8,
+          'exceed-2::default': 0,
+          'fiesta::v1.01': 8,
+          'prime::v1.00.0': 0,
+          'prime::v1.11.0': 8,
           'phoenix::v1.00.0': 9
         },
-        { 'fiesta-ex::v1.50': 13 },
-        { 'prime-je::v1.07.0': 16 }
+        { 'fiesta-ex::v1.50': 13, 'prime::v1.00.0': 0, 'prime::v1.11.0': 13 },
+        { 'prime::v1.11.0': 16 }
       ],
-      double: [{ 'fiesta::v1.01': 13 }, { 'prime-je::v1.07.0': 17 }]
+      'double': [
+        {
+          'the-obg-season-evolution::default': 6,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 6,
+          'exceed-2::default': 0,
+          'fiesta::v1.01': 8,
+          'prime::v1.00.0': 0,
+          'prime::v1.11.0': 8,
+          'xx::v1.00.1': 11,
+          'phoenix::v1.00.0': 0
+        },
+        { 'fiesta::v1.01': 13, 'prime::v1.00.0': 0, 'prime::v1.11.0': 13 },
+        { 'prime::v1.11.0': 17 }
+      ],
+      'single-p': [
+        {
+          'fiesta::v1.01': 2,
+          'prime::v1.00.0': 0,
+          'prime::v1.11.0': 2,
+          'phoenix::v1.00.0': 0
+        }
+      ]
     }
   },
   'first-love': {
