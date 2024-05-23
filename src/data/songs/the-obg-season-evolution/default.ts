@@ -73,20 +73,70 @@ const songsMap: Record<string, Song> = {
     type: 'arcade',
     category: 'original',
     steps: {
-      single: [
+      'single': [
+        {
+          'the-obg-season-evolution::default': 4,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 4,
+          'exceed::default': 1,
+          'zero::default': 0
+        },
         {
           'the-obg-season-evolution::default': 3,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 3,
           'exceed::default': 4,
+          'zero::default': 0,
+          'fiesta::v1.01': 4,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 4,
           'phoenix::v1.00.0': 6
         },
         {
           'the-obg-season-evolution::default': 8,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 8,
           'exceed::default': 9,
+          'zero::default': 0,
+          'fiesta::v1.01': 9,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 9,
           'xx::v1.00.1': 10,
           'phoenix::v1.00.0': 12
         }
       ],
-      double: [{ 'fiesta::v1.01': 14, 'phoenix::v1.00.0': 15 }]
+      'double': [
+        {
+          'the-obg-season-evolution::default': 4,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 4,
+          'exceed::default': 3,
+          'exceed-2::default': 4,
+          'zero::default': 0
+        },
+        {
+          'fiesta::v1.01': 14,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 14,
+          'phoenix::v1.00.0': 15
+        }
+      ],
+      'single-p': [
+        {
+          'fiesta::v1.01': 1,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 1,
+          'phoenix::v1.00.0': 0
+        }
+      ],
+      'double-p': [
+        {
+          'fiesta::v1.01': 4,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 4,
+          'phoenix::v1.00.0': 0
+        }
+      ]
     }
   },
   'mr-larpus': {
