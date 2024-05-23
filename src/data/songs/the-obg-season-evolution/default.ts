@@ -212,21 +212,59 @@ const songsMap: Record<string, Song> = {
     bpm: 148,
     type: 'arcade',
     category: 'original',
-    steps: {
-      single: [
-        { 'fiesta::v1.01': 7, 'xx::v1.00.1': 8, 'phoenix::v1.00.0': 9 },
-        { 'fiesta::v1.01': 13, 'phoenix::v1.00.0': 14 }
-      ],
-      double: [
-        {
-          'the-obg-season-evolution::default': 7,
-          'exceed::default': 6,
-          'exceed-2::default': 7,
-          'phoenix::v1.00.0': 11
-        }
-      ],
-      coop: [{ 'prime-2::v1.04.0': 2 }]
-    }
+    steps: (() => {
+      const obgToPremiere3Pattern: StepHistoryPattern = level => ({
+        'the-obg-season-evolution::default': level,
+        'extra::default': 0,
+        'the-premiere::default': level,
+        'the-rebirth::default': 0,
+        'the-premiere-2::default': level,
+        'the-prex-2::default': 0,
+        'the-premiere-3::default': level
+      })
+
+      return {
+        single: [
+          {
+            ...obgToPremiere3Pattern(4),
+            'exceed::default': 3,
+            'zero::default': 0
+          },
+          {
+            ...obgToPremiere3Pattern(6),
+            'exceed::default': 5,
+            'exceed-2::default': 6,
+            'zero::default': 0
+          },
+          {
+            'fiesta::v1.01': 7,
+            'prime::v1.00.0': 0,
+            'prime-2::v1.00.0': 7,
+            'xx::v1.00.1': 8,
+            'phoenix::v1.00.0': 9
+          },
+          {
+            'fiesta::v1.01': 13,
+            'prime::v1.00.0': 0,
+            'prime-2::v1.00.0': 13,
+            'phoenix::v1.00.0': 14
+          }
+        ],
+        double: [
+          {
+            ...obgToPremiere3Pattern(7),
+            'exceed::default': 6,
+            'exceed-2::default': 7,
+            'zero::default': 0,
+            'fiesta::v1.01': 7,
+            'prime::v1.00.0': 0,
+            'prime-2::v1.00.0': 7,
+            'phoenix::v1.00.0': 11
+          }
+        ],
+        coop: [{ 'prime-2::v1.04.0': 2 }]
+      }
+    })()
   },
   'solitary': {
     id: 'solitary',
