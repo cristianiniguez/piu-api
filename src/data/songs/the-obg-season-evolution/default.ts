@@ -266,6 +266,71 @@ const songsMap: Record<string, Song> = {
       }
     })()
   },
+  'run': {
+    id: 'run',
+    name: 'RUN!',
+    artist: 'Novasonic',
+    bpm: 140,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: (() => {
+      const obgToPremiere3Pattern: StepHistoryPattern = level => ({
+        'the-obg-season-evolution::default': level,
+        'extra::default': 0,
+        'the-premiere::default': level,
+        'the-rebirth::default': 0,
+        'the-premiere-2::default': level,
+        'the-prex-2::default': 0,
+        'the-premiere-3::default': level
+      })
+
+      const nxToPrimePattern: StepHistoryPattern = level => ({
+        'nx::default': level,
+        'nx2::default': 0,
+        'fiesta::v1.01': level,
+        'prime::v1.00.0': 0
+      })
+
+      return {
+        single: [
+          {
+            ...obgToPremiere3Pattern(4),
+            'exceed::default': 2,
+            ...nxToPrimePattern(4)
+          },
+          {
+            ...obgToPremiere3Pattern(7),
+            'exceed::default': 5,
+            ...nxToPrimePattern(8)
+          },
+          {
+            ...obgToPremiere3Pattern(8),
+            'exceed::default': 10,
+            'exceed-2::default': 0
+          },
+          {
+            'exceed-2::default': 15,
+            'nx2::default': 0,
+            'fiesta::v1.01': 15,
+            'prime::v1.00.0': 0
+          }
+        ],
+        double: [
+          {
+            ...obgToPremiere3Pattern(7),
+            'exceed::default': 6,
+            ...nxToPrimePattern(8)
+          },
+          {
+            'exceed-2::default': 16,
+            'nx2::default': 0,
+            'fiesta::v1.01': 17,
+            'prime::v1.00.0': 0
+          }
+        ]
+      }
+    })()
+  },
   'solitary': {
     id: 'solitary',
     name: 'Solitary',
