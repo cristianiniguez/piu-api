@@ -1,5 +1,11 @@
 import { onlyInfinityPattern } from 'data/patterns'
 
+const obgToPremiere2Pattern: StepHistoryPattern = level => ({
+  'the-obg-season-evolution::default': level,
+  'the-rebirth::default': 0,
+  'the-premiere-2::default': level
+})
+
 const songsMap: Record<string, Song> = {
   'betrayer': {
     id: 'betrayer',
@@ -12,16 +18,12 @@ const songsMap: Record<string, Song> = {
       'single': [
         { 'fiesta-ex::v1.50': 1, 'prime::v1.00.0': 0, 'prime::v1.11.0': 1 },
         {
-          'the-obg-season-evolution::default': 4,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 4,
+          ...obgToPremiere2Pattern(4),
           'exceed::default': 2,
           'exceed-2::default': 0
         },
         {
-          'the-obg-season-evolution::default': 4,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 4,
+          ...obgToPremiere2Pattern(4),
           'exceed::default': 5,
           'exceed-2::default': 0,
           'fiesta::v1.01': 5,
@@ -29,9 +31,7 @@ const songsMap: Record<string, Song> = {
           'prime::v1.11.0': 5
         },
         {
-          'the-obg-season-evolution::default': 6,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 6,
+          ...obgToPremiere2Pattern(6),
           'exceed::default': 8,
           'exceed-2::default': 0,
           'fiesta::v1.01': 8,
@@ -44,9 +44,7 @@ const songsMap: Record<string, Song> = {
       ],
       'double': [
         {
-          'the-obg-season-evolution::default': 6,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 6,
+          ...obgToPremiere2Pattern(6),
           'exceed-2::default': 0,
           'fiesta::v1.01': 8,
           'prime::v1.00.0': 0,
@@ -77,16 +75,12 @@ const songsMap: Record<string, Song> = {
     steps: {
       'single': [
         {
-          'the-obg-season-evolution::default': 4,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 4,
+          ...obgToPremiere2Pattern(4),
           'exceed::default': 1,
           'zero::default': 0
         },
         {
-          'the-obg-season-evolution::default': 3,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 3,
+          ...obgToPremiere2Pattern(3),
           'exceed::default': 4,
           'zero::default': 0,
           'fiesta::v1.01': 4,
@@ -95,9 +89,7 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 6
         },
         {
-          'the-obg-season-evolution::default': 8,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 8,
+          ...obgToPremiere2Pattern(8),
           'exceed::default': 9,
           'zero::default': 0,
           'fiesta::v1.01': 9,
@@ -109,9 +101,7 @@ const songsMap: Record<string, Song> = {
       ],
       'double': [
         {
-          'the-obg-season-evolution::default': 4,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 4,
+          ...obgToPremiere2Pattern(4),
           'exceed::default': 3,
           'exceed-2::default': 4,
           'zero::default': 0
@@ -151,16 +141,9 @@ const songsMap: Record<string, Song> = {
     steps: {
       single: [
         { 'fiesta-ex::v1.50': 3 },
+        { ...obgToPremiere2Pattern(4), 'nxa::default': 5 },
         {
-          'the-obg-season-evolution::default': 4,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 4,
-          'nxa::default': 5
-        },
-        {
-          'the-obg-season-evolution::default': 10,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 10,
+          ...obgToPremiere2Pattern(10),
           'exceed::default': 7,
           'exceed-2::default': 9,
           'nx::default': 10,
@@ -169,9 +152,7 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 13
         },
         {
-          'the-obg-season-evolution::default': 10,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 10,
+          ...obgToPremiere2Pattern(10),
           'exceed::default': 12,
           'exceed-2::default': 13,
           'nx::default': 14,
@@ -182,9 +163,7 @@ const songsMap: Record<string, Song> = {
       ],
       double: [
         {
-          'the-obg-season-evolution::default': 10,
-          'the-rebirth::default': 0,
-          'the-premiere-2::default': 10,
+          ...obgToPremiere2Pattern(10),
           'nx::default': 14,
           'xx::v1.00.1': 16
         },
@@ -404,61 +383,53 @@ const songsMap: Record<string, Song> = {
     bpm: 136,
     type: 'arcade',
     category: 'original',
-    steps: (() => {
-      const obgToPremiere2Pattern: StepHistoryPattern = level => ({
-        'the-obg-season-evolution::default': level,
-        'the-rebirth::default': 0,
-        'the-premiere-2::default': level
-      })
-
-      return {
-        'single': [
-          { 'fiesta-ex::v1.50': 2 },
-          {
-            ...obgToPremiere2Pattern(4),
-            'exceed::default': 3,
-            'fiesta::v1.01': 0
-          },
-          { 'fiesta-ex::v1.50': 4 },
-          {
-            ...obgToPremiere2Pattern(7),
-            'exceed::default': 5,
-            'nxa::default': 6
-          },
-          { 'fiesta-ex::v1.50': 8 },
-          {
-            ...obgToPremiere2Pattern(6),
-            'exceed::default': 9,
-            'exceed-2::default': 8,
-            'nx::default': 9,
-            'phoenix::v1.00.0': 11
-          },
-          { 'fiesta::v1.01': 16, 'xx::v1.00.1': 18, 'phoenix::v1.00.0': 17 },
-          { 'nx2::default': 17, 'phoenix::v1.00.0': 18 }
-        ],
-        'double': [
-          {
-            ...obgToPremiere2Pattern(8),
-            'exceed::default': 6,
-            'nx::default': 7,
-            'xx::v1.00.1': 10
-          },
-          {
-            'exceed-2::default': 15,
-            'nx::default': 16,
-            'phoenix::v1.00.0': 17
-          },
-          {
-            'nx2::default': 19,
-            'nxa::default': 18,
-            'fiesta::v1.01': 0,
-            ...onlyInfinityPattern('infinity::v1.09', 18)
-          }
-        ],
-        'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
-        'double-p': [{ 'fiesta-ex::v1.30': 5, 'phoenix::v1.00.0': 0 }]
-      }
-    })()
+    steps: {
+      'single': [
+        { 'fiesta-ex::v1.50': 2 },
+        {
+          ...obgToPremiere2Pattern(4),
+          'exceed::default': 3,
+          'fiesta::v1.01': 0
+        },
+        { 'fiesta-ex::v1.50': 4 },
+        {
+          ...obgToPremiere2Pattern(7),
+          'exceed::default': 5,
+          'nxa::default': 6
+        },
+        { 'fiesta-ex::v1.50': 8 },
+        {
+          ...obgToPremiere2Pattern(6),
+          'exceed::default': 9,
+          'exceed-2::default': 8,
+          'nx::default': 9,
+          'phoenix::v1.00.0': 11
+        },
+        { 'fiesta::v1.01': 16, 'xx::v1.00.1': 18, 'phoenix::v1.00.0': 17 },
+        { 'nx2::default': 17, 'phoenix::v1.00.0': 18 }
+      ],
+      'double': [
+        {
+          ...obgToPremiere2Pattern(8),
+          'exceed::default': 6,
+          'nx::default': 7,
+          'xx::v1.00.1': 10
+        },
+        {
+          'exceed-2::default': 15,
+          'nx::default': 16,
+          'phoenix::v1.00.0': 17
+        },
+        {
+          'nx2::default': 19,
+          'nxa::default': 18,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 18)
+        }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
+      'double-p': [{ 'fiesta-ex::v1.30': 5, 'phoenix::v1.00.0': 0 }]
+    }
   }
 }
 
