@@ -331,6 +331,72 @@ const songsMap: Record<string, Song> = {
       }
     })()
   },
+  'run-to-you': {
+    id: 'run-to-you',
+    name: 'Run to you',
+    artist: 'DJ DOC',
+    bpm: 132,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: (() => {
+      const fiestaEX120ToPrime2Pattern: StepHistoryPattern = level => ({
+        'fiesta-ex::v1.20': level,
+        'prime-2::v1.00.0': 0
+      })
+
+      const fiestaEX150ToPrime2Pattern: StepHistoryPattern = level => ({
+        'fiesta-ex::v1.50': level,
+        'prime-2::v1.00.0': 0
+      })
+
+      const obgToPrex3Pattern: StepHistoryPattern = level => ({
+        'the-obg-season-evolution::default': level,
+        'the-rebirth::default': 0,
+        'the-premiere-2::default': level,
+        'the-premiere-3::default': 0,
+        'the-prex-3::default': level
+      })
+
+      return {
+        single: [
+          fiestaEX150ToPrime2Pattern(2),
+          {
+            ...obgToPrex3Pattern(4),
+            'exceed::default': 2,
+            'exceed-2::default': 0,
+            'fiesta-ex::v1.00': 4,
+            'prime-2::v1.00.0': 0
+          },
+          {
+            ...obgToPrex3Pattern(3),
+            'exceed::default': 5,
+            'exceed-2::default': 0,
+            'fiesta-ex::v1.00': 5,
+            'prime-2::v1.00.0': 0
+          },
+          fiestaEX150ToPrime2Pattern(7),
+          {
+            ...obgToPrex3Pattern(4),
+            'exceed::default': 9,
+            'exceed-2::default': 0,
+            'fiesta-ex::v1.00': 10,
+            'prime-2::v1.00.0': 0
+          },
+          fiestaEX120ToPrime2Pattern(13)
+        ],
+        double: [
+          {
+            ...obgToPrex3Pattern(4),
+            'exceed::default': 3,
+            'exceed-2::default': 0,
+            'fiesta-ex::v1.00': 6,
+            'prime-2::v1.00.0': 0
+          },
+          fiestaEX120ToPrime2Pattern(14)
+        ]
+      }
+    })()
+  },
   'solitary': {
     id: 'solitary',
     name: 'Solitary',
