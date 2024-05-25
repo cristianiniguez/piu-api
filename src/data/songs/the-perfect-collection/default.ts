@@ -1,3 +1,5 @@
+import { onlyInfinityPattern } from 'data/patterns'
+
 const songsMap: Record<string, Song> = {
   'all-i-want-for-x-mas': {
     id: 'all-i-want-for-x-mas',
@@ -60,35 +62,63 @@ const songsMap: Record<string, Song> = {
     bpm: 162,
     type: 'arcade',
     category: 'original',
-    steps: {
-      single: [
-        {
-          'the-perfect-collection::default': 5,
-          'exceed::default': 4,
-          'exceed-2::default': 3,
-          'nxa::default': 4
-        },
-        { 'fiesta::v1.01': 8, 'xx::v1.00.1': 6 },
-        { 'the-perfect-collection::default': 6, 'nx::default': 7 },
-        { 'fiesta::v1.01': 13, 'xx::v1.00.1': 11, 'phoenix::v1.00.0': 12 },
-        { 'fiesta::v1.01': 16 },
-        { 'nx::default': 16, 'nx2::default': 17 },
-        { 'xx::v2.08.0': 21 }
-      ],
-      double: [
-        {
-          'the-perfect-collection::default': 9,
-          'exceed::default': 6,
-          'exceed-2::default': 8,
-          'xx::v1.00.1': 11,
-          'phoenix::v1.00.0': 13
-        },
-        { 'fiesta::v1.01': 18 },
-        { 'exceed::default': 17, 'exceed-2::default': 20, 'xx::v1.00.1': 21 },
-        { 'xx::v2.08.0': 23, 'phoenix::v1.00.0': 24 }
-      ],
-      coop: [{ 'xx::v2.01.0': 2 }]
-    }
+    steps: (() => {
+      const perfectToPremiere2Pattern: StepHistoryPattern = level => ({
+        'the-perfect-collection::default': level,
+        'the-rebirth::default': 0,
+        'the-premiere-2::default': level
+      })
+
+      return {
+        'single': [
+          {
+            ...perfectToPremiere2Pattern(5),
+            'exceed::default': 4,
+            'exceed-2::default': 3,
+            'nxa::default': 4
+          },
+          { 'fiesta::v1.01': 8, 'xx::v1.00.1': 6 },
+          { ...perfectToPremiere2Pattern(6), 'nx::default': 7 },
+          {
+            'nx2::default': 7,
+            'nxa::default': 10,
+            'fiesta::v1.01': 0,
+            ...onlyInfinityPattern('infinity::v1.09', 10)
+          },
+          { 'fiesta::v1.01': 13, 'xx::v1.00.1': 11, 'phoenix::v1.00.0': 12 },
+          {
+            ...perfectToPremiere2Pattern(8),
+            'exceed::default': 11,
+            'exceed-2::default': 13,
+            'fiesta::v1.01': 0,
+            ...onlyInfinityPattern('infinity::v1.09', 14)
+          },
+          { 'fiesta::v1.01': 16 },
+          { 'nx::default': 16, 'nx2::default': 17 },
+          { 'xx::v2.08.0': 21 }
+        ],
+        'double': [
+          {
+            'nx2::default': 9,
+            'nxa::default': 11,
+            'fiesta::v1.01': 0,
+            ...onlyInfinityPattern('infinity::v1.09', 11)
+          },
+          {
+            ...perfectToPremiere2Pattern(9),
+            'exceed::default': 6,
+            'exceed-2::default': 8,
+            'xx::v1.00.1': 11,
+            'phoenix::v1.00.0': 13
+          },
+          { 'fiesta::v1.01': 18 },
+          { 'exceed::default': 17, 'exceed-2::default': 20, 'xx::v1.00.1': 21 },
+          { 'xx::v2.08.0': 23, 'phoenix::v1.00.0': 24 }
+        ],
+        'double-p': [{ 'fiesta-ex::v1.30': 3, 'phoenix::v1.00.0': 0 }],
+        'coop': [{ 'xx::v2.01.0': 2 }]
+      }
+    })()
   },
   'n': {
     id: 'n',
