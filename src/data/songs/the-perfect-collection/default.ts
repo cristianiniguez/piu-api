@@ -6,33 +6,52 @@ const songsMap: Record<string, Song> = {
     bpm: 130,
     type: 'arcade',
     category: 'original',
-    steps: {
-      single: [
-        { 'the-perfect-collection::default': 2, 'fiesta-ex::v1.00': 3 },
-        {
-          'the-perfect-collection::default': 3,
-          'exceed::default': 5,
-          'fiesta-ex::v1.00': 6,
-          'phoenix::v1.00.0': 5
-        },
-        {
-          'the-perfect-collection::default': 3,
-          'exceed::default': 8,
-          'exceed-2::default': 7,
-          'fiesta-ex::v1.00': 11,
-          'prime-je::v1.01.0': 11,
-          'xx::v1.00.1': 9
-        }
-      ],
-      double: [
-        {
-          'the-perfect-collection::default': 3,
-          'exceed::default': 4,
-          'prime-je::v1.01.0': 7,
-          'phoenix::v1.00.0': 8
-        }
-      ]
-    }
+    steps: (() => {
+      const perfectToPrex3Pattern: StepHistoryPattern = level => ({
+        'the-perfect-collection::default': level,
+        'extra::default': 0,
+        'the-premiere::default': level,
+        'the-rebirth::default': 0,
+        'the-premiere-2::default': level,
+        'the-prex-2::default': 0,
+        'the-prex-3::default': level
+      })
+
+      return {
+        single: [
+          {
+            ...perfectToPrex3Pattern(2),
+            'zero::default': 0,
+            'fiesta-ex::v1.00': 3
+          },
+          {
+            ...perfectToPrex3Pattern(3),
+            'exceed::default': 5,
+            'zero::default': 0,
+            'fiesta-ex::v1.00': 6,
+            'phoenix::v1.00.0': 5
+          },
+          {
+            ...perfectToPrex3Pattern(3),
+            'exceed::default': 8,
+            'exceed-2::default': 7,
+            'zero::default': 0,
+            'fiesta-ex::v1.00': 11,
+            'prime-je::v1.01.0': 11,
+            'xx::v1.00.1': 9
+          }
+        ],
+        double: [
+          {
+            ...perfectToPrex3Pattern(3),
+            'exceed::default': 4,
+            'zero::default': 0,
+            'prime-je::v1.01.0': 7,
+            'phoenix::v1.00.0': 8
+          }
+        ]
+      }
+    })()
   },
   'beethoven-virus': {
     id: 'beethoven-virus',
