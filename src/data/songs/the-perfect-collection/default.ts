@@ -127,13 +127,62 @@ const songsMap: Record<string, Song> = {
     bpm: 106,
     type: 'arcade',
     category: 'original',
-    steps: {
-      single: [
-        { 'the-perfect-collection::default': 4, 'nx::default': 5 },
-        { 'zero::default': 14, 'nx::default': 16 }
-      ],
-      double: [{ 'fiesta-ex::v1.50': 16 }]
-    }
+    steps: (() => {
+      const perfectToPrex2Pattern: StepHistoryPattern = level => ({
+        'the-perfect-collection::default': level,
+        'extra::default': 0,
+        'the-premiere::default': level,
+        'the-rebirth::default': 0,
+        'the-premiere-2::default': level,
+        'the-prex-2::default': 0
+      })
+
+      const fiestaToPhoenixPattern: StepHistoryPattern = level => ({
+        'fiesta::v1.01': level,
+        'prime::v1.00.0': 0,
+        'prime-2::v1.00.0': level,
+        'phoenix::v1.00.0': 0
+      })
+
+      return {
+        'single': [
+          {
+            ...perfectToPrex2Pattern(3),
+            'zero::default': 2,
+            'fiesta::v1.01': 0
+          },
+          {
+            ...perfectToPrex2Pattern(4),
+            'zero::default': 4,
+            'nx::default': 5,
+            'prime::v1.00.0': 0,
+            'prime-2::v1.00.0': 5
+          },
+          perfectToPrex2Pattern(5),
+          {
+            'zero::default': 14,
+            'nx::default': 16,
+            'prime::v1.00.0': 0,
+            'prime-2::v1.00.0': 16
+          }
+        ],
+        'double': [
+          {
+            ...perfectToPrex2Pattern(4),
+            'zero::default': 4,
+            'nx::default': 5,
+            'fiesta::v1.01': 0
+          },
+          {
+            'fiesta-ex::v1.50': 16,
+            'prime::v1.00.0': 0,
+            'prime-2::v1.00.0': 16
+          }
+        ],
+        'single-p': [fiestaToPhoenixPattern(2)],
+        'double-p': [fiestaToPhoenixPattern(5)]
+      }
+    })()
   },
   'pump-jump': {
     id: 'pump-jump',
