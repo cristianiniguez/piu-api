@@ -1,5 +1,12 @@
 import { onlyInfinityPattern } from 'data/patterns'
 
+const fiestaToPhoenixPattern: StepHistoryPattern = level => ({
+  'fiesta::v1.01': level,
+  'prime::v1.00.0': 0,
+  'prime-2::v1.00.0': level,
+  'phoenix::v1.00.0': 0
+})
+
 const songsMap: Record<string, Song> = {
   'all-i-want-for-x-mas': {
     id: 'all-i-want-for-x-mas',
@@ -137,13 +144,6 @@ const songsMap: Record<string, Song> = {
         'the-prex-2::default': 0
       })
 
-      const fiestaToPhoenixPattern: StepHistoryPattern = level => ({
-        'fiesta::v1.01': level,
-        'prime::v1.00.0': 0,
-        'prime-2::v1.00.0': level,
-        'phoenix::v1.00.0': 0
-      })
-
       return {
         'single': [
           {
@@ -191,13 +191,46 @@ const songsMap: Record<string, Song> = {
     bpm: 106,
     type: 'arcade',
     category: 'original',
-    steps: {
-      single: [
-        { 'the-perfect-collection::default': 4, 'phoenix::v1.00.0': 5 },
-        { 'fiesta::v1.01': 15 }
-      ],
-      double: [{ 'fiesta::v1.01': 17, 'phoenix::v1.00.0': 18 }]
-    }
+    steps: (() => {
+      const perfectToPrex3Pattern: StepHistoryPattern = level => ({
+        'the-perfect-collection::default': level,
+        'the-rebirth::default': 0,
+        'the-premiere-2::default': level,
+        'the-premiere-3::default': 0,
+        'the-prex-3::default': level
+      })
+
+      return {
+        'single': [
+          { ...perfectToPrex3Pattern(2), 'exceed-2::default': 0 },
+          {
+            ...perfectToPrex3Pattern(4),
+            'exceed-2::default': 0,
+            'fiesta::v1.01': 4,
+            'prime::v1.00.0': 0,
+            'prime-2::v1.00.0': 4,
+            'phoenix::v1.00.0': 5
+          },
+          {
+            ...perfectToPrex3Pattern(6),
+            'exceed::default': 9,
+            'exceed-2::default': 0
+          },
+          { 'fiesta::v1.01': 15, 'prime::v1.00.0': 0, 'prime-2::v1.00.0': 15 }
+        ],
+        'double': [
+          { ...perfectToPrex3Pattern(4), 'exceed-2::default': 0 },
+          {
+            'fiesta::v1.01': 17,
+            'prime::v1.00.0': 0,
+            'prime-2::v1.00.0': 17,
+            'phoenix::v1.00.0': 18
+          }
+        ],
+        'single-p': [fiestaToPhoenixPattern(2)],
+        'double-p': [fiestaToPhoenixPattern(4)]
+      }
+    })()
   },
   'rolling-christmas': {
     id: 'rolling-christmas',
