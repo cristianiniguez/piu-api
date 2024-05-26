@@ -239,22 +239,71 @@ const songsMap: Record<string, Song> = {
     bpm: 142,
     type: 'arcade',
     category: 'original',
-    steps: {
-      single: [
-        { 'fiesta::v1.10': 3 },
-        { 'fiesta-2::v1.00': 5 },
-        { 'fiesta::v1.10': 8 },
-        { 'fiesta::v1.01': 13, 'xx::v1.00.1': 12 },
-        { 'xx::v2.06.0': 17 }
-      ],
-      double: [
-        { 'zero::default': 4, 'prime-je::v1.07.0': 5 },
-        { 'zero::default': 12, 'nx::default': 13 },
-        { 'prime-je::v1.08.0': 17, 'xx::v1.00.1': 16 },
-        { 'xx::v2.05.0': 22 }
-      ],
-      coop: [{ 'prime::v1.11.0': 2 }]
-    }
+    steps: (() => {
+      const perfectToPremiere3Pattern: StepHistoryPattern = level => ({
+        'the-perfect-collection::default': level,
+        'extra::default': 0,
+        'the-premiere::default': level,
+        'the-rebirth::default': 0,
+        'the-premiere-2::default': level,
+        'the-prex-2::default': 0,
+        'the-premiere-3::default': level
+      })
+      return {
+        single: [
+          { 'fiesta::v1.10': 3 },
+          { 'fiesta::v1.01': 3, 'fiesta::v1.20': 0 },
+          {
+            ...perfectToPremiere3Pattern(2),
+            'exceed::default': 3,
+            'exceed-2::default': 2,
+            'nx::default': 4,
+            'nx2::default': 0,
+            ...onlyInfinityPattern('infinity::v1.10', 3)
+          },
+          { 'fiesta::v1.10': 5 },
+          {
+            'zero::default': 4,
+            'nx::default': 5,
+            'nx2::default': 0,
+            'fiesta::v1.01': 5,
+            'fiesta::v1.10': 0
+          },
+          { 'fiesta::v1.10': 8 },
+          {
+            ...perfectToPremiere3Pattern(4),
+            'exceed::default': 8,
+            'zero::default': 0,
+            ...onlyInfinityPattern('infinity::v1.10', 10)
+          },
+          { 'fiesta::v1.01': 13, 'xx::v1.00.1': 12 },
+          { 'xx::v2.06.0': 17 }
+        ],
+        double: [
+          {
+            'zero::default': 4,
+            'nx2::default': 0,
+            'fiesta::v1.01': 4,
+            'prime-je::v1.07.0': 5
+          },
+          {
+            ...perfectToPremiere3Pattern(4),
+            'exceed-2::default': 5,
+            'zero::default': 0,
+            ...onlyInfinityPattern('infinity::v1.10', 6)
+          },
+          {
+            'zero::default': 12,
+            'nx::default': 13,
+            'nx2::default': 0,
+            'fiesta::v1.01': 13
+          },
+          { 'prime::v1.12.0': 17, 'xx::v1.00.1': 16 },
+          { 'xx::v2.05.0': 22 }
+        ],
+        coop: [{ 'prime::v1.11.0': 2 }]
+      }
+    })()
   },
   'slam': {
     id: 'slam',
