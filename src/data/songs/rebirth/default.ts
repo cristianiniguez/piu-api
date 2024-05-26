@@ -192,6 +192,59 @@ const songsMap: Record<string, Song> = {
       ],
       'coop': [{ 'xx::v2.06.0': 2 }]
     }
+  },
+  'get-your-groove-on': {
+    id: 'get-your-groove-on',
+    name: 'Get Your Groove On',
+    artist: 'BanYa',
+    bpm: 96,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        {
+          'the-rebirth::default': 2,
+          'exceed::default': 1,
+          'zero::default': 0,
+          'fiesta-ex::v1.00': 4,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 4
+        },
+        {
+          'the-rebirth::default': 3,
+          'exceed::default': 4,
+          'exceed-2::default': 5,
+          'zero::default': 0,
+          'fiesta-ex::v1.00': 6,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 6,
+          'phoenix::v1.00.0': 7
+        },
+        {
+          'the-rebirth::default': 7,
+          'exceed::default': 8,
+          'exceed-2::default': 7,
+          'zero::default': 0,
+          'fiesta-ex::v1.00': 13,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 13,
+          'xx::v1.00.1': 12
+        }
+      ],
+      double: [
+        {
+          'the-rebirth::default': 4,
+          'exceed::default': 5,
+          'exceed-2::default': 8,
+          'zero::default': 0,
+          'fiesta-ex::v1.00': 9,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 9,
+          'phoenix::v1.00.0': 10
+        },
+        { 'prime-2::v1.10.0': 21, 'xx::v1.00.1': 22 }
+      ]
+    }
   }
 }
 
