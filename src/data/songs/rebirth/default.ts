@@ -147,6 +147,51 @@ const songsMap: Record<string, Song> = {
         { 'exceed::default': 16, 'xx::v1.00.1': 18 }
       ]
     }
+  },
+  'emperor': {
+    id: 'emperor',
+    name: 'Emperor',
+    artist: 'BanYa',
+    bpm: 150,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        { 'fiesta-ex::v1.50': 2 },
+        {
+          'the-rebirth::default': 3,
+          'the-premiere-3::default': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 3)
+        },
+        {
+          'the-rebirth::default': 5,
+          'the-premiere-3::default': 0,
+          'fiesta::v1.01': 5,
+          'phoenix::v1.00.0': 0
+        },
+        { 'fiesta-ex::v1.50': 8 },
+        {
+          'the-rebirth::default': 6,
+          'the-premiere-3::default': 0,
+          'fiesta::v1.01': 11,
+          'xx::v1.00.1': 12
+        },
+        { 'fiesta::v1.01': 16 }
+      ],
+      'double': [
+        {
+          'the-rebirth::default': 6,
+          'the-premiere-3::default': 0
+        },
+        { 'fiesta::v1.01': 17 }
+      ],
+      'single-p': [{ 'fiesta-ex::v1.20': 3, 'phoenix::v1.00.0': 0 }],
+      'double-p': [
+        { 'fiesta-ex::v1.20': 3, 'phoenix::v1.00.0': 0 },
+        onlyInfinityPattern('infinity::v1.09', 8)
+      ],
+      'coop': [{ 'xx::v2.06.0': 2 }]
+    }
   }
 }
 
