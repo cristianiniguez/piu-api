@@ -1,3 +1,12 @@
+const extraToPremiere3Pattern: StepHistoryPattern = level => ({
+  'extra::default': level,
+  'the-premiere::default': 0,
+  'the-prex::default': level,
+  'the-rebirth::default': 0,
+  'the-prex-2::default': level,
+  'the-premiere-3::default': 0
+})
+
 const premiereToPremiere3Pattern: StepHistoryPattern = level => ({
   'the-premiere::default': 0,
   'the-prex::default': level,
@@ -139,44 +148,33 @@ const songsMap: Record<string, Song> = {
     bpm: 110,
     type: 'arcade',
     category: 'k-pop',
-    steps: (() => {
-      const extraToPremiere3Pattern: StepHistoryPattern = level => ({
-        'extra::default': level,
-        'the-premiere::default': 0,
-        'the-prex::default': level,
-        'the-rebirth::default': 0,
-        'the-prex-2::default': level,
-        'the-premiere-3::default': 0
-      })
-
-      return {
-        'single': [
-          {
-            ...extraToPremiere3Pattern(1),
-            'nx2::default': 1,
-            'fiesta::v1.01': 0
-          },
-          { 'fiesta::v1.01': 2, 'prime-2::v1.00.0': 0 },
-          { 'fiesta::v1.01': 4, 'prime-2::v1.00.0': 0 },
-          {
-            ...extraToPremiere3Pattern(5),
-            'nx::default': 6,
-            'prime-2::v1.00.0': 0
-          },
-          { 'fiesta-ex::v1.30': 11, 'prime-2::v1.00.0': 0 }
-        ],
-        'double': [
-          {
-            ...extraToPremiere3Pattern(4),
-            'nx::default': 6,
-            'fiesta::v1.01': 0
-          },
-          { 'nx2::default': 13, 'nxa::default': 12, 'prime-2::v1.00.0': 0 }
-        ],
-        'single-p': [{ 'fiesta::v1.01': 1, 'prime-2::v1.00.0': 0 }],
-        'double-p': [{ 'fiesta::v1.01': 6, 'prime-2::v1.00.0': 0 }]
-      }
-    })()
+    steps: {
+      'single': [
+        {
+          ...extraToPremiere3Pattern(1),
+          'nx2::default': 1,
+          'fiesta::v1.01': 0
+        },
+        { 'fiesta::v1.01': 2, 'prime-2::v1.00.0': 0 },
+        { 'fiesta::v1.01': 4, 'prime-2::v1.00.0': 0 },
+        {
+          ...extraToPremiere3Pattern(5),
+          'nx::default': 6,
+          'prime-2::v1.00.0': 0
+        },
+        { 'fiesta-ex::v1.30': 11, 'prime-2::v1.00.0': 0 }
+      ],
+      'double': [
+        {
+          ...extraToPremiere3Pattern(4),
+          'nx::default': 6,
+          'fiesta::v1.01': 0
+        },
+        { 'nx2::default': 13, 'nxa::default': 12, 'prime-2::v1.00.0': 0 }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 1, 'prime-2::v1.00.0': 0 }],
+      'double-p': [{ 'fiesta::v1.01': 6, 'prime-2::v1.00.0': 0 }]
+    }
   },
   'radetzky-can-can': {
     id: 'radetzky-can-can',
@@ -211,6 +209,44 @@ const songsMap: Record<string, Song> = {
           'phoenix::v1.00.0': 18
         },
         { 'xx::v1.00.1': 22 }
+      ]
+    }
+  },
+  'starian': {
+    id: 'starian',
+    name: 'Starian',
+    artist: 'DUKE',
+    bpm: 134.9,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: {
+      single: [
+        { 'fiesta-ex::v1.00': 2, 'prime-2::v1.00.0': 0 },
+        {
+          ...extraToPremiere3Pattern(6),
+          'the-prex-3::default': 6,
+          'exceed::default': 5,
+          'exceed-2::default': 6,
+          'nx::default': 7,
+          'prime-2::v1.00.0': 0
+        },
+        {
+          'the-prex-3::default': 8,
+          'exceed::default': 12,
+          'nx::default': 13,
+          'prime-2::v1.00.0': 0
+        },
+        { 'nxa::default': 15, 'prime-2::v1.00.0': 0 }
+      ],
+      double: [
+        {
+          ...extraToPremiere3Pattern(7),
+          'the-prex-3::default': 7,
+          'exceed::default': 5,
+          'exceed-2::default': 7,
+          'nx::default': 9,
+          'prime-2::v1.00.0': 0
+        }
       ]
     }
   }
