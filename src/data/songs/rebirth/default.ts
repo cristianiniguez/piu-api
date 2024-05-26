@@ -98,6 +98,55 @@ const songsMap: Record<string, Song> = {
         { 'fiesta::v1.01': 6, 'phoenix::v1.00.0': 0 }
       ]
     }
+  },
+  'dr-m': {
+    id: 'dr-m',
+    name: 'Dr. M',
+    artist: 'BanYa',
+    bpm: 145,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        { 'fiesta::v1.01': 3 },
+        {
+          'the-rebirth::default': 3,
+          'exceed::default': 2,
+          'nx::default': 3,
+          'nxa::default': 4,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 4)
+        },
+        { 'xx::v1.00.1': 6 },
+        {
+          'the-rebirth::default': 5,
+          'exceed-2::default': 6,
+          'nx::default': 7,
+          'xx::v1.00.1': 8,
+          'phoenix::v1.00.0': 9
+        },
+        { 'fiesta-ex::v1.50': 9, 'phoenix::v1.00.0': 10 },
+        {
+          'the-rebirth::default': 7,
+          'exceed::default': 12,
+          'nx::default': 11,
+          'nxa::default': 12,
+          'phoenix::v1.00.0': 14
+        },
+        { 'nx::default': 15, 'nx2::default': 16 }
+      ],
+      double: [
+        {
+          'the-rebirth::default': 7,
+          'exceed::default': 6,
+          'exceed-2::default': 8,
+          'nx::default': 9,
+          'nxa::default': 11,
+          'phoenix::v1.00.0': 14
+        },
+        { 'exceed::default': 16, 'xx::v1.00.1': 18 }
+      ]
+    }
   }
 }
 
