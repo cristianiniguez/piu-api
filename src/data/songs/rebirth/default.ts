@@ -289,6 +289,46 @@ const songsMap: Record<string, Song> = {
       ],
       coop: [{ 'prime::v1.06.0': 2 }]
     }
+  },
+  'maria': {
+    id: 'maria',
+    name: 'Maria',
+    artist: 'BanYa',
+    bpm: 136,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        { 'the-rebirth::default': 3, 'exceed::default': 2, 'zero::default': 0 },
+        {
+          'the-rebirth::default': 6,
+          'exceed::default': 5,
+          'zero::default': 0,
+          'fiesta::v1.01': 6,
+          'phoenix::v1.00.0': 7
+        },
+        {
+          'the-rebirth::default': 6,
+          'exceed::default': 8,
+          'zero::default': 0,
+          'fiesta::v1.01': 11,
+          'phoenix::v1.00.0': 12
+        },
+        { 'fiesta::v1.01': 15, 'phoenix::v1.00.0': 16 },
+        { 'prime::v1.12.0': 18 }
+      ],
+      'double': [
+        {
+          'the-rebirth::default': 6,
+          'exceed::default': 5,
+          'exceed-2::default': 6,
+          'zero::default': 0
+        },
+        { 'fiesta::v1.01': 15, 'phoenix::v1.00.0': 16 },
+        { 'prime-2::v1.09.0': 19, 'xx::v1.00.1': 20, 'phoenix::v1.00.0': 21 }
+      ],
+      'double-p': [{ 'fiesta::v1.01': 6, 'phoenix::v1.00.0': 0 }]
+    }
   }
 }
 
