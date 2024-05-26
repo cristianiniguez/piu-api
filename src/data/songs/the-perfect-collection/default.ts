@@ -1,5 +1,11 @@
 import { onlyInfinityPattern } from 'data/patterns'
 
+const perfectToPremiere2Pattern: StepHistoryPattern = level => ({
+  'the-perfect-collection::default': level,
+  'the-rebirth::default': 0,
+  'the-premiere-2::default': level
+})
+
 const fiestaToPhoenixPattern: StepHistoryPattern = level => ({
   'fiesta::v1.01': level,
   'prime::v1.00.0': 0,
@@ -70,12 +76,6 @@ const songsMap: Record<string, Song> = {
     type: 'arcade',
     category: 'original',
     steps: (() => {
-      const perfectToPremiere2Pattern: StepHistoryPattern = level => ({
-        'the-perfect-collection::default': level,
-        'the-rebirth::default': 0,
-        'the-premiere-2::default': level
-      })
-
       return {
         'single': [
           {
@@ -315,20 +315,24 @@ const songsMap: Record<string, Song> = {
     steps: {
       single: [
         {
-          'the-perfect-collection::default': 4,
+          ...perfectToPremiere2Pattern(4),
           'exceed::default': 3,
           'phoenix::v1.00.0': 5
         },
         {
-          'the-perfect-collection::default': 6,
+          ...perfectToPremiere2Pattern(6),
           'exceed::default': 5,
           'nx::default': 6,
           'phoenix::v1.00.0': 7
         },
         { 'fiesta-ex::v1.50': 9 },
+        onlyInfinityPattern('infinity::v1.10', 13),
+        onlyInfinityPattern('infinity::v1.10', 15),
         {
           'extra::default': 4,
           'the-premiere::default': 9,
+          'the-rebirth::default': 0,
+          'the-premiere-2::default': 9,
           'exceed::default': 12,
           'exceed-2::default': 15,
           'nx::default': 16,
@@ -340,10 +344,17 @@ const songsMap: Record<string, Song> = {
       ],
       double: [
         {
-          'the-perfect-collection::default': 6,
+          ...perfectToPremiere2Pattern(6),
           'exceed::default': 5,
           'exceed-2::default': 6,
           'phoenix::v1.00.0': 9
+        },
+        onlyInfinityPattern('infinity::v1.10', 13),
+        onlyInfinityPattern('infinity::v1.10', 16),
+        {
+          'nxa::default': 19,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 19)
         },
         {
           'exceed::default': 17,
