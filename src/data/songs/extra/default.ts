@@ -56,6 +56,7 @@ const songsMap: Record<string, Song> = {
       single: [
         {
           'extra::default': 9,
+          'the-premiere::default': 0,
           'nx2::default': 10,
           'nxa::default': 8,
           'xx::v1.00.1': 11,
@@ -66,6 +67,7 @@ const songsMap: Record<string, Song> = {
       double: [
         {
           'extra::default': 9,
+          'the-premiere::default': 0,
           'nx2::default': 11,
           'nxa::default': 13,
           'xx::v1.00.1': 14,
