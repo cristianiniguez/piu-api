@@ -133,6 +133,52 @@ const songsMap: Record<string, Song> = {
         ]
       }
     })()
+  },
+  'mistake': {
+    id: 'mistake',
+    name: 'Mistake',
+    artist: 'U-Too',
+    bpm: 110,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: (() => {
+      const extraToPremiere3Pattern: StepHistoryPattern = level => ({
+        'extra::default': level,
+        'the-premiere::default': 0,
+        'the-prex::default': level,
+        'the-rebirth::default': 0,
+        'the-prex-2::default': level,
+        'the-premiere-3::default': 0
+      })
+
+      return {
+        'single': [
+          {
+            ...extraToPremiere3Pattern(1),
+            'nx2::default': 1,
+            'fiesta::v1.01': 0
+          },
+          { 'fiesta::v1.01': 2, 'prime-2::v1.00.0': 0 },
+          { 'fiesta::v1.01': 4, 'prime-2::v1.00.0': 0 },
+          {
+            ...extraToPremiere3Pattern(5),
+            'nx::default': 6,
+            'prime-2::v1.00.0': 0
+          },
+          { 'fiesta-ex::v1.30': 11, 'prime-2::v1.00.0': 0 }
+        ],
+        'double': [
+          {
+            ...extraToPremiere3Pattern(4),
+            'nx::default': 6,
+            'fiesta::v1.01': 0
+          },
+          { 'nx2::default': 13, 'nxa::default': 12, 'prime-2::v1.00.0': 0 }
+        ],
+        'single-p': [{ 'fiesta::v1.01': 1, 'prime-2::v1.00.0': 0 }],
+        'double-p': [{ 'fiesta::v1.01': 6, 'prime-2::v1.00.0': 0 }]
+      }
+    })()
   }
 }
 
