@@ -64,6 +64,40 @@ const songsMap: Record<string, Song> = {
       ],
       coop: [{ 'xx::v2.02.0': 2 }]
     }
+  },
+  'dance-with-me': {
+    id: 'dance-with-me',
+    name: 'Dance with me',
+    artist: 'BanYa',
+    bpm: 122,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        { 'fiesta-ex::v1.50': 2 },
+        { 'the-rebirth::default': 3, 'the-premiere-3::default': 0 },
+        { 'fiesta-ex::v1.50': 4 },
+        { 'the-rebirth::default': 4, 'the-premiere-3::default': 0 },
+        { 'fiesta-ex::v1.50': 6 },
+        {
+          'the-rebirth::default': 5,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 12,
+          'phoenix::v1.00.0': 0
+        },
+        { 'fiesta-ex::v1.30': 14, 'phoenix::v1.00.0': 15 }
+      ],
+      'double': [
+        { 'the-rebirth::default': 5, 'the-premiere-3::default': 0 },
+        { 'fiesta-ex::v1.30': 15 },
+        { 'xx::v2.06.0': 18 }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 4, 'phoenix::v1.00.0': 0 }],
+      'double-p': [
+        { 'fiesta-ex::v1.10': 4, 'phoenix::v1.00.0': 0 },
+        { 'fiesta::v1.01': 6, 'phoenix::v1.00.0': 0 }
+      ]
+    }
   }
 }
 
