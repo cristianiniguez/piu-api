@@ -245,6 +245,50 @@ const songsMap: Record<string, Song> = {
         { 'prime-2::v1.10.0': 21, 'xx::v1.00.1': 22 }
       ]
     }
+  },
+  'love-is-a-danger-zone': {
+    id: 'love-is-a-danger-zone',
+    name: 'Love is a Danger Zone',
+    artist: 'BanYa',
+    bpm: 140,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        {
+          'the-rebirth::default': 3,
+          'exceed::default': 2,
+          'nx::default': 3,
+          'nxa::default': 4,
+          'fiesta::v1.01': 3,
+          'fiesta::v1.20': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 4)
+        },
+        { 'fiesta::v1.10': 3, 'phoenix::v1.00.0': 4 },
+        {
+          'the-rebirth::default': 8,
+          'exceed::default': 6,
+          'nx2::default': 5,
+          'nxa::default': 7,
+          'phoenix::v1.00.0': 8
+        },
+        { 'fiesta-ex::v1.50': 10, 'phoenix::v1.00.0': 11 },
+        { 'nx::default': 16, 'fiesta::v1.01': 15, 'xx::v1.00.1': 17 },
+        { 'exceed-2::default': 18, 'zero::default': 19 }
+      ],
+      double: [
+        { 'nx::default': 8, 'nxa::default': 0 },
+        {
+          'the-rebirth::default': 6,
+          'exceed::default': 5,
+          'exceed-2::default': 6,
+          'phoenix::v1.00.0': 11
+        },
+        { 'nxa::default': 7, 'fiesta::v1.01': 15, 'xx::v1.00.1': 17 },
+        { 'exceed-2::default': 20, 'xx::v1.00.1': 21 }
+      ],
+      coop: [{ 'prime::v1.06.0': 2 }]
+    }
   }
 }
 
