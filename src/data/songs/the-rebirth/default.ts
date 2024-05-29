@@ -374,6 +374,55 @@ const songsMap: Record<string, Song> = {
         'double-p': [{ ...fiestaToPrime2Pattern(5), 'phoenix::v1.00.0': 0 }]
       }
     })()
+  },
+  'mission-possible': {
+    id: 'mission-possible',
+    name: 'Mission Possible',
+    artist: 'BanYa',
+    bpm: 124,
+    type: 'arcade',
+    category: 'original',
+    steps: (() => {
+      const fiestaEXToPrime2Pattern: StepHistoryPattern = level => ({
+        'fiesta-ex::v1.00': level,
+        'prime::v1.00.0': 0,
+        'prime-2::v1.00.0': level
+      })
+
+      return {
+        single: [
+          {
+            'the-rebirth::default': 2,
+            'the-premiere-3::default': 0,
+            ...fiestaEXToPrime2Pattern(5)
+          },
+          {
+            'the-rebirth::default': 4,
+            'the-premiere-3::default': 0,
+            ...fiestaEXToPrime2Pattern(7)
+          },
+          {
+            'the-rebirth::default': 4,
+            'the-premiere-3::default': 0,
+            ...fiestaEXToPrime2Pattern(13),
+            'phoenix::v1.00.0': 0
+          },
+          {
+            'fiesta-ex::v1.20': 19,
+            'prime::v1.00.0': 0,
+            'prime-2::v1.00.0': 19
+          }
+        ],
+        double: [
+          {
+            'the-rebirth::default': 6,
+            'the-premiere-3::default': 0,
+            ...fiestaEXToPrime2Pattern(8),
+            'phoenix::v1.00.0': 0
+          }
+        ]
+      }
+    })()
   }
 }
 
