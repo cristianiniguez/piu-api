@@ -423,6 +423,64 @@ const songsMap: Record<string, Song> = {
         ]
       }
     })()
+  },
+  'my-way': {
+    id: 'my-way',
+    name: 'My Way',
+    artist: 'BanYa',
+    bpm: 118,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        {
+          'the-rebirth::default': 2,
+          'the-prex-3::default': 0,
+          'exceed-2::default': 2,
+          'nx::default': 0
+        },
+        { 'fiesta-ex::v1.50': 3, 'phoenix::v1.00.0': 4 },
+        {
+          'the-rebirth::default': 4,
+          'the-prex-3::default': 0,
+          'exceed-2::default': 5,
+          'nx::default': 0,
+          'fiesta::v1.01': 5,
+          'phoenix::v1.00.0': 6
+        },
+        { 'fiesta-ex::v1.50': 8 },
+        {
+          'the-rebirth::default': 8,
+          'the-prex-3::default': 0,
+          'exceed-2::default': 12,
+          'nx::default': 0,
+          'fiesta::v1.01': 12,
+          'xx::v1.00.1': 14,
+          'phoenix::v1.00.0': 15
+        },
+        onlyInfinityPattern('infinity::v1.09', 15)
+      ],
+      'double': [
+        {
+          'the-rebirth::default': 4,
+          'the-prex-3::default': 0,
+          'exceed-2::default': 6,
+          'nx::default': 0
+        },
+        {
+          'exceed-2::default': 15,
+          'nx::default': 0,
+          'fiesta::v1.01': 15,
+          'phoenix::v1.00.0': 16
+        },
+        { 'prime-2::v1.09.0': 18 }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 2, 'phoenix::v1.00.0': 0 }],
+      'double-p': [
+        { 'fiesta-ex::v1.20': 4, 'phoenix::v1.00.0': 0 },
+        { 'fiesta::v1.01': 6, 'phoenix::v1.00.0': 0 }
+      ]
+    }
   }
 }
 
