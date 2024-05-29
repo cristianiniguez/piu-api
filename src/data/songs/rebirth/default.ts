@@ -329,6 +329,50 @@ const songsMap: Record<string, Song> = {
       ],
       'double-p': [{ 'fiesta::v1.01': 6, 'phoenix::v1.00.0': 0 }]
     }
+  },
+  'miss-s-story': {
+    id: 'miss-s-story',
+    name: "Miss S' story",
+    artist: 'BanYa',
+    bpm: 111,
+    type: 'arcade',
+    category: 'original',
+    steps: (() => {
+      const rebirthToNXAPattern: StepHistoryPattern = level => ({
+        'the-rebirth::default': level,
+        'the-premiere-3::default': 0,
+        'nx2::default': level,
+        'nxa::default': 0
+      })
+
+      const fiestaToPrime2Pattern: StepHistoryPattern = level => ({
+        'fiesta::v1.01': level,
+        'prime::v1.00.0': 0,
+        'prime-2::v1.00.0': level
+      })
+
+      return {
+        'single': [
+          rebirthToNXAPattern(3),
+          {
+            ...rebirthToNXAPattern(5),
+            ...fiestaToPrime2Pattern(5),
+            'phoenix::v1.00.0': 7
+          },
+          {
+            'the-rebirth::default': 3,
+            'the-premiere-3::default': 0,
+            'nx2::default': 12,
+            'nxa::default': 0,
+            ...onlyInfinityPattern('infinity::v1.09', 12)
+          },
+          { ...fiestaToPrime2Pattern(18), 'xx::v1.00.1': 19 }
+        ],
+        'double': [rebirthToNXAPattern(3), fiestaToPrime2Pattern(19)],
+        'single-p': [{ ...fiestaToPrime2Pattern(3), 'phoenix::v1.00.0': 0 }],
+        'double-p': [{ ...fiestaToPrime2Pattern(5), 'phoenix::v1.00.0': 0 }]
+      }
+    })()
   }
 }
 
