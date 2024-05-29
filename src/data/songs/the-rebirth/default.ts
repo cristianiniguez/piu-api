@@ -515,7 +515,7 @@ const songsMap: Record<string, Song> = {
           'the-rebirth::default': 7,
           'exceed::default': 6,
           'exceed-2::default': 7,
-          "zero::default":0,
+          'zero::default': 0
         },
         { 'fiesta-ex::v1.30': 13 },
         onlyInfinityPattern('infinity::v1.10', 18)
@@ -525,6 +525,60 @@ const songsMap: Record<string, Song> = {
         { 'fiesta-ex::v1.20': 3, 'phoenix::v1.00.0': 0 },
         { 'fiesta::v1.01': 7 }
       ]
+    }
+  },
+  'point-break': {
+    id: 'point-break',
+    name: 'Point Break',
+    artist: 'BanYa',
+    bpm: 92,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        {
+          'the-rebirth::default': 1,
+          'the-premiere-3::default': 0,
+          'exceed-2::default': 1,
+          'nx::default': 3,
+          'fiesta::v1.01': 0
+        },
+        { 'xx::v2.02.0': 3 },
+        {
+          'the-rebirth::default': 3,
+          'the-premiere-3::default': 0,
+          'exceed-2::default': 4,
+          'nx::default': 6
+        },
+        { 'xx::v2.02.0': 9, 'phoenix::v1.00.0': 8 },
+        {
+          'the-rebirth::default': 4,
+          'the-premiere-3::default': 0,
+          'exceed-2::default': 8,
+          'nx::default': 9,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 9)
+        },
+        { 'xx::v2.02.0': 13 }
+      ],
+      'double': [
+        {
+          'the-rebirth::default': 5,
+          'the-premiere-3::default': 0,
+          'exceed-2::default': 5,
+          'nx::default': 6,
+          'fiesta::v1.01': 0
+        },
+        { 'xx::v2.02.0': 9, 'phoenix::v1.00.0': 7 },
+        {
+          'nx2::default': 13,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 13)
+        },
+        { 'fiesta::v1.01': 14 }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
+      'double-p': [{ 'fiesta::v1.01': 6, 'phoenix::v1.00.0': 0 }]
     }
   }
 }
