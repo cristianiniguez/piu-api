@@ -13,9 +13,10 @@ const songsMap: Record<string, Song> = {
         { 'fiesta::v1.01': 3, 'xx::v1.00.1': 4 },
         {
           'the-rebirth::default': 6,
-          'nx2::default': 0,
           'exceed::default': 3,
-          'nx::default': 4
+          'nx::default': 4,
+          'nx2::default': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 4)
         },
         { 'xx::v1.00.1': 7 },
         {
