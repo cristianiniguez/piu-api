@@ -481,6 +481,51 @@ const songsMap: Record<string, Song> = {
         { 'fiesta::v1.01': 6, 'phoenix::v1.00.0': 0 }
       ]
     }
+  },
+  'oy-oy-oy': {
+    id: 'oy-oy-oy',
+    name: 'Oy Oy Oy',
+    artist: 'BanYa',
+    bpm: 148,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        { 'the-rebirth::default': 4, 'zero::default': 0, 'exceed::default': 3 },
+        { 'fiesta-ex::v1.50': 4 },
+        {
+          'the-rebirth::default': 7,
+          'exceed::default': 6,
+          'zero::default': 0,
+          'fiesta::v1.01': 6,
+          'phoenix::v1.00.0': 8
+        },
+        {
+          'the-rebirth::default': 3,
+          'exceed::default': 8,
+          'zero::default': 0,
+          'fiesta::v1.01': 8,
+          'phoenix::v1.00.0': 9
+        },
+        { 'fiesta-ex::v1.30': 13, 'phoenix::v1.00.0': 14 },
+        onlyInfinityPattern('infinity::v1.10', 16)
+      ],
+      'double': [
+        {
+          'the-rebirth::default': 7,
+          'exceed::default': 6,
+          'exceed-2::default': 7,
+          "zero::default":0,
+        },
+        { 'fiesta-ex::v1.30': 13 },
+        onlyInfinityPattern('infinity::v1.10', 18)
+      ],
+      'single-p': [{ 'fiesta-ex::v1.20': 2, 'phoenix::v1.00.0': 0 }],
+      'double-p': [
+        { 'fiesta-ex::v1.20': 3, 'phoenix::v1.00.0': 0 },
+        { 'fiesta::v1.01': 7 }
+      ]
+    }
   }
 }
 
