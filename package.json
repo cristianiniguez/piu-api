@@ -14,7 +14,11 @@
   ],
   "scripts": {
     "dev:api": "bun --filter './apps/api' dev",
-    "start:api": "bun --filter './apps/api' start"
+    "start:api": "bun --filter './apps/api' start",
+    "dev:ui": "bun --filter './apps/ui' dev",
+    "build:ui": "bun --filter './apps/ui' build",
+    "start:ui": "bun --filter './apps/ui' start",
+    "lint:ui": "bun --filter './apps/ui' lint"
   },
   "devDependencies": {
     "husky": "9.0.11",
