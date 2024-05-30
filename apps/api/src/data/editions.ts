@@ -12,7 +12,7 @@ const newEdition = <K extends string, V extends string>(
   payload: EditionPayload<K, V>
 ) => ({
   ...payload,
-  versions: getVersionIds(payload)
+  versionIds: getVersionIds(payload)
 })
 
 const editions = {
@@ -271,10 +271,10 @@ const editions = {
   })
 }
 
-export const getVersions = () => Object.values(editions).map(({ versions }) => versions).flat()
+export const ALL_VERSION_IDS = Object.values(editions).map(({ versionIds }) => versionIds).flat()
 
 declare global {
-  type Version = ReturnType<typeof getVersions>[number]
+  type Version = (typeof ALL_VERSION_IDS)[number]
 }
 
 export default editions

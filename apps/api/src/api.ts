@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { getVersions } from './data'
+import { getChart, getVersions, isValidVersionId } from './data'
 import editions from './data/editions'
 import songs from './data/songs'
 
@@ -20,6 +20,17 @@ api.get('/songs/:id', (req, res) => {
     .find(({ id }) => id === songId)
   if (!song) return res.status(404).send()
   res.status(200).json(song)
+})
+
+api.get('/chart/:versionId', (req, res) => {
+  const { versionId } = req.params
+
+  if (!isValidVersionId(versionId)) {
+    res.status(400).json({ message: 'Invalid version id' })
+    return
+  }
+
+  res.status(200).json(getChart(versionId))
 })
 
 export default api
