@@ -1,0 +1,28 @@
+{
+  "name": "piu-api",
+  "author": {
+    "name": "cristianiniguez"
+  },
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "version": "0.1.0",
+  "description": "My own Pump It Up API",
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "start": "bun src/index.ts"
+  },
+  "dependencies": {
+    "express": "4.19.2"
+  },
+  "devDependencies": {
+    "@types/bun": "1.1.2",
+    "@types/express": "4.17.21",
+    "eslint": "9.2.0",
+    "eslint-config-custom": "*",
+    "globals": "15.2.0",
+    "tsconfig": "*",
+    "typescript": "5.4.5",
+    "typescript-eslint": "7.9.0"
+  }
+}
