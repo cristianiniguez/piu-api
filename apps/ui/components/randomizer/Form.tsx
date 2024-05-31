@@ -98,9 +98,7 @@ const RandomizerForm: FC<{ chart: object }> = ({ chart }) => {
   const searchParams = useSearchParams()
 
   const handelSubmit = async (values: FormValues) => {
-    const route = `./song?${getSearchParamsFromValues(values).toString()}`
-    console.log(route)
-    router.push(route)
+    router.push(`./song?${getSearchParamsFromValues(values).toString()}`)
   }
 
   const getValidationSchema = () => {

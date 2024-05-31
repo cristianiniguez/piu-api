@@ -1,5 +1,6 @@
 'use client'
 
+import { FC } from 'react'
 import {
   Box,
   Drawer,
@@ -9,10 +10,14 @@ import {
   Text,
   useDisclosure
 } from '@chakra-ui/react'
-import SidebarMenu from './SidebarMenu'
 import { FiMenu } from 'react-icons/fi'
+import SidebarMenu from './SidebarMenu'
 
-const SidebarMobile = () => {
+type SidebarMobileProps = {
+  editions: GetEditionsApiResponse
+}
+
+const SidebarMobile: FC<SidebarMobileProps> = ({ editions }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -26,8 +31,8 @@ const SidebarMobile = () => {
         onOverlayClick={onClose}
         size='full'
       >
-        <DrawerContent>
-          <SidebarMenu onClose={onClose} />
+        <DrawerContent color='gray.50'>
+          <SidebarMenu editions={editions} onClose={onClose} />
         </DrawerContent>
       </Drawer>
 

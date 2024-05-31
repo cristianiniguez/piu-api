@@ -6,7 +6,7 @@ const api = axios.create({
 
 class API {
   static async getEditions () {
-    const response = await api.get('/editions')
+    const response = await api.get<GetEditionsApiResponse>('/editions')
     return response.data
   }
 

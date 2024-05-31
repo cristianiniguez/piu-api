@@ -1,31 +1,32 @@
-import { ReactNode } from 'react'
 import { Flex, FlexProps, Link } from '@chakra-ui/react'
 
 interface SidebarMenuItemProps extends FlexProps {
-  children: ReactNode
+  version: {
+    id: string
+    label: string
+  }
 }
 
-const SidebarMenuItem = ({ children, ...rest }: SidebarMenuItemProps) => {
+const SidebarMenuItem = ({ version, ...rest }: SidebarMenuItemProps) => {
   return (
     <Link
-      href='#'
+      href={`/randomizer/${version.id}/form`}
       style={{ textDecoration: 'none' }}
       _focus={{ boxShadow: 'none' }}
     >
       <Flex
         align='center'
-        p='4'
-        mx='4'
+        p={2}
         borderRadius='lg'
         role='group'
         cursor='pointer'
         _hover={{
-          bg: 'cyan.400',
+          bg: 'blue.500',
           color: 'white'
         }}
         {...rest}
       >
-        {children}
+        {version.label}
       </Flex>
     </Link>
   )

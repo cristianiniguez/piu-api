@@ -4,20 +4,16 @@ import SidebarMenu from './SidebarMenu'
 import SidebarMobile from './SidebarMobile'
 
 type SidebarProps = {
-  editions: object
+  editions: GetEditionsApiResponse
   children: ReactNode
 }
 
-const SimpleSidebar: FC<SidebarProps> = ({ children }) => {
-  return (
-    <Box bg='blue.900' color='gray.50' minH='100vh'>
-      <SidebarMenu
-        display={{ base: 'none', md: 'block' }}
-      />
-      <SidebarMobile />
-      <Box ml={{ base: 0, md: 60 }}>{children}</Box>
-    </Box>
-  )
-}
+const SimpleSidebar: FC<SidebarProps> = ({ children, editions }) => (
+  <Box bg='blue.900' color='gray.50' minH='100vh'>
+    <SidebarMenu editions={editions} display={{ base: 'none', md: 'grid' }} />
+    <SidebarMobile editions={editions} />
+    <Box ml={{ base: 0, md: 96 }}>{children}</Box>
+  </Box>
+)
 
 export default SimpleSidebar
