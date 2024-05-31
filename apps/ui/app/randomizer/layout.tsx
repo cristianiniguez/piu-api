@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { Box, Grid } from '@chakra-ui/react'
 import API from '@/api'
-import Sidebar from '@/components/randomizer/Sidebar'
+import Sidebar from '@/components/randomizer/Sidebar/Sidebar'
 
 type RandomizerLayoutProps = {
   children: ReactNode
