@@ -7,7 +7,7 @@ type SongPageProps = {
 }
 
 const SongPage = async (props: SongPageProps) => {
-  const { versionId } = props.params
+  const versionId = decodeURIComponent(props.params.versionId)
   if (!isValidVersionId(versionId)) redirect('/')
   const chart = getChart(versionId)
   return <RandomizerSong chart={chart} />

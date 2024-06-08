@@ -41,7 +41,7 @@ const RandomizerSong: FC<{ chart: EditionsMap }> = ({ chart }) => {
       <>
         <Flex alignItems='center' gap={2} direction='column'>
           <Image
-            src={`${process.env.NEXT_PUBLIC_API_URL}/images/songs/${song.id}.png`}
+            src={`/images/songs/${song.id}.png`}
             alt={song.name}
             w='full'
             maxW={250}
