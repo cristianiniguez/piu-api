@@ -585,6 +585,40 @@ const songsMap: Record<string, SongWithStepsHistories> = {
       'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
       'double-p': [{ 'fiesta::v1.01': 6, 'phoenix::v1.00.0': 0 }]
     }
+  },
+  'set-me-up': {
+    id: 'set-me-up',
+    name: 'Set me up',
+    artist: 'BanYa',
+    bpm: 120,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        { 'the-rebirth::default': 2, 'the-premiere-3::default': 0 },
+        { 'fiesta-ex::v1.50': 2 },
+        { 'fiesta-ex::v1.50': 4 },
+        { 'the-rebirth::default': 4, 'the-premiere-3::default': 0 },
+        { 'fiesta-ex::v1.50': 6 },
+        {
+          'the-rebirth::default': 7,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 9,
+          'phoenix::v1.00.0': 10
+        },
+        { 'fiesta-ex::v1.30': 13, 'phoenix::v1.00.0': 14 }
+      ],
+      'double': [
+        { 'the-rebirth::default': 6, 'the-premiere-3::default': 0 },
+        onlyInfinityPattern('infinity::v1.09', 13),
+        { 'xx::v2.01.0': 16, 'phoenix::v1.00.0': 17 }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 4, 'phoenix::v1.00.0': 0 }],
+      'double-p': [
+        { 'fiesta-ex::v1.10': 4, 'phoenix::v1.00.0': 0 },
+        { 'fiesta::v1.01': 7, 'phoenix::v1.00.0': 0 }
+      ]
+    }
   }
 }
 
