@@ -1,18 +1,13 @@
 type Song = {
+  id: string
   name: string
   artist: string
-  bpm: number | number[]
+  bpm: number
   type: string
-  tags: string[]
-}
-
-type Step = Song & {
-  stepType: string
-  stepLevel: number
+  category: string
 }
 
 type RandomSongParams = {
-  gameEdition: string
   stepType: string
   songType: string
   minLevel: number
@@ -27,3 +22,17 @@ type Edition = {
 }
 
 type GetEditionsApiResponse = Record<string, Edition>
+
+type StepsMap = Record<string, number[]>
+type SongsMap = Record<string, Song & { steps: StepsMap }>
+type VersionsMap = Record<string, SongsMap>
+type EditionsMap = Record<string, VersionsMap>
+
+type GetChartApiResponse = EditionsMap
+
+type MatchingStep = Song & {
+  edition: string
+  stepType: string
+  stepLevel: number
+  version: string
+}

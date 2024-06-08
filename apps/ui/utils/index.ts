@@ -1,43 +1,45 @@
 import { DEFAULT_FORM_VALUES, MAX_LEVEL, MIN_LEVEL } from '@/constants'
-const songs: Song[] = []
-const steps: Record<string, Record<string, Record<string, number[]>>> = {}
 
-export const getRandomSong = (params: RandomSongParams) => {
-  const stepsForGameEdition = steps[params.gameEdition]
+const isLevelBetweenMinAndMax = (level: number, min: number, max: number) =>
+  level >= min && level <= max
 
-  if (!stepsForGameEdition) {
-    console.log(`No steps for game edition ${params.gameEdition}`)
-    return undefined
-  }
+export const getRandomSong = (chart: EditionsMap, params: RandomSongParams) => {
+  const matchingSteps: MatchingStep[] = []
 
-  const songsForSongTypes: Song[] = songs.filter(song => song.type === params.songType)
+  Object.entries(chart).forEach(([edition, versionsMap]) => {
+    Object.entries(versionsMap).forEach(([version, songsMap]) => {
+      Object.values(songsMap).forEach(({ steps, ...song }) => {
+        if (song.type !== params.songType) return
 
-  const stepsFiltered: Step[] = []
+        const stepsMatching =
+          steps[params.stepType]?.filter(stepLevel =>
+            isLevelBetweenMinAndMax(stepLevel, params.minLevel, params.maxLevel)
+          ) ?? []
 
-  songsForSongTypes.forEach(song => {
-    const stepsForSong = stepsForGameEdition[song.name]
-    if (!stepsForSong) {
-      console.log(`No steps for song ${song.name}`)
-      return
-    }
-
-    const levelsForSong = stepsForSong[params.stepType] ?? []
-
-    levelsForSong.forEach(stepLevel => {
-      if (params.minLevel <= stepLevel && stepLevel <= params.maxLevel) stepsFiltered.push({ ...song, stepType: params.stepType, stepLevel })
+        stepsMatching.forEach(stepLevel => {
+          matchingSteps.push({
+            ...song,
+            edition,
+            stepType: params.stepType,
+            stepLevel,
+            version
+          })
+        })
+      })
     })
   })
 
-  console.table(stepsFiltered)
+  console.table(matchingSteps)
 
-  return stepsFiltered[Math.floor(Math.random() * stepsFiltered.length)]
+  return matchingSteps[Math.floor(Math.random() * matchingSteps.length)]
 }
 
-export const getValuesFromSearchParams = (searchParams: URLSearchParams): RandomSongParams => {
+export const getValuesFromSearchParams = (
+  searchParams: URLSearchParams
+): RandomSongParams => {
   const minLevel = +(searchParams.get('minLevel') ?? MIN_LEVEL)
   const maxLevel = +(searchParams.get('maxLevel') ?? MAX_LEVEL)
   return {
-    gameEdition: searchParams.get('gameEdition') ?? DEFAULT_FORM_VALUES.gameEdition,
     songType: searchParams.get('songType') ?? DEFAULT_FORM_VALUES.songType,
     stepType: searchParams.get('stepType') ?? DEFAULT_FORM_VALUES.stepType,
     minLevel: isNaN(minLevel) ? MIN_LEVEL : minLevel,
@@ -45,8 +47,9 @@ export const getValuesFromSearchParams = (searchParams: URLSearchParams): Random
   }
 }
 
-export const getSearchParamsFromValues = (values: RandomSongParams) => new URLSearchParams({
-  ...values,
-  minLevel: String(values.minLevel),
-  maxLevel: String(values.maxLevel)
-})
+export const getSearchParamsFromValues = (values: RandomSongParams) =>
+  new URLSearchParams({
+    ...values,
+    minLevel: String(values.minLevel),
+    maxLevel: String(values.maxLevel)
+  })

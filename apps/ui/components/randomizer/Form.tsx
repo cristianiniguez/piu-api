@@ -4,9 +4,6 @@ import { FC, useEffect } from 'react'
 import { Form, Formik, type FormikProps } from 'formik'
 import * as Yup from 'yup'
 import { Button, VStack } from '@chakra-ui/react'
-import SelectInput, {
-  SelectInputOptionProps
-} from '@/components/inputs/SelectInput'
 import RadioGroupInput, {
   RadioGroupInputOptionProps
 } from '@/components/inputs/RadioGroupInput'
@@ -15,13 +12,11 @@ import { getSearchParamsFromValues, getValuesFromSearchParams } from '@/utils'
 import { MAX_LEVEL, MIN_LEVEL } from '@/constants'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-const GAME_EDITION_OPTIONS: SelectInputOptionProps[] = [
-  { label: 'PIU Phoenix', value: 'piu-phoenix' }
-]
-
 const STEP_TYPES_OPTIONS: RadioGroupInputOptionProps[] = [
   { label: 'Single', value: 'single' },
   { label: 'Double', value: 'double' },
+  { label: 'Single Performance', value: 'single-p' },
+  { label: 'Double Performance', value: 'double-p' },
   { label: 'CO-OP', value: 'coop' }
 ]
 
@@ -51,40 +46,34 @@ const FormPageComponent = ({
 
   return (
     <Form>
-      <VStack alignItems="stretch" spacing={4}>
-        <SelectInput
-          label="Game Edition"
-          name="gameEdition"
-          options={GAME_EDITION_OPTIONS}
-        />
-
+      <VStack alignItems='stretch' spacing={4}>
         <RadioGroupInput
-          label="Step Types"
-          name="stepType"
+          label='Step Types'
+          name='stepType'
           options={STEP_TYPES_OPTIONS}
         />
 
         <RadioGroupInput
-          label="Song Types"
-          name="songType"
+          label='Song Types'
+          name='songType'
           options={SONG_TYPES_OPTIONS}
         />
 
         <IntegerInput
-          label="Min Level"
+          label='Min Level'
           min={MIN_LEVEL}
           max={MAX_LEVEL}
-          name="minLevel"
+          name='minLevel'
         />
 
         <IntegerInput
-          label="Max Level"
+          label='Max Level'
           min={MIN_LEVEL}
           max={MAX_LEVEL}
-          name="maxLevel"
+          name='maxLevel'
         />
 
-        <Button colorScheme="blue" isLoading={isSubmitting} type="submit">
+        <Button colorScheme='blue' isLoading={isSubmitting} type='submit'>
           Search
         </Button>
       </VStack>
@@ -92,8 +81,7 @@ const FormPageComponent = ({
   )
 }
 
-const RandomizerForm: FC<{ chart: object }> = ({ chart }) => {
-  console.log(Object.values(chart))
+const RandomizerForm = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -106,7 +94,6 @@ const RandomizerForm: FC<{ chart: object }> = ({ chart }) => {
     const maxLevelError = `Use a level equal or less than ${MAX_LEVEL}`
 
     return Yup.object({
-      gameEdition: Yup.string().required('Select one'),
       stepType: Yup.string().required('Select one'),
       songType: Yup.string().required('Select one'),
       minLevel: Yup.number()
