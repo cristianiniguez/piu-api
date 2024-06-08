@@ -1,5 +1,4 @@
 {
-  "version": 2,
-  "builds": [{ "src": "./src", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/src" }]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm i -g bun"
 }
