@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 import { Box, Grid } from '@chakra-ui/react'
 import API from '@/api'
 import Sidebar from '@/components/randomizer/Sidebar/Sidebar'
