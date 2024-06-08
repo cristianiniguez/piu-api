@@ -745,6 +745,113 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         { 'fiesta::v1.01': 6 }
       ]
     }
+  },
+  'top-city': {
+    id: 'top-city',
+    name: 'Top City',
+    artist: 'BanYa',
+    bpm: 110.8,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        {
+          'the-rebirth::default': 2,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 4,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 4
+        },
+        {
+          'the-rebirth::default': 5,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 6,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 6
+        },
+        {
+          'the-rebirth::default': 5,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 12,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 12,
+          'phoenix::v1.00.0': 13
+        },
+        { 'xx::v2.06.0': 20 }
+      ],
+      double: [
+        {
+          'the-rebirth::default': 5,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 7,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 7,
+          'phoenix::v1.00.0': 9
+        },
+        { 'fiesta-ex::v1.00': 12, 'prime::v1.00.0': 0 },
+        { 'xx::v2.06.0': 20, 'phoenix::v1.00.0': 21 }
+      ]
+    }
+  },
+  'vook': {
+    id: 'vook',
+    name: 'Vook',
+    artist: 'BanYa',
+    bpm: 184,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        { 'fiesta-ex::v1.50': 4, 'phoenix::v1.00.0': 3 },
+        {
+          'the-rebirth::default': 6,
+          'exceed::default': 4,
+          'nxa::default': 5,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 5)
+        },
+        { 'fiesta-ex::v1.50': 7 },
+        {
+          'the-rebirth::default': 8,
+          'exceed::default': 7,
+          'nx::default': 8,
+          'nxa::default': 9,
+          'phoenix::v1.00.0': 10
+        },
+        {
+          'the-rebirth::default': 10,
+          'exceed::default': 14,
+          'nxa::default': 15,
+          'phoenix::v1.00.0': 16
+        },
+        { 'nx2::default': 16, 'nxa::default': 17, 'phoenix::v1.00.0': 18 },
+        { 'nx2::default': 18, 'nxa::default': 20 }
+      ],
+      double: [
+        {
+          'nx::default': 11,
+          'nx2::default': 12,
+          'xx::v1.00.1': 13,
+          'phoenix::v1.00.0': 15
+        },
+        {
+          'the-rebirth::default': 12,
+          'exceed::default': 7,
+          'exceed-2::default': 15,
+          'nx::default': 16,
+          'nxa::default': 17,
+          'xx::v1.00.1': 0
+        },
+        { 'nx::default': 19, 'xx::v1.00.1': 20 },
+        {
+          'exceed::default': 18,
+          'exceed-2::default': 17,
+          'zero::default': 18,
+          'xx::v1.00.1': 19,
+          'phoenix::v1.00.0': 21
+        }
+      ]
+    }
   }
 }
 
