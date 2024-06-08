@@ -705,6 +705,46 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         }
       ]
     }
+  },
+  'till-the-end-of-time': {
+    id: 'till-the-end-of-time',
+    name: 'Till the end of time',
+    artist: 'BanYa',
+    bpm: 140,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        { 'the-rebirth::default': 1, 'the-premiere-3::default': 0 },
+        { 'fiesta::v1.01': 2, 'phoenix::v1.00.0': 3 },
+        {
+          'the-rebirth::default': 2,
+          'the-premiere-3::default': 0,
+          'fiesta::v1.01': 3
+        },
+        { 'fiesta::v1.01': 4 },
+        {
+          'the-rebirth::default': 4,
+          'the-premiere-3::default': 0,
+          'fiesta::v1.01': 8
+        },
+        { 'fiesta::v1.01': 9, 'phoenix::v1.00.0': 11 },
+        { 'prime::v1.17.0': 13 },
+        { 'prime::v1.17.0': 17 }
+      ],
+      'double': [
+        { 'the-rebirth::default': 5, 'the-premiere-3::default': 0 },
+        { 'prime::v1.17.0': 8, 'phoenix::v1.00.0': 10 },
+        onlyInfinityPattern('infinity::v1.09', 13),
+        { 'prime::v1.17.0': 13 },
+        { 'prime::v1.17.0': 16 }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 2 }],
+      'double-p': [
+        { 'fiesta-ex::v1.10': 3, 'phoenix::v1.00.0': 0 },
+        { 'fiesta::v1.01': 6 }
+      ]
+    }
   }
 }
 
