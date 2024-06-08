@@ -1,4 +1,7 @@
-import { Flex, FlexProps, Link } from '@chakra-ui/react'
+'use client'
+
+import { Link } from '@chakra-ui/next-js'
+import { Flex, FlexProps } from '@chakra-ui/react'
 
 interface SidebarMenuItemProps extends FlexProps {
   version: {
