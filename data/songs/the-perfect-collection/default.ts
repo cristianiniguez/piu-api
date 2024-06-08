@@ -13,7 +13,7 @@ const fiestaToPhoenixPattern: StepHistoryPattern = level => ({
   'phoenix::v1.00.0': 0
 })
 
-const songsMap: Record<string, Song> = {
+const songsMap: Record<string, SongWithStepsHistories> = {
   'all-i-want-for-x-mas': {
     id: 'all-i-want-for-x-mas',
     name: 'All I Want For X-mas',

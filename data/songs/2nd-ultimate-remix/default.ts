@@ -53,7 +53,7 @@ const zeroToXXPattern: StepHistoryPattern = level => ({
   'xx::v1.00.1': 0
 })
 
-const songsMap: Record<string, Song> = {
+const songsMap: Record<string, SongWithStepsHistories> = {
   'com-back': {
     id: 'com-back',
     name: "Com'Back",

@@ -27,7 +27,7 @@ const firstToPrex3Pattern: StepHistoryPattern = level => ({
   'the-prex-3::default': level
 })
 
-const songsMap: Record<string, Song> = {
+const songsMap: Record<string, SongWithStepsHistories> = {
   'another-truth': {
     id: 'another-truth',
     name: 'Another Truth',

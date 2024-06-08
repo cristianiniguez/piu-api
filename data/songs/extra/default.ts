@@ -15,7 +15,7 @@ const premiereToPremiere3Pattern: StepHistoryPattern = level => ({
   'the-premiere-3::default': 0
 })
 
-const songsMap: Record<string, Song> = {
+const songsMap: Record<string, SongWithStepsHistories> = {
   'chicken-wing': {
     id: 'chicken-wing',
     name: 'Chicken Wing',

@@ -1,6 +1,6 @@
 import { onlyInfinityPattern } from '@/data/patterns'
 
-const songsMap: Record<string, Song> = {
+const songsMap: Record<string, SongWithStepsHistories> = {
   'csikos-post': {
     id: 'csikos-post',
     name: 'Csikos Post',
@@ -491,7 +491,12 @@ const songsMap: Record<string, Song> = {
     category: 'original',
     steps: {
       'single': [
-        { 'the-rebirth::default': 4, 'zero::default': 0, 'exceed::default': 3 },
+        {
+          'the-rebirth::default': 4,
+          'exceed::default': 3,
+          'zero::default': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 3)
+        },
         { 'fiesta-ex::v1.50': 4 },
         {
           'the-rebirth::default': 7,

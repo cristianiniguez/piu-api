@@ -6,7 +6,7 @@ const obgToPremiere2Pattern: StepHistoryPattern = level => ({
   'the-premiere-2::default': level
 })
 
-const songsMap: Record<string, Song> = {
+const songsMap: Record<string, SongWithStepsHistories> = {
   'betrayer': {
     id: 'betrayer',
     name: 'Betrayer',
