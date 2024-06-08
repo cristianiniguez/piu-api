@@ -50,14 +50,14 @@ export const getChart = (comingVersionId: Version) => {
       return level > 0 ? [...levels, level] : levels
     }, [])
 
-  const getStepsForSong = (song: Song) =>
+  const getStepsForSong = (song: SongWithStepsHistories) =>
     Object.entries(song.steps).reduce((stepsMap, [stepType, steps]) => {
       const levelsForStepType = getLevels(steps)
       if (levelsForStepType.length === 0) return stepsMap
       return { ...stepsMap, [stepType]: levelsForStepType }
     }, {})
 
-  const getSongsForVersion = (songsMap: Record<string, Song>) =>
+  const getSongsForVersion = (songsMap: Record<string, SongWithStepsHistories>) =>
     Object.entries(songsMap).reduce((map, [songId, song]) => {
       const stepsForSong = getStepsForSong(song)
       if (isObjectEmpty(stepsForSong)) return map
@@ -66,7 +66,7 @@ export const getChart = (comingVersionId: Version) => {
     }, {})
 
   const getVersionsForEdition = (
-    mapVersionToSongs: Record<string, Record<string, Song>>
+    mapVersionToSongs: Record<string, Record<string, SongWithStepsHistories>>
   ) =>
     Object.entries(mapVersionToSongs).reduce(
       (songsByVersion, [versionId, songsMap]) => {
