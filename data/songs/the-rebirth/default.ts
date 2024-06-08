@@ -949,6 +949,62 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         { 'xx::v2.01.0': 25 }
       ]
     }
+  },
+  'winter': {
+    id: 'winter',
+    name: 'Winter',
+    artist: 'BanYa',
+    bpm: 168,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        { 'fiesta::v1.01': 4 },
+        {
+          'the-rebirth::default': 5,
+          'exceed::default': 3,
+          'nx::default': 4,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 5)
+        },
+        { 'fiesta::v1.01': 6, 'xx::v1.00.1': 7 },
+        {
+          'the-rebirth::default': 8,
+          'exceed::default': 7,
+          'exceed-2::default': 8,
+          'nx::default': 9,
+          'nxa::default': 8,
+          'xx::v1.00.1': 10,
+          'phoenix::v1.00.0': 12
+        },
+        {
+          'the-rebirth::default': 10,
+          'exceed::default': 14,
+          'nxa::default': 15,
+          'xx::v1.00.1': 16
+        },
+        onlyInfinityPattern('infinity::v1.05', 20),
+        { 'prime-2::v1.07.0': 19, 'phoenix::v1.00.0': 20 }
+      ],
+      double: [
+        {
+          'the-rebirth::default': 8,
+          'exceed::default': 7,
+          'exceed-2::default': 9,
+          'nx::default': 10,
+          'nxa::default': 11,
+          'xx::v1.00.1': 12,
+          'phoenix::v1.00.0': 14
+        },
+        { 'fiesta-ex::v1.30': 17 },
+        {
+          'exceed::default': 18,
+          'zero::default': 19,
+          'xx::v1.00.1': 20,
+          'phoenix::v1.00.0': 21
+        }
+      ]
+    }
   }
 }
 
