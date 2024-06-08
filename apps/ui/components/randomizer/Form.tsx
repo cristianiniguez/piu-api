@@ -1,7 +1,8 @@
 'use client'
 
-import { FC, useEffect } from 'react'
-import { Form, Formik, type FormikProps } from 'formik'
+import { useEffect } from 'react'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { Form, Formik, FormikConfig } from 'formik'
 import * as Yup from 'yup'
 import { Button, VStack } from '@chakra-ui/react'
 import RadioGroupInput, {
@@ -10,7 +11,6 @@ import RadioGroupInput, {
 import IntegerInput from '@/components/inputs/IntegerInput'
 import { getSearchParamsFromValues, getValuesFromSearchParams } from '@/utils'
 import { MAX_LEVEL, MIN_LEVEL } from '@/constants'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 const STEP_TYPES_OPTIONS: RadioGroupInputOptionProps[] = [
   { label: 'Single', value: 'single' },
@@ -28,11 +28,12 @@ const SONG_TYPES_OPTIONS: RadioGroupInputOptionProps[] = [
 ]
 
 type FormValues = RandomSongParams
+type FormConfig = FormikConfig<FormValues>
 
-const FormPageComponent = ({
+const FormPageComponent: FormConfig['component'] = ({
   isSubmitting,
   values
-}: FormikProps<FormValues>) => {
+}) => {
   const router = useRouter()
   const pathname = usePathname()
 
@@ -43,6 +44,8 @@ const FormPageComponent = ({
   useEffect(() => {
     setSearchParams(getSearchParamsFromValues(values))
   }, [values, setSearchParams])
+
+  const search = () => router.push(`./song?${getSearchParamsFromValues(values).toString()}`)
 
   return (
     <Form>
@@ -73,7 +76,7 @@ const FormPageComponent = ({
           name='maxLevel'
         />
 
-        <Button colorScheme='blue' isLoading={isSubmitting} type='submit'>
+        <Button colorScheme='blue' isLoading={isSubmitting} type='button' onClick={search}>
           Search
         </Button>
       </VStack>
@@ -82,12 +85,7 @@ const FormPageComponent = ({
 }
 
 const RandomizerForm = () => {
-  const router = useRouter()
   const searchParams = useSearchParams()
-
-  const handelSubmit = async (values: FormValues) => {
-    router.push(`./song?${getSearchParamsFromValues(values).toString()}`)
-  }
 
   const getValidationSchema = () => {
     const minLevelError = `Use a level equal or greater than ${MIN_LEVEL}`
@@ -109,7 +107,7 @@ const RandomizerForm = () => {
     <Formik
       component={FormPageComponent}
       initialValues={getValuesFromSearchParams(searchParams)}
-      onSubmit={handelSubmit}
+      onSubmit={() => {}}
       validationSchema={getValidationSchema()}
     />
   )

@@ -55,14 +55,9 @@ const SidebarMobile: FC<SidebarMobileProps> = ({ editions }) => {
           icon={<FiMenu />}
         />
 
-        <Box>
-          <Text fontSize='lg' ml='8' fontWeight='bold'>
-            PIU Randomizer
-          </Text>
-          <Text fontSize='lg' ml='8' fontWeight='bold'>
-            TODO: put version name here
-          </Text>
-        </Box>
+        <Text fontSize='lg' ml='8' fontWeight='bold'>
+          PIU Randomizer
+        </Text>
       </Flex>
     </>
   )
