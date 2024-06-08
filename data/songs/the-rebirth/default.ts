@@ -619,6 +619,92 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         { 'fiesta::v1.01': 7, 'phoenix::v1.00.0': 0 }
       ]
     }
+  },
+  'street-show-down': {
+    id: 'street-show-down',
+    name: 'Street show down',
+    artist: 'BanYa',
+    bpm: 124,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        {
+          'the-rebirth::default': 3,
+          'the-premiere-3::default': 0,
+          'exceed-2::default': 4,
+          'nx::default': 0,
+          'nx2::default': 4,
+          'nxa::default': 0
+        },
+        {
+          'the-rebirth::default': 5,
+          'the-premiere-3::default': 0,
+          'exceed-2::default': 7,
+          'nx::default': 0,
+          'nx2::default': 7,
+          'nxa::default': 0,
+          'fiesta::v1.01': 7,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 7,
+          'phoenix::v1.00.0': 8
+        },
+        { 'xx::v2.07.0': 11 },
+        {
+          'the-rebirth::default': 4,
+          'the-premiere-3::default': 0,
+          'exceed-2::default': 8,
+          'nx::default': 0,
+          'nx2::default': 8,
+          'nxa::default': 0,
+          'fiesta::v1.01': 12
+        },
+        {
+          'fiesta::v1.01': 15,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 15,
+          'phoenix::v1.00.0': 16
+        }
+      ],
+      'double': [
+        {
+          'the-rebirth::default': 2,
+          'the-premiere-3::default': 0,
+          'exceed-2::default': 6,
+          'nx::default': 0,
+          'nx2::default': 6,
+          'nxa::default': 0
+        },
+        {
+          'exceed-2::default': 14,
+          'zero::default': 13,
+          'nx::default': 0,
+          'nx2::default': 13,
+          'nxa::default': 0,
+          'fiesta::v1.01': 13,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 13,
+          'phoenix::v1.00.0': 16
+        },
+        { 'xx::v1.02.0': 18, 'phoenix::v1.00.0': 19 }
+      ],
+      'single-p': [
+        {
+          'fiesta::v1.01': 4,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 4,
+          'phoenix::v1.00.0': 0
+        }
+      ],
+      'double-p': [
+        {
+          'fiesta::v1.01': 6,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 6,
+          'phoenix::v1.00.0': 0
+        }
+      ]
+    }
   }
 }
 
