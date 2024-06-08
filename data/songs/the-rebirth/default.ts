@@ -852,6 +852,103 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         }
       ]
     }
+  },
+  'we-will-meet-again': {
+    id: 'we-will-meet-again',
+    name: 'We will meet again',
+    artist: 'BanYa',
+    bpm: 118,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        {
+          'the-rebirth::default': 4,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 3,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 3,
+          'xx::v1.00.1': 4
+        },
+        {
+          'the-rebirth::default': 5,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 8,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 8,
+          'phoenix::v1.00.0': 9
+        },
+        {
+          'fiesta-ex::v1.30': 14,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 14,
+          'xx::v1.00.1': 13
+        },
+        {
+          'the-rebirth::default': 3,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 13,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 13,
+          'xx::v1.00.1': 14,
+          'phoenix::v1.00.0': 0
+        }
+      ],
+      double: [
+        {
+          'the-rebirth::default': 4,
+          'the-premiere-3::default': 0,
+          'fiesta-ex::v1.00': 8,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 8,
+          'phoenix::v1.00.0': 11
+        }
+      ]
+    }
+  },
+  'will-o-the-wisp': {
+    id: 'will-o-the-wisp',
+    name: 'Will-O-The-Wisp',
+    artist: 'BanYa',
+    bpm: 210,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        { 'fiesta-ex::v1.50': 3, 'xx::v1.00.1': 2 },
+        { 'the-rebirth::default': 6, 'exceed::default': 4, 'nx::default': 5 },
+        {
+          'the-rebirth::default': 9,
+          'exceed::default': 7,
+          'exceed-2::default': 8,
+          'nx::default': 10,
+          'xx::v1.00.1': 11,
+          'phoenix::v1.00.0': 13
+        },
+        {
+          'the-rebirth::default': 9,
+          'exceed::default': 12,
+          'exceed-2::default': 13,
+          'xx::v1.00.1': 14,
+          'phoenix::v1.00.0': 16
+        },
+        { 'nxa::default': 19 }
+      ],
+      double: [
+        { 'fiesta::v1.01': 10, 'xx::v1.00.1': 13, 'phoenix::v1.00.0': 14 },
+        {
+          'the-rebirth::default': 10,
+          'exceed::default': 7,
+          'exceed-2::default': 10,
+          'nx::default': 13,
+          'xx::v1.00.1': 14,
+          'phoenix::v1.00.0': 16
+        },
+        { 'exceed::default': 20, 'exceed-2::default': 19, 'xx::v1.00.1': 20 },
+        { 'nxa::default': 21 },
+        { 'xx::v2.01.0': 25 }
+      ]
+    }
   }
 }
 
