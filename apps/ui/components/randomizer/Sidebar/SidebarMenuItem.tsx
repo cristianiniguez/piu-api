@@ -1,7 +1,9 @@
 'use client'
 
 import { Link } from '@chakra-ui/next-js'
-import { Flex, FlexProps } from '@chakra-ui/react'
+import { useParams } from 'next/navigation'
+import { Flex, FlexProps, Text } from '@chakra-ui/react'
+import { FiCheck } from 'react-icons/fi'
 
 interface SidebarMenuItemProps extends FlexProps {
   version: {
@@ -11,14 +13,25 @@ interface SidebarMenuItemProps extends FlexProps {
 }
 
 const SidebarMenuItem = ({ version, ...rest }: SidebarMenuItemProps) => {
+  const params = useParams()
+  const versionId =
+    typeof params.versionId === 'string'
+      ? decodeURIComponent(params.versionId)
+      : ''
+  const currentVersion = versionId === version.id
+
   return (
     <Link
       href={`/randomizer/${version.id}/form`}
-      style={{ textDecoration: 'none' }}
+      style={{
+        textDecoration: 'none',
+        fontWeight: currentVersion ? 'bold' : undefined
+      }}
       _focus={{ boxShadow: 'none' }}
     >
       <Flex
         align='center'
+        gap={2}
         p={2}
         borderRadius='lg'
         role='group'
@@ -29,7 +42,8 @@ const SidebarMenuItem = ({ version, ...rest }: SidebarMenuItemProps) => {
         }}
         {...rest}
       >
-        {version.label}
+        <Text>{version.label}</Text>
+        {currentVersion && <FiCheck />}
       </Flex>
     </Link>
   )

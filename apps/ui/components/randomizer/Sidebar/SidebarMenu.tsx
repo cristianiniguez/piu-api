@@ -9,13 +9,13 @@ interface SidebarMenuProps extends BoxProps {
 
 const SidebarMenu: FC<SidebarMenuProps> = ({ editions, onClose, ...rest }) => {
   const versions = Object.values(editions)
-    .map(({ id, name, versions }) =>
+    .flatMap(({ id, name, versions }) =>
       versions.map(version => ({
         label: `${name} - ${version}`,
         id: `${id}::${version}`
       }))
     )
-    .flat()
+    .reverse()
 
   return (
     <Grid
