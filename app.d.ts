@@ -16,7 +16,7 @@ type Song = {
   id: string
   name: string
   artist: string
-  bpm: number
+  bpm: number | [number, number]
   type: SongType
   category: SongCategory
 }

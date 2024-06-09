@@ -5,6 +5,7 @@ import theObgSeasonEvolution from './the-obg-season-evolution'
 import thePerfectCollection from './the-perfect-collection'
 import extra from './extra'
 import theRebirth from './the-rebirth'
+import thePremiere3 from './the-premiere-3'
 
 const mapEditionToVersionMap = {
   'the-1st-dance-floor': the1stDanceFloor,
@@ -13,7 +14,8 @@ const mapEditionToVersionMap = {
   'the-obg-season-evolution': theObgSeasonEvolution,
   'the-perfect-collection': thePerfectCollection,
   'extra': extra,
-  'the-rebirth': theRebirth
+  'the-rebirth': theRebirth,
+  'the-premiere-3': thePremiere3
 }
 
 export default mapEditionToVersionMap
