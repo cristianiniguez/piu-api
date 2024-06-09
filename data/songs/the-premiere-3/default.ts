@@ -182,6 +182,67 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         { 'prime-2::v2.00.0': 17, 'phoenix::v1.00.0': 18 }
       ]
     }
+  },
+  'hello': {
+    id: 'hello',
+    name: 'Hello',
+    artist: 'BanYa',
+    bpm: 140,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        {
+          'the-premiere-3::default': 4,
+          'exceed::default': 2,
+          'zero::default': 0
+        },
+        {
+          'the-premiere-3::default': 5,
+          'exceed::default': 6,
+          'exceed-2::default': 7,
+          'fiesta::v1.01': 8
+        },
+        {
+          'fiesta::v1.01': 7,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 7,
+          'phoenix::v1.00.0': 11
+        },
+        {
+          'the-premiere-3::default': 7,
+          'exceed::default': 13,
+          'zero::default': 0
+        },
+        {
+          'fiesta::v1.01': 16,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 16,
+          'phoenix::v1.00.0': 17
+        }
+      ],
+      double: [
+        {
+          'the-premiere-3::default': 6,
+          'exceed::default': 8,
+          'exceed-2::default': 7,
+          'zero::default': 0,
+          'fiesta::v1.01': 7,
+          'fiesta-2::v1.00': 9,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 9,
+          'phoenix::v1.00.0': 0
+        },
+        {
+          'exceed-2::default': 16,
+          'zero::default': 0,
+          'fiesta::v1.01': 16,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 16,
+          'xx::v1.00.1': 18
+        }
+      ]
+    }
   }
 }
 
