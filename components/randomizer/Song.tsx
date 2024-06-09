@@ -10,6 +10,9 @@ import {
   getValuesFromSearchParams
 } from '@/utils'
 
+const formatBpm = (bpm: Song['bpm']) =>
+  Array.isArray(bpm) ? `${bpm[0]} - ${bpm[1]}` : bpm
+
 const RandomizerSong: FC<{ chart: EditionsMap }> = ({ chart }) => {
   const router = useRouter()
   const [loading, setLoading] = useState(true)
@@ -25,9 +28,9 @@ const RandomizerSong: FC<{ chart: EditionsMap }> = ({ chart }) => {
     setLoading(false)
   }
 
-  const goBack = () =>{
+  const goBack = () => {
     router.push(`./form?${getSearchParamsFromValues(values).toString()}`)
-}
+  }
   useEffect(() => {
     searchSong()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
@@ -46,10 +49,14 @@ const RandomizerSong: FC<{ chart: EditionsMap }> = ({ chart }) => {
             w='full'
             maxW={250}
           />
-          <Text fontSize='xl' textTransform='uppercase'>{song.name}</Text>
+          <Text fontSize='xl' textTransform='uppercase'>
+            {song.name}
+          </Text>
           <Text fontSize='lg'>{song.artist}</Text>
-          <Text fontSize='md'>{song.bpm} BPM</Text>
-          <Text fontSize='md' textTransform='uppercase'>{song.type}</Text>
+          <Text fontSize='md'>{formatBpm(song.bpm)} BPM</Text>
+          <Text fontSize='md' textTransform='uppercase'>
+            {song.type}
+          </Text>
           <Text fontSize='md' textTransform='uppercase'>
             {song.stepType} {song.stepLevel.toString().padStart(2, '0')}
           </Text>
