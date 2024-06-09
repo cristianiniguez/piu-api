@@ -121,6 +121,67 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         { 'nx::default': 23, 'xx::v1.00.1': 24 }
       ]
     }
+  },
+  'd-gang': {
+    id: 'd-gang',
+    name: 'D Gang',
+    artist: 'BanYa',
+    bpm: 150,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        {
+          'the-premiere-3::default': 6,
+          'exceed::default': 3,
+          'exceed-2::default': 4,
+          'zero::default': 0,
+          'fiesta::v1.01': 4,
+          'fiesta::v1.20': 0,
+          ...onlyInfinityPattern('infinity::v1.10', 4)
+        },
+        {
+          'fiesta::v1.10': 4,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 4,
+          'phoenix::v1.00.0': 5
+        },
+        {
+          'the-premiere-3::default': 7,
+          'exceed::default': 5,
+          'exceed-2::default': 6,
+          'zero::default': 0,
+          'fiesta::v1.01': 6,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 6
+        },
+        {
+          'the-premiere-3::default': 8,
+          'exceed::default': 9,
+          'zero::default': 0,
+          'fiesta::v1.01': 9,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 9,
+          'xx::v1.00.1': 11
+        },
+        { 'fiesta::v1.01': 18, 'prime::v1.00.0': 0, 'prime-2::v1.00.0': 18 }
+      ],
+      double: [
+        {
+          'the-premiere-3::default': 6,
+          'exceed::default': 8,
+          'exceed-2::default': 7,
+          'zero::default': 0,
+          'fiesta::v1.01': 7,
+          'prime::v1.00.0': 0,
+          'prime-2::v1.00.0': 7,
+          'phoenix::v1.00.0': 9
+        },
+        { 'fiesta::v1.01': 15, 'prime::v1.00.0': 0, 'prime-2::v1.00.0': 15 },
+        onlyInfinityPattern('infinity::v1.10', 16),
+        { 'prime-2::v2.00.0': 17, 'phoenix::v1.00.0': 18 }
+      ]
+    }
   }
 }
 
