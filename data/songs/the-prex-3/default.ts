@@ -53,6 +53,57 @@ const songsMap: Record<string, SongWithStepsHistories> = {
       'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
       'double-p': [{ 'fiesta::v1.01': 6, 'phoenix::v1.00.0': 0 }]
     }
+  },
+  'empire-of-the-sun': {
+    id: 'empire-of-the-sun',
+    name: 'Empire of the Sun',
+    artist: 'Novasonic',
+    bpm: 118,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: {
+      'single': [
+        {
+          'the-prex-3::default': 4,
+          'exceed::default': 2,
+          'exceed-2::default': 1,
+          'nx::default': 0
+        },
+        {
+          'the-prex-3::default': 6,
+          'exceed::default': 5,
+          'exceed-2::default': 6,
+          'nx::default': 0,
+          'fiesta::v1.01': 6,
+          'prime::v1.00.0': 0
+        },
+        {
+          'the-prex-3::default': 7,
+          'exceed::default': 10,
+          'exceed-2::default': 11,
+          'nx::default': 0,
+          'fiesta::v1.01': 11,
+          'prime::v1.00.0': 0
+        }
+      ],
+      'double': [
+        {
+          'the-prex-3::default': 9,
+          'exceed::default': 5,
+          'exceed-2::default': 4,
+          'nx::default': 0
+        },
+        {
+          'exceed::default': 15,
+          'exceed-2::default': 13,
+          'nx::default': 0,
+          'fiesta::v1.01': 13,
+          'prime::v1.00.0': 0
+        }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 1, 'prime::v1.00.0': 0 }],
+      'double-p': [{ 'fiesta::v1.01': 4, 'prime::v1.00.0': 0 }]
+    }
   }
 }
 
