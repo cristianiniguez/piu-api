@@ -6,6 +6,7 @@ import thePerfectCollection from './the-perfect-collection'
 import extra from './extra'
 import theRebirth from './the-rebirth'
 import thePremiere3 from './the-premiere-3'
+import exceed from './exceed'
 
 const mapEditionToVersionMap = {
   'the-1st-dance-floor': the1stDanceFloor,
@@ -15,7 +16,8 @@ const mapEditionToVersionMap = {
   'the-perfect-collection': thePerfectCollection,
   'extra': extra,
   'the-rebirth': theRebirth,
-  'the-premiere-3': thePremiere3
+  'the-premiere-3': thePremiere3,
+  'exceed': exceed
 }
 
 export default mapEditionToVersionMap
