@@ -22,24 +22,24 @@ const SidebarMenuItem = ({ version, ...rest }: SidebarMenuItemProps) => {
 
   return (
     <Link
+      _focus={{ boxShadow: 'none' }}
       href={`/randomizer/${version.id}/form`}
       style={{
         textDecoration: 'none',
         fontWeight: currentVersion ? 'bold' : undefined
       }}
-      _focus={{ boxShadow: 'none' }}
     >
       <Flex
-        align='center'
-        gap={2}
-        p={2}
-        borderRadius='lg'
-        role='group'
-        cursor='pointer'
         _hover={{
           bg: 'blue.500',
           color: 'white'
         }}
+        align='center'
+        borderRadius='lg'
+        cursor='pointer'
+        gap={2}
+        p={2}
+        role='group'
         {...rest}
       >
         <Text>{version.label}</Text>

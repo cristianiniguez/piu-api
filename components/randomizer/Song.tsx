@@ -42,12 +42,12 @@ const RandomizerSong: FC<{ chart: EditionsMap }> = ({ chart }) => {
 
     return (
       <>
-        <Flex alignItems='center' gap={2} direction='column'>
+        <Flex alignItems='center' direction='column' gap={2}>
           <Image
-            src={`/images/songs/${song.id}.png`}
             alt={song.name}
-            w='full'
             maxW={250}
+            src={`/images/songs/${song.id}.png`}
+            w='full'
           />
           <Text fontSize='xl' textTransform='uppercase'>
             {song.name}
@@ -64,16 +64,16 @@ const RandomizerSong: FC<{ chart: EditionsMap }> = ({ chart }) => {
             aria-label='Search another song'
             colorScheme='blue'
             icon={<FiRefreshCw />}
-            w='full'
             onClick={searchSong}
+            w='full'
           />
           <IconButton
             aria-label='Go back'
             colorScheme='blue'
             icon={<FiArrowLeft />}
-            w='full'
-            variant='outline'
             onClick={goBack}
+            variant='outline'
+            w='full'
           />
         </Flex>
       </>

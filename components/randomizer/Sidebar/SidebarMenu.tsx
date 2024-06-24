@@ -19,19 +19,19 @@ const SidebarMenu: FC<SidebarMenuProps> = ({ editions, onClose, ...rest }) => {
 
   return (
     <Grid
-      gridTemplateRows='auto 1fr'
-      gap={4}
       bg='blue.900'
       borderRight='1px'
       borderRightColor='gray.50'
-      w={{ base: 'full', md: 96 }}
-      pos='fixed'
+      gap={4}
+      gridTemplateRows='auto 1fr'
       h='full'
       p={6}
+      pos='fixed'
+      w={{ base: 'full', md: 96 }}
       {...rest}
     >
       <Flex alignItems='center' justifyContent='space-between'>
-        <Text px={2} fontSize='lg' fontWeight='bold'>
+        <Text fontSize='lg' fontWeight='bold' px={2}>
           PIU Randomizer
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />

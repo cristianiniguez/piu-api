@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Form, Formik, FormikConfig } from 'formik'
 import * as Yup from 'yup'
@@ -37,9 +37,9 @@ const FormPageComponent: FormConfig['component'] = ({
   const router = useRouter()
   const pathname = usePathname()
 
-  const setSearchParams = (searchParams: URLSearchParams) => {
+  const setSearchParams = useCallback((searchParams: URLSearchParams) => {
     router.replace(`${pathname}?${searchParams.toString()}`)
-  }
+  }, [pathname, router])
 
   useEffect(() => {
     setSearchParams(getSearchParamsFromValues(values))
@@ -64,19 +64,19 @@ const FormPageComponent: FormConfig['component'] = ({
 
         <IntegerInput
           label='Min Level'
-          min={MIN_LEVEL}
           max={MAX_LEVEL}
+          min={MIN_LEVEL}
           name='minLevel'
         />
 
         <IntegerInput
           label='Max Level'
-          min={MIN_LEVEL}
           max={MAX_LEVEL}
+          min={MIN_LEVEL}
           name='maxLevel'
         />
 
-        <Button colorScheme='blue' isLoading={isSubmitting} type='button' onClick={search}>
+        <Button colorScheme='blue' isLoading={isSubmitting} onClick={search} type='button'>
           Search
         </Button>
       </VStack>

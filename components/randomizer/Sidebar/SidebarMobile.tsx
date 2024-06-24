@@ -2,7 +2,6 @@
 
 import { FC } from 'react'
 import {
-  Box,
   Drawer,
   DrawerContent,
   Flex,
@@ -25,10 +24,10 @@ const SidebarMobile: FC<SidebarMobileProps> = ({ editions }) => {
       <Drawer
         autoFocus={false}
         isOpen={isOpen}
-        placement='left'
         onClose={onClose}
-        returnFocusOnClose={false}
         onOverlayClick={onClose}
+        placement='left'
+        returnFocusOnClose={false}
         size='full'
       >
         <DrawerContent color='gray.50'>
@@ -38,24 +37,24 @@ const SidebarMobile: FC<SidebarMobileProps> = ({ editions }) => {
 
       {/* mobilenav */}
       <Flex
+        alignItems='center'
+        borderBottomColor='gray.50'
+        borderBottomWidth='1px'
+        display={{ base: 'flex', md: 'none' }}
+        height='20'
+        justifyContent='flex-start'
         ml={{ base: 0, md: 60 }}
         px={{ base: 4, md: 24 }}
-        height='20'
-        alignItems='center'
-        borderBottomWidth='1px'
-        borderBottomColor='gray.50'
-        justifyContent='flex-start'
-        display={{ base: 'flex', md: 'none' }}
       >
         <IconButton
-          variant='outline'
-          color='gray.50'
-          onClick={onOpen}
           aria-label='open menu'
+          color='gray.50'
           icon={<FiMenu />}
+          onClick={onOpen}
+          variant='outline'
         />
 
-        <Text fontSize='lg' ml='8' fontWeight='bold'>
+        <Text fontSize='lg' fontWeight='bold' ml='8'>
           PIU Randomizer
         </Text>
       </Flex>

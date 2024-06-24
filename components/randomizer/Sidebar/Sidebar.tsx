@@ -10,7 +10,7 @@ type SidebarProps = {
 
 const SimpleSidebar: FC<SidebarProps> = ({ children, editions }) => (
   <Box bg='blue.900' color='gray.50' minH='100vh'>
-    <SidebarMenu editions={editions} display={{ base: 'none', md: 'grid' }} />
+    <SidebarMenu display={{ base: 'none', md: 'grid' }} editions={editions} />
     <SidebarMobile editions={editions} />
     <Box ml={{ base: 0, md: 96 }}>{children}</Box>
   </Box>

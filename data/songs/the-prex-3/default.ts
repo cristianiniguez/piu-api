@@ -1,5 +1,3 @@
-import { onlyInfinityPattern } from '@/data/patterns'
-
 const songsMap: Record<string, SongWithStepsHistories> = {
   'come-to-me': {
     id: 'come-to-me',

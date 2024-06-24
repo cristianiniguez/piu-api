@@ -2,19 +2,13 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "plugin:sonarjs/recommended",
     "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "sort-destructure-keys",
-    "sonarjs"
-  ],
+  "plugins": ["@typescript-eslint"],
   "root": true,
   "rules": {
-    "no-console": [ "warn", { "allow": [ "warn", "error" ] } ],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
     "react/jsx-sort-props": "warn"
   }
 }
