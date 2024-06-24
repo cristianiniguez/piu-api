@@ -150,6 +150,67 @@ const songsMap: Record<string, SongWithStepsHistories> = {
       'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
       'double-p': [{ 'fiesta::v1.01': 5, 'phoenix::v1.00.0': 0 }]
     }
+  },
+  'get-up': {
+    id: 'get-up',
+    name: 'Get Up!',
+    artist: 'BanYa',
+    bpm: 180,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        {
+          'exceed::default': 5,
+          'exceed-2::default': 4,
+          'zero::default': 0,
+          'nx2::default': 4,
+          'nxa::default': 0,
+          'fiesta::v1.01': 4,
+          'phoenix::v1.00.0': 5
+        },
+        {
+          'exceed::default': 7,
+          'zero::default': 0,
+          'nx2::default': 7,
+          'nxa::default': 0,
+          'fiesta::v1.01': 8,
+          'phoenix::v1.00.0': 10
+        },
+        {
+          'exceed::default': 12,
+          'exceed-2::default': 13,
+          'zero::default': 0,
+          'nx2::default': 15,
+          'nxa::default': 0,
+          'fiesta::v1.01': 13,
+          'xx::v1.00.1': 15
+        },
+        { 'xx::v2.07.0': 21 }
+      ],
+      double: [
+        {
+          'exceed::default': 7,
+          'zero::default': 0,
+          'nx2::default': 7,
+          'nxa::default': 0,
+          'fiesta::v1.01': 9,
+          'xx::v1.00.1': 12,
+          'phoenix::v1.00.0': 15
+        },
+        {
+          'exceed::default': 18,
+          'exceed-2::default': 16,
+          'zero::default': 0,
+          'nx2::default': 18,
+          'nxa::default': 0,
+          'fiesta::v1.01': 17,
+          'xx::v1.00.1': 0
+        },
+        { 'fiesta::v1.01': 18, 'phoenix::v1.00.0': 19 },
+        { 'xx::v2.07.0': 23 }
+      ]
+    }
   }
 }
 
