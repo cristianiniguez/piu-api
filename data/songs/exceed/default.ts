@@ -247,6 +247,43 @@ const songsMap: Record<string, SongWithStepsHistories> = {
       ],
       'double-p': [{ 'fiesta::v1.01': 3, 'prime::v1.00.0': 0 }]
     }
+  },
+  'monkey-fingers': {
+    id: 'monkey-fingers',
+    name: 'Monkey Fingers',
+    artist: 'BanYa',
+    bpm: 186,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        { 'fiesta-ex::v1.00': 3, 'xx::v1.00.1': 4 },
+        {
+          'exceed::default': 4,
+          'nx::default': 3,
+          'nxa::default': 5,
+          'fiesta::v1.01': 0
+        },
+        { 'fiesta::v1.01': 5, 'phoenix::v1.00.0': 6 },
+        {
+          'exceed::default': 7,
+          'nxa::default': 8,
+          'xx::v1.00.1': 9,
+          'phoenix::v1.00.0': 10
+        },
+        { 'exceed::default': 17, 'exceed-2::default': 15 }
+      ],
+      'double': [
+        {
+          'exceed::default': 6,
+          'nx::default': 7,
+          'fiesta::v1.01': 0
+        },
+        { 'exceed::default': 18, 'nx::default': 17 }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 5, 'phoenix::v1.00.0': 0 }],
+      'double-p': [{ 'fiesta::v1.01': 7 }]
+    }
   }
 }
 
