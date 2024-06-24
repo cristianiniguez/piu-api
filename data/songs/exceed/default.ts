@@ -320,6 +320,63 @@ const songsMap: Record<string, SongWithStepsHistories> = {
       'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
       'double-p': [{ 'fiesta::v1.01': 5, 'phoenix::v1.00.0': 0 }]
     }
+  },
+  'pump-me-amadeus': {
+    id: 'pump-me-amadeus',
+    name: 'Pump me Amadeus',
+    artist: 'BanYa',
+    bpm: 170,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        { 'fiesta-ex::v1.50': 3 },
+        {
+          'exceed::default': 4,
+          'nx2::default': 0,
+          'fiesta::v1.01': 4,
+          'fiesta::v1.20': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 4)
+        },
+        { 'fiesta::v1.10': 5, 'xx::v1.00.1': 6 },
+        {
+          'exceed::default': 7,
+          'exceed-2::default': 8,
+          'nx::default': 9,
+          'nx2::default': 0,
+          'fiesta::v1.01': 9,
+          'xx::v1.00.1': 11,
+          'phoenix::v1.00.0': 13
+        },
+        {
+          'exceed::default': 15,
+          'exceed-2::default': 16,
+          'nx::default': 17,
+          'nx2::default': 0,
+          'fiesta::v1.01': 17,
+          'xx::v1.00.1': 18
+        }
+      ],
+      double: [
+        {
+          'exceed::default': 8,
+          'nx::default': 10,
+          'nx2::default': 0,
+          'fiesta::v1.01': 10,
+          'xx::v1.00.1': 12,
+          'phoenix::v1.00.0': 15
+        },
+        { 'fiesta::v1.10': 18, 'xx::v1.00.1': 19 },
+        {
+          'exceed::default': 20,
+          'exceed-2::default': 19,
+          'nx2::default': 0,
+          'fiesta::v1.01': 19,
+          'xx::v1.00.1': 21
+        },
+        { 'xx::v2.08.0': 23, 'phoenix::v1.00.0': 24 }
+      ]
+    }
   }
 }
 
