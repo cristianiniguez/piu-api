@@ -377,6 +377,65 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         { 'xx::v2.08.0': 23, 'phoenix::v1.00.0': 24 }
       ]
     }
+  },
+  'what-do-you-really-want': {
+    id: 'what-do-you-really-want',
+    name: 'What Do You Really Want?',
+    artist: 'Crash',
+    bpm: 110,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: {
+      'single': [
+        {
+          'exceed::default': 2,
+          'nxa::default': 3,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 3)
+        },
+        {
+          'exceed::default': 6,
+          'exceed-2::default': 7,
+          'nx::default': 9,
+          'prime-2::v1.00.0': 0
+        },
+        {
+          'nx::default': 12,
+          'nx2::default': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 12)
+        },
+        { 'fiesta::v1.01': 14, 'prime-2::v1.00.0': 0 },
+        onlyInfinityPattern('infinity::v1.05', 18),
+        {
+          'exceed::default': 14,
+          'exceed-2::default': 16,
+          'zero::default': 18,
+          'nx::default': 19,
+          'nx2::default': 20,
+          'nxa::default': 19,
+          'prime-2::v1.00.0': 0
+        }
+      ],
+      'double': [
+        { 'exceed::default': 7, 'nx::default': 11, 'fiesta::v1.01': 0 },
+        {
+          'exceed::default': 15,
+          'exceed-2::default': 14,
+          'zero::default': 16,
+          'nx::default': 14,
+          'nxa::default': 16,
+          'prime-2::v1.00.0': 0
+        },
+        onlyInfinityPattern('infinity::v1.10', 18),
+        {
+          'nx::default': 20,
+          'nx2::default': 0,
+          'fiesta::v1.01': 20,
+          'prime-2::v1.00.0': 0
+        }
+      ],
+      'double-p': [{ 'fiesta::v1.01': 11 }]
+    }
   }
 }
 
