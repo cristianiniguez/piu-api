@@ -211,6 +211,42 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         { 'xx::v2.07.0': 23 }
       ]
     }
+  },
+  'go': {
+    id: 'go',
+    name: 'Go',
+    artist: 'U;NEE',
+    bpm: 138,
+    type: 'arcade',
+    category: 'k-pop',
+    steps: {
+      'single': [
+        { 'exceed::default': 2, 'nx::default': 3, 'prime::v1.00.0': 0 },
+        {
+          'exceed::default': 3,
+          'exceed-2::default': 6,
+          'nxa::default': 7,
+          'prime::v1.00.0': 0
+        },
+        {
+          'exceed::default': 9,
+          'exceed-2::default': 11,
+          'nx::default': 12,
+          'prime::v1.00.0': 0
+        }
+      ],
+      'double': [
+        {
+          'exceed::default': 4,
+          'exceed-2::default': 3,
+          'zero::default': 6,
+          'nx::default': 3,
+          'fiesta::v1.01': 0
+        },
+        { 'exceed::default': 12, 'exceed-2::default': 13, 'prime::v1.00.0': 0 }
+      ],
+      'double-p': [{ 'fiesta::v1.01': 3, 'prime::v1.00.0': 0 }]
+    }
   }
 }
 
