@@ -284,6 +284,42 @@ const songsMap: Record<string, SongWithStepsHistories> = {
       'single-p': [{ 'fiesta::v1.01': 5, 'phoenix::v1.00.0': 0 }],
       'double-p': [{ 'fiesta::v1.01': 7 }]
     }
+  },
+  'naissance-2': {
+    id: 'naissance-2',
+    name: 'Naissance 2',
+    artist: 'BanYa',
+    bpm: 129,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        { 'exceed::default': 2, 'nx::default': 3, 'fiesta::v1.01': 0 },
+        { 'exceed::default': 6, 'xx::v1.00.1': 9 },
+        {
+          'exceed::default': 11,
+          'exceed-2::default': 13,
+          'phoenix::v1.00.0': 15
+        }
+      ],
+      'double': [
+        { 'exceed::default': 6, 'exceed-2::default': 5, 'fiesta::v1.01': 0 },
+        {
+          'exceed::default': 15,
+          'exceed-2::default': 14,
+          'nx::default': 15,
+          'phoenix::v1.00.0': 16
+        },
+        {
+          'nx::default': 19,
+          'nx2::default': 20,
+          'nxa::default': 19,
+          'xx::v1.00.1': 20
+        }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
+      'double-p': [{ 'fiesta::v1.01': 5, 'phoenix::v1.00.0': 0 }]
+    }
   }
 }
 
