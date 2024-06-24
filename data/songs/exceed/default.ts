@@ -436,6 +436,47 @@ const songsMap: Record<string, SongWithStepsHistories> = {
       ],
       'double-p': [{ 'fiesta::v1.01': 11 }]
     }
+  },
+  'x-treme': {
+    id: 'x-treme',
+    name: 'X Treme',
+    artist: 'BanYa',
+    bpm: 162,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      single: [
+        { 'fiesta-ex::v1.50': 4, 'phoenix::v1.00.0': 5 },
+        {
+          'exceed::default': 4,
+          'exceed-2::default': 5,
+          'nx::default': 4,
+          'nxa::default': 5,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 5)
+        },
+        { 'fiesta-ex::v1.50': 7, 'phoenix::v1.00.0': 8 },
+        {
+          'exceed::default': 7,
+          'nxa::default': 9,
+          'xx::v1.00.1': 10,
+          'phoenix::v1.00.0': 12
+        },
+        { 'exceed::default': 15, 'exceed-2::default': 14, 'xx::v1.00.1': 15 },
+        { 'fiesta-2::v1.00': 18 }
+      ],
+      double: [
+        {
+          'exceed::default': 7,
+          'exceed-2::default': 8,
+          'nx::default': 9,
+          'fiesta::v1.01': 0,
+          ...onlyInfinityPattern('infinity::v1.09', 9)
+        },
+        { 'fiesta::v1.01': 13, 'phoenix::v1.00.0': 15 },
+        { 'exceed::default': 19, 'xx::v1.00.1': 20 }
+      ]
+    }
   }
 }
 
