@@ -1,7 +1,7 @@
 import { onlyInfinityPattern } from '@/data/patterns'
 
 const songsMap: Record<string, SongWithStepsHistories> = {
-  blazing: {
+  'blazing': {
     id: 'blazing',
     name: 'Blazing',
     artist: 'BanYa',
@@ -45,7 +45,7 @@ const songsMap: Record<string, SongWithStepsHistories> = {
       ]
     }
   },
-  dignity: {
+  'dignity': {
     id: 'dignity',
     name: 'Dignity',
     artist: 'Crash',
@@ -112,6 +112,43 @@ const songsMap: Record<string, SongWithStepsHistories> = {
         onlyInfinityPattern('infinity::v1.10', 26),
         { 'xx::v1.04.0': 26 }
       ]
+    }
+  },
+  'final-audition-3': {
+    id: 'final-audition-3',
+    name: 'Final Audition 3',
+    artist: 'BanYa',
+    bpm: 130.5,
+    type: 'arcade',
+    category: 'original',
+    steps: {
+      'single': [
+        { 'fiesta-ex::v1.50': 2 },
+        { 'exceed::default': 2, 'exceed-2::default': 3, 'fiesta::v1.01': 0 },
+        { 'fiesta-ex::v1.50': 5 },
+        { 'exceed::default': 5, 'nx::default': 6, 'xx::v1.00.1': 8 },
+        { 'fiesta-ex::v1.50': 9 },
+        { 'exceed::default': 13, 'nx::default': 14, 'xx::v1.00.1': 16 },
+        { 'prime::v1.19.0': 17 }
+      ],
+      'double': [
+        {
+          'exceed::default': 5,
+          'exceed-2::default': 4,
+          'nx::default': 5,
+          'fiesta::v1.01': 0
+        },
+        {
+          'exceed::default': 17,
+          'exceed-2::default': 15,
+          'zero::default': 16,
+          'nx::default': 17,
+          'phoenix::v1.00.0': 18
+        },
+        { 'nx::default': 18, 'nxa::default': 19 }
+      ],
+      'single-p': [{ 'fiesta::v1.01': 3, 'phoenix::v1.00.0': 0 }],
+      'double-p': [{ 'fiesta::v1.01': 5, 'phoenix::v1.00.0': 0 }]
     }
   }
 }
